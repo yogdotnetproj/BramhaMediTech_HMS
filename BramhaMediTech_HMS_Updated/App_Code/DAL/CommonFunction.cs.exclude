@@ -1,0 +1,163 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Data.SqlClient;
+using System.Data;
+using System.Data.Common;
+using Microsoft.Practices.EnterpriseLibrary.Data;
+using Microsoft.Practices.EnterpriseLibrary.Common;
+
+/// <summary>
+/// Summary description for CommonFunction
+/// </summary>
+public class CommonFunction
+{
+    Database objDatabase = DatabaseFactory.CreateDatabase();
+    DataSet ds = new DataSet();
+    DataTable dt = new DataTable();
+    public CommonFunction()
+    {
+        //
+        // TODO: Add constructor logic here
+        //
+    }
+
+    public bool IsExist(string TableName, string ColumnName, string ColumnValue, int HospitalId)
+    {
+
+        try
+        {
+            DbCommand objDBCommand = objDatabase.GetStoredProcCommand("Sp_IsExist");
+            objDatabase.AddInParameter(objDBCommand, "@TableName", DbType.String, TableName);
+            objDatabase.AddInParameter(objDBCommand, "@ColumnName", DbType.String, ColumnName);
+            objDatabase.AddInParameter(objDBCommand, "@ColumnValue", DbType.String, ColumnValue);
+            objDatabase.AddInParameter(objDBCommand, "@HospitalId", DbType.Int32, HospitalId);
+            object Result = objDatabase.ExecuteScalar(objDBCommand);
+            if (Convert.ToInt32(Result) > 0)
+                return true;
+            else
+                return false;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        finally
+        {
+
+        }
+    }
+
+
+    /// <summary>
+    /// Created By Archaha Indalkar
+    /// It Checks User is Valid or InValid
+    /// </summary>
+    /// <param name="UserName">UserName</param>
+    /// <param name="UserPassword">UserPassword</param>
+    /// <returns>LoginValidation & UserId</returns>
+    public object[] LoginValidation(string UserName, string UserPassword)
+    {
+        object[] Result = new object[10];
+        try
+        {
+            DbCommand objDBCommand = objDatabase.GetStoredProcCommand("SP_LoginValidation");
+            objDatabase.AddInParameter(objDBCommand, "@UserName", DbType.String, UserName);
+            objDatabase.AddInParameter(objDBCommand, "@UserPassword", DbType.String, UserPassword);
+            objDatabase.AddOutParameter(objDBCommand, "@UserId", DbType.Int32,4);
+            objDatabase.AddOutParameter(objDBCommand, "@RoleId", DbType.Int32, 4);
+            objDatabase.AddOutParameter(objDBCommand, "@RoleName", DbType.String, 150);
+            objDatabase.AddOutParameter(objDBCommand, "@EmployeeId", DbType.String, 151);
+            Result[0] = objDatabase.ExecuteScalar(objDBCommand);
+            Result[1] = Convert.ToInt32(Convert.ToString(objDatabase.GetParameterValue(objDBCommand, "@UserId")));
+            Result[2] = Convert.ToInt32(Convert.ToString(objDatabase.GetParameterValue(objDBCommand, "@RoleId")));
+            Result[3] = Convert.ToString(objDatabase.GetParameterValue(objDBCommand, "@RoleName"));
+            Result[4] = Convert.ToString(objDatabase.GetParameterValue(objDBCommand, "@EmployeeId"));
+            return Result;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        finally
+        {
+
+        }
+    }
+    public object[] GetSystemConstantValue(string SystemConstantName)
+    {
+        object[] Result = new object[10];
+        try
+        {
+            DbCommand objDBCommand = objDatabase.GetStoredProcCommand("SP_SystemConstant_GetValue");
+            objDatabase.AddInParameter(objDBCommand, "@SystemConstantName", DbType.String, SystemConstantName);
+            objDatabase.AddOutParameter(objDBCommand, "@Id", DbType.Int32, 4);
+            Result[0] = objDatabase.ExecuteScalar(objDBCommand);
+            Result[1] = Convert.ToInt32(Convert.ToString(objDatabase.GetParameterValue(objDBCommand, "@Id")));
+            //return Convert.ToString(Result[0]);
+            return Result;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        finally
+        {
+
+        }
+
+    }
+
+
+    /// <summary>
+    /// Created By Monika bhosale
+    public object[] GetSystemConstantValue1(string SystemConstantName)
+    {
+        object[] Result = new object[10];
+        try
+        {
+            DbCommand objDBCommand = objDatabase.GetStoredProcCommand("SP_SystemConstant_GetValue1");
+            objDatabase.AddInParameter(objDBCommand, "@SystemConstantName", DbType.String, SystemConstantName);
+            objDatabase.AddOutParameter(objDBCommand, "@BillParticularId", DbType.Int32, 4);
+            objDatabase.AddOutParameter(objDBCommand, "@DoctorId", DbType.Int32, 4);
+            objDatabase.AddOutParameter(objDBCommand, "@Id", DbType.Int32, 4);
+            Result[0] = objDatabase.ExecuteScalar(objDBCommand);
+            Result[1] = Convert.ToInt32(Convert.ToString(objDatabase.GetParameterValue(objDBCommand, "@Id")));
+            Result[2] = Convert.ToInt32(Convert.ToString(objDatabase.GetParameterValue(objDBCommand, "@BillParticularId")));
+            Result[3] = Convert.ToInt32(Convert.ToString(objDatabase.GetParameterValue(objDBCommand, "@DoctorId")));
+           
+            return Result;
+            //return Convert.ToString( Result[0]);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        finally
+        {
+
+        }
+
+    }
+
+    //public object[] GetEmployeeName(int DoctorId)
+    //{ 
+    //    object[] Result = new object[10];
+    //    DbCommand objDBCommand = objDatabase.GetStoredProcCommand("SP_EmployeeMaster_GetEmployeeName");
+    //    objDatabase.AddInParameter(objDBCommand, "@EmployeeId", DbType.Int32, DoctorId);
+    //    IDataReader reader;
+    //    reader = objDatabase.ExecuteReader(objDBCommand);
+    //    List<DOAppointment> objobjDOAppointments = new List<DOAppointment>();
+    //    while (reader.Read())
+    //    {
+    //        DOAppointment objDOAppointment = new DOAppointment();
+    //        objDOAppointment.EmployeeName = Convert.ToString(reader["EmployeeName"]);
+    //        objobjDOAppointments.Add(objDOAppointment);
+    //        Result[1] = objDOAppointment.EmployeeName;
+    //    }
+    //    reader.Close();
+    //    reader.Dispose();
+    //    return Result;
+    //}
+}

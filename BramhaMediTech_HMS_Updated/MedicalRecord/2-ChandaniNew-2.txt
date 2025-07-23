@@ -1,0 +1,66 @@
+ --DECLARE THE VARIABLES FOR HOLDING DATA.
+      DECLARE @Patregid INT,
+	          @Ipdno int,
+			  @IPDID int,
+			  @TotalCharges float,
+              @AmountReceived float
+ 
+      --DECLARE AND SET COUNTER.
+      DECLARE @Counter INT
+      SET @Counter = 1
+ 
+      --DECLARE THE CURSOR FOR A QUERY.
+      DECLARE PrintCustomers CURSOR READ_ONLY
+      FOR
+   SELECT        IpdBillServiceDetails.PatRegId, IpdBillServiceDetails.IpdNo, IpdBillServiceDetails.IpdId, SUM(ISNULL(ROUND(IpdBillServiceDetails.TotalCharges, 0), 0)) AS TotalCharges
+                        
+FROM            IpdBillServiceDetails INNER JOIN
+                         IpdBillMaster ON IpdBillServiceDetails.IpdNo = IpdBillMaster.IpdNo AND IpdBillServiceDetails.IpdId = IpdBillMaster.IpdId AND IpdBillServiceDetails.PatRegId = IpdBillMaster.PatRegId
+WHERE       (CAST(CAST(YEAR(IpdBillMaster.FinalDischargeOn) AS varchar(4)) + '/' + CAST(MONTH(IpdBillMaster.FinalDischargeOn) AS varchar(2)) + '/' + CAST(DAY(IpdBillMaster.FinalDischargeOn) AS varchar(2)) AS datetime) BETWEEN 
+                         '2021-04-17' AND '2021-06-16') AND (IpdBillServiceDetails.DrugId > 0) and IpdBillMaster.InsuranceAmt>0
+--and round(IpdBillMaster.Billamount,0)>((IpdBillMaster.AmountReceived+IpdBillMaster.Discount)+ IpdBillMaster.InsuranceAmt)
+
+GROUP BY IpdBillServiceDetails.PatRegId, IpdBillServiceDetails.IpdNo, IpdBillServiceDetails.IpdId
+ORDER BY IpdBillServiceDetails.PatRegId
+ 
+      --OPEN CURSOR.
+      OPEN PrintCustomers 
+      --FETCH THE RECORD INTO THE VARIABLES.
+      FETCH NEXT FROM PrintCustomers INTO
+     @Patregid,@Ipdno,@IPDID,@TotalCharges
+ 
+      --LOOP UNTIL RECORDS ARE AVAILABLE.
+      WHILE @@FETCH_STATUS = 0
+      BEGIN
+
+	  --select @AmountReceived=AmountReceived from IpdBillMaster where PatRegId= @Patregid and IpdNo=@Ipdno and Ipdid=@IPDID
+
+	  --if(@AmountReceived>0)
+	  --begin
+	  --if(@AmountReceived>@TotalCharges)
+	  --begin
+	  update IpdBillMaster set BillAmount=(BillAmount-@TotalCharges) where PatRegId= @Patregid and IpdNo=@Ipdno and Ipdid=@IPDID
+	 -- end
+	 -- end
+             --IF @Counter = 1
+             --BEGIN
+             --           PRINT 'CustomerID' + CHAR(9) + 'Name' + CHAR(9) + CHAR(9) + CHAR(9) + 'Country'
+             --           PRINT '------------------------------------'
+             --END
+ 
+             ----PRINT CURRENT RECORD.
+             --PRINT CAST(@CustomerId AS VARCHAR(10)) + CHAR(9) + CHAR(9) + CHAR(9) + @Name + CHAR(9) + @Country
+    
+             ----INCREMENT COUNTER.
+             --SET @Counter = @Counter + 1
+ 
+
+
+             --FETCH THE NEXT RECORD INTO THE VARIABLES.
+             FETCH NEXT FROM PrintCustomers INTO
+            @Patregid,@Ipdno,@IPDID,@TotalCharges
+      END
+ 
+      --CLOSE THE CURSOR.
+      CLOSE PrintCustomers
+      DEALLOCATE PrintCustomers

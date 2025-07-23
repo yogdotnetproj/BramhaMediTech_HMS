@@ -1,0 +1,4 @@
+delete IP
+FROM            IpdBillServiceDetails IP INNER JOIN
+                         IpdBillMaster IB ON IP.IpdNo = IB.IpdNo AND IP.PatRegId = IB.PatRegId where      (CAST(CAST(YEAR(IB.FinalDischargeOn) AS varchar(4)) + '/' + CAST(MONTH(IB.FinalDischargeOn) AS varchar(2)) + '/' + CAST(DAY(IB.FinalDischargeOn) AS varchar(2)) AS datetime) BETWEEN 
+                         '2021-04-17' AND '2021-06-16') AND (IP.DrugId > 0)

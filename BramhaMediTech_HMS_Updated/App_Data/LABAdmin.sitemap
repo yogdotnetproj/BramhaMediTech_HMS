@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<siteMap>
+  <siteMapNode url="#" title="Registration" description="Registration">
+    <siteMapNode url="~/Masters/PatientInfoList.aspx" title="Patient Registration" description="Registration" />
+    <siteMapNode url="~/OPD/OPDCancelRegistration.aspx" title="Cancle Registration" description="Registration" />
+  </siteMapNode>
+  <siteMapNode url="#" title="OPD" description="OPD">
+    <siteMapNode url="~/frmPatientRegistration.aspx" title="OPD Registration" description="OPD" />
+    <siteMapNode url="~/frmPatientRegistrationList.aspx?FormType=Nurse&amp;amp;PatientType=OPD" title="OPD Nurse Module" description="OPD" />
+    <siteMapNode url="~/frmPatientRegistrationList.aspx?FormType=Consultant&amp;amp;PatientType=OPD" title="Consultant Doctor" description="OPD" />
+    <siteMapNode url="~/frmPatientRegistrationList.aspx?FormType=OrderInv&amp;amp;PatientType=OPD" title="Order Investigation" description="OPD" />
+    <siteMapNode url="~/frmPatientRegistrationList.aspx?FormType=ViewInv&amp;amp;PatientType=OPD" title="View Investigation" description="OPD" />
+    <siteMapNode url="#" title="OPD Appointment" description="OPD" />
+    <siteMapNode url="~/frmPatientRegistrationList.aspx?FormType=Cancle" title="Cancle OPD" description="OPD" />
+  </siteMapNode>
+  <siteMapNode url="#" title="IPD" description="IPD">
+    <siteMapNode url="~/Masters/frmRoomStatus.aspx" title="Room Status" description="IPD" />
+    <siteMapNode url="#" title="Admit" description="IPD">
+      <siteMapNode url="~/IPD/frmIPDAdmission.aspx" title="Admit Patient" description="Admit" />
+      <siteMapNode url="~/IPD/frmIPDPatientSelection.aspx" title="Cancle Admission" description="Admit" />
+      <siteMapNode url="~/IPD/frmShiftPatient.aspx" title="Shift Patient" description="Admit" />
+      <siteMapNode url="~/IPD/frmEditPatient.aspx" title="Edit Information" description="Admit" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Discharge" description="IPD">
+      <siteMapNode url="~/Masters/frmDischargeDetail.aspx" title="Discharge Recommanded" description="Discharge" />
+    </siteMapNode>
+  </siteMapNode>
+  <siteMapNode url="#" title="Billing" description="Billing">
+    <siteMapNode url="#" title="OPD Bill" description="Billing">
+      <siteMapNode url="~/frmBillIPD.aspx" title="OPD Billing" description="OPD Bill" />
+      <siteMapNode url="#" title="OPD Refund" description="OPD Bill" />
+      <siteMapNode url="#" title="OPD Reciept" description="OPD Bill" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

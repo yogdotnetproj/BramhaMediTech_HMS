@@ -1,0 +1,727 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OT_mainMaster.master" AutoEventWireup="true" CodeFile="LSCH_Section.aspx.cs" Inherits="LSCH_Section" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <script type="text/javascript">
+        function ShowMessage(message, messagetype) {
+            var cssclass;
+            switch (messagetype) {
+                case 'Success':
+                    cssclass = 'alert-success'
+                    break;
+                case 'Error':
+                    cssclass = 'alert-danger'
+                    break;
+                case 'Warning':
+                    cssclass = 'alert-warning'
+                    break;
+                default:
+                    cssclass = 'alert-info'
+            }
+            $('#alert_container').append('<div id="alert_div" style="margin: 0 0.5%; -webkit-box-shadow: 3px 4px 6px #999;" class="alert p-2 in ' + cssclass + '"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>' + messagetype + '!</strong> <span>' + message + '</span></div>');
+
+            setTimeout(function () {
+                $("#alert_div").fadeTo(1000, 500).slideUp(500, function () {
+                    $("#alert_div").remove();
+                });
+            }, 500);//5000=5 seconds
+        }
+    </script>
+   <asp:ScriptManager ID="ScriptManager1" runat="server">
+   </asp:ScriptManager>
+
+
+     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <Triggers>
+            <asp:PostBackTrigger ControlID="btnPrint" />
+        </Triggers>
+        <ContentTemplate>
+            <section class="content-header d-flex">
+                    <h1>LSCH</h1>
+                    <ol class="breadcrumb">
+                       <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li class="breadcrumb-item active">LSCH</li>
+                    </ol>                
+                </section>
+             <section class="content"> 
+                 <div class="box" runat="server" id="Show">
+                 <div class="box-body">
+                                    <div class="row">    
+                  <div class="col-lg-12 mt-3">
+                            <div class="row">  
+                                <div class="col-sm-2" >
+                                            <div class="form-group">
+                                                <label for="txtFirstName"><strong>Note Time</strong></label> 
+                                                </div>
+                                              </div>   
+                                <div class="col-sm-2" >
+                                            <div class="form-group">
+                                                  <div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy" data-autoclose="true">                                                            
+                                                          <asp:TextBox ID="txtNoteDate" runat="server"   CssClass="form-control" TabIndex="7" 
+                                                             AutoPostBack="True" ></asp:TextBox>
+                                                             
+                                                                 <span class="input-group-addon">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </span>                                                   
+                        
+                                                        </div>
+                                                </div>
+                                    </div>
+                                
+                                 <div class="col-sm-3 text-center" >
+                                            <div class="form-group">
+                                                <label for="txtFirstName"><strong>Schedule </strong></label> 
+                                                </div>
+                                              </div> 
+                                <div class="col-sm-3" >
+                                            <div class="form-group">
+                                               <asp:TextBox ID="txtschedule" CssClass="form-control"  runat="server" placeholder="" ></asp:TextBox>
+                                      
+                                                </div>
+                                              </div> 
+                                </div>
+                      </div>
+
+                                        <div class="col-lg-12 mt-3">
+                            <div class="row">
+                                 <div class="col-sm-2" >
+                                            <div class="form-group">
+                                                <label for="txtFirstName"><strong>Date Of Operation </strong></label> 
+                                                </div>
+                                              </div> 
+                                 <div class="col-sm-2" >
+                                            <div class="form-group">
+                                               <div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy" data-autoclose="true">                                                            
+                                                          <asp:TextBox ID="txtdateofoperation" runat="server"   CssClass="form-control" TabIndex="7" 
+                                                             AutoPostBack="True" ></asp:TextBox>
+                                                             
+                                                                 <span class="input-group-addon">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </span>                                                   
+                        
+                                                        </div>
+                                                </div>
+                                              </div> 
+                                 <div class="col-sm-3 text-center" >
+                                            <div class="form-group">
+                                                <label for="txtFirstName"><strong>Operative Procedure </strong></label> 
+                                                </div>
+                                              </div> 
+                                <div class="col-sm-3 " >
+                                            <div class="form-group">
+                                               <asp:TextBox ID="txtoperativeProcedure" CssClass="form-control"  runat="server" placeholder="" ></asp:TextBox>
+                                      
+                                                </div>
+                                              </div> 
+                                </div>
+                                            </div>
+                                        <div class="col-lg-12 mt-2">
+                            <div class="row">
+                                         <div style="height:2px; background:#B24592;"> </div>
+                                </div>
+                                            </div>
+                 <div class="col-lg-12 mt-2">
+                            <div class="row">  
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong>Pre-Operative Diagnosis</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                          <asp:TextBox ID="txtpreOperativeDiagnosis" CssClass="form-control"  runat="server" placeholder="Enter Pre-Operative Diagnosis" ></asp:TextBox>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong>Anaesthetist</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+
+                                       <asp:TextBox ID="txtAnaesthetist" CssClass="form-control"  runat="server" placeholder="Enter Anaesthetist" ></asp:TextBox>
+                                      </div>
+                                </div>
+                             
+                                </div>
+                     </div>
+
+                                         <div class="col-lg-12 mt-2">
+                            <div class="row">  
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong>Duration of Surgery</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                          <asp:TextBox ID="txtdurationofsurgery" CssClass="form-control"  runat="server" placeholder="Enter Duration of Surgery" ></asp:TextBox>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong>Post Operative Diagnosis</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+
+                                       <asp:TextBox ID="txtpostoperativediagnosis" CssClass="form-control"  runat="server" placeholder="Enter Post Operative Diagnosis" ></asp:TextBox>
+                                      </div>
+                                </div>
+                             
+                                </div>
+                     </div>
+
+                                          <div class="col-lg-12 mt-2">
+                            <div class="row">  
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong> Post Operative Anaesthetist</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                          <asp:TextBox ID="txtpostoperativeAnaesthetist" CssClass="form-control"  runat="server" placeholder="Enter Post Operative Anaesthetist" ></asp:TextBox>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong>Tourniquet Time</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+
+                                       <asp:TextBox ID="txtTourniquetTime" CssClass="form-control"  runat="server" placeholder="Enter Tourniquet Time" ></asp:TextBox>
+                                      </div>
+                                </div>
+                             
+                                </div>
+                     </div>
+                                         <div class="col-lg-12 mt-2">
+                            <div class="row">  
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong> Swab/Pack/Instrument Count</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                          <asp:TextBox ID="txtswabcount" CssClass="form-control"  runat="server" placeholder="Enter Swab/Pack/Instrument Count" ></asp:TextBox>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong>Surgeon</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+
+                                       <asp:TextBox ID="txtSurgeon" CssClass="form-control"  runat="server" placeholder="Enter Surgeon" ></asp:TextBox>
+                                      </div>
+                                </div>
+                             
+                                </div>
+                     </div>
+
+                                         <div class="col-lg-12 mt-2">
+                            <div class="row">  
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong> Inflate</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                          <asp:TextBox ID="txtInflate" CssClass="form-control"  runat="server" placeholder="Enter Inflate" ></asp:TextBox>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong>Material/Specimen Forwarded for Pathology</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+
+                                       <asp:TextBox ID="txtmaterialforwarded" CssClass="form-control"  runat="server" placeholder="Enter Material/Specimen Forwarded for Pathology" ></asp:TextBox>
+                                      </div>
+                                </div>
+                             
+                                </div>
+                     </div>
+                                            <div class="col-lg-12 mt-2">
+                            <div class="row">  
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong> Scrub Nurse</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                          <asp:TextBox ID="txtScrubNurse" CssClass="form-control"  runat="server" placeholder="Enter Scrub Nurse" ></asp:TextBox>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong>Deflate</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+
+                                       <asp:TextBox ID="txtDeflate" CssClass="form-control"  runat="server" placeholder="Enter Deflate" ></asp:TextBox>
+                                      </div>
+                                </div>
+                             
+                                </div>
+                     </div>
+
+                                         <div class="col-lg-12 mt-2">
+                            <div class="row">  
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong> Operation Findings</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                          <asp:TextBox ID="txtoperationFinding" CssClass="form-control"  runat="server" placeholder="Enter Operation Findings" ></asp:TextBox>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong>Blood Loss in ml</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+
+                                       <asp:TextBox ID="txtbloodloss" CssClass="form-control"  runat="server" placeholder="Enter Blood Loss in ml" ></asp:TextBox>
+                                      </div>
+                                </div>
+                             
+                                </div>
+                     </div>
+
+                                         <div class="col-lg-12 mt-2">
+                            <div class="row">  
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                         <strong> Drains</strong>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                          <asp:DropDownList ID="ddlDrains"  CssClass="form-control form-select"  runat="server" >
+                                          <asp:ListItem Value=""></asp:ListItem>
+                                           
+                                         
+                                        </asp:DropDownList>
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+                                        
+                                      </div>
+                                </div>
+                                <div class="col-sm-3" >
+                                     <div class="form-group">
+
+                                       
+                                      </div>
+                                </div>
+                             
+                                </div>
+                     </div>
+<div class="col-lg-12 mt-2" id="longprotocol3" runat="server">
+
+                    <div class="row">
+                        <div class="panel-heading">
+                            <div class="col-lg-12 text-center">
+                                    <div class="form-group">
+                                        <strong>LSCS</strong>
+                                        </div>
+                                </div>
+                        </div>
+
+                    </div>
+                           </div>
+
+                                        <div class="row">
+                                             <div class="col-lg-4  text-left">
+                                               INDICATION FOR CAESAREAN
+                                                 <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                <div class="col-sm-12" >
+                                            <div class="form-group">
+                                               <asp:CheckBox runat="server" ID="chkFetalDistress" Text="Fetal distress" />
+                                                </div>
+                                    </div>
+                                       
+
+                                                      </div>
+                                                     </div>
+                                                <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                                          <div class="col-sm-12" >
+                                            <div class="form-group">
+                                                <asp:CheckBox runat="server" ID="chkCPD" Text="CPD in Labour" />
+                                                </div>
+                                    </div>
+                               
+                                        
+
+                                                      </div>
+                                                     </div>
+
+                                                 <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                                          <div class="col-sm-12" >
+                                            <div class="form-group">
+                                                <asp:CheckBox runat="server" ID="chkMaternalChoice" Text="Maternal Choice" />
+                                                </div>
+                                    </div>
+                                
+                                        
+
+                                                      </div>
+                                                     </div>
+                                                  <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                                           <div class="col-sm-12" >
+                                            <div class="form-group">
+                                                 <asp:CheckBox runat="server" ID="chkMultiplePregnancy" Text="Multiple Pregnancy " />
+                                                </div>
+                                    </div>
+                               
+                                        
+
+                                                      </div>
+                                                     </div>
+                                                 <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                                           <div class="col-sm-12" >
+                                            <div class="form-group">
+                                                <asp:CheckBox runat="server" ID="chkTwoPrevLSCS" Text="Two Previous LSCS" />
+                                                </div>
+                                    </div>
+                               
+                                        
+
+                                                      </div>
+                                                     </div>
+                                                  <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                                           <div class="col-sm-12" >
+                                            <div class="form-group">
+                                                <asp:CheckBox runat="server" ID="chknonprogresslabour" Text="Non Progress of labour" />
+                                                </div>
+                                    </div>
+                               
+                                        
+
+                                                      </div>
+                                                     </div>
+                                                 <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                                           <div class="col-sm-12" >
+                                            <div class="form-group">
+                                                <asp:CheckBox runat="server" ID="chkPRevLSCSComplication" Text="Pre. LSCS with complication" />
+                                                </div>
+                                    </div>
+                               
+                                        
+
+                                                      </div>
+                                                     </div>
+                                                 <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                <div class="col-sm-12" >
+                                            <div class="form-group">
+                                                <asp:TextBox ID="txtPRevLSCSComplication" CssClass="form-control" TextMode="MultiLine" Height="70px"  runat="server" placeholder="" ></asp:TextBox>
+                                                </div>
+                                    </div>
+                                        
+
+                                                      </div>
+                                                     </div>
+
+                                                 </div>
+
+                                             <div class="col-lg-4  text-left">
+                                               
+                                                 <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                <div class="col-sm-2" >
+                                            <div class="form-group">
+                                           Baby
+                                                </div>
+                                    </div>
+                                        
+                                                          <div class="col-sm-4" >
+                                            <div class="form-group">
+                                           Presentation
+                                                </div>
+                                    </div>
+                                                          <div class="col-sm-3" >
+                                            <div class="form-group">
+                                           sex
+                                                </div>
+                                    </div>
+                                                          <div class="col-sm-3" >
+                                            <div class="form-group">
+                                           Apgar
+                                                </div>
+                                    </div>
+
+                                                      </div>
+                                                     </div>
+                                                <div class="col-lg-12 mt-2">
+                                                     
+                                                      <div class="row">
+                                <div class="col-sm-2" >
+                                            <div class="form-group">
+                                           <strong>1</strong>
+                                                </div>
+                                    </div>
+                                        
+                                                          <div class="col-sm-4" >
+                                            <div class="form-group">
+                                            <asp:DropDownList ID="ddlPResentation1"  CssClass="form-control form-select"  runat="server" >
+                                          <asp:ListItem Value=""></asp:ListItem>
+                                                <asp:ListItem Value="Cephalic">Cephalic</asp:ListItem>
+                                                <asp:ListItem Value="Breech">Breech</asp:ListItem>
+                                                 <asp:ListItem Value="Transverse">Transverse</asp:ListItem>
+                                                </asp:DropDownList>
+                                                </div>
+                                    </div>
+                                                          <div class="col-sm-3" >
+                                            <div class="form-group">
+                                            <asp:DropDownList ID="ddlSex1"  CssClass="form-control form-select"  runat="server" >
+                                          <asp:ListItem Value=""></asp:ListItem>
+                                                 <asp:ListItem Value="Male">Male</asp:ListItem>
+                                                 <asp:ListItem Value="Female">Female</asp:ListItem>
+                                                </asp:DropDownList>
+                                                </div>
+                                    </div>
+                                                          <div class="col-sm-3" >
+                                            <div class="form-group">
+                                            <asp:TextBox ID="txtapgar1" CssClass="form-control"  runat="server" placeholder="" ></asp:TextBox>
+                                               
+                                                </div>
+                                    </div>
+
+                                                      </div>
+                                                     </div>
+                                                   
+
+                                                 <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                <div class="col-sm-2" >
+                                            <div class="form-group">
+                                           <strong>2</strong>
+                                                </div>
+                                    </div>
+                                        
+                                                          <div class="col-sm-4" >
+                                            <div class="form-group">
+                                            <asp:DropDownList ID="ddlPresentation2"  CssClass="form-control form-select"  runat="server" >
+                                          <asp:ListItem Value=""></asp:ListItem>
+                                                <asp:ListItem Value="Cephalic">Cephalic</asp:ListItem>
+                                                <asp:ListItem Value="Breech">Breech</asp:ListItem>
+                                                 <asp:ListItem Value="Transverse">Transverse</asp:ListItem>
+                                                </asp:DropDownList>
+                                                </div>
+                                    </div>
+                                                          <div class="col-sm-3" >
+                                            <div class="form-group">
+                                            <asp:DropDownList ID="ddlsex2"  CssClass="form-control form-select"  runat="server" >
+                                          <asp:ListItem Value=""></asp:ListItem>
+                                                 <asp:ListItem Value="Male">Male</asp:ListItem>
+                                                 <asp:ListItem Value="Female">Female</asp:ListItem>
+                                                </asp:DropDownList>
+                                                </div>
+                                    </div>
+                                                          <div class="col-sm-3" >
+                                            <div class="form-group">
+                                            <asp:TextBox ID="txtapgar2" CssClass="form-control"  runat="server" placeholder="" ></asp:TextBox>
+                                               
+                                                </div>
+                                    </div>
+
+                                                      </div>
+                                                     </div>
+                                                  <div class="col-lg-12 mt-2">
+                                                       <div class="row">
+                                <div class="col-sm-2" >
+                                            <div class="form-group">
+                                           <strong>3</strong>
+                                                </div>
+                                    </div>
+                                        
+                                                          <div class="col-sm-4" >
+                                            <div class="form-group">
+                                            <asp:DropDownList ID="ddlpresentation3"  CssClass="form-control form-select"  runat="server" >
+                                          <asp:ListItem Value=""></asp:ListItem>
+                                                <asp:ListItem Value="Cephalic">Cephalic</asp:ListItem>
+                                                <asp:ListItem Value="Breech">Breech</asp:ListItem>
+                                                 <asp:ListItem Value="Transverse">Transverse</asp:ListItem>
+                                                </asp:DropDownList>
+                                                </div>
+                                    </div>
+                                                          <div class="col-sm-3" >
+                                            <div class="form-group">
+                                            <asp:DropDownList ID="ddlsex3"  CssClass="form-control form-select"  runat="server" >
+                                          <asp:ListItem Value=""></asp:ListItem>
+                                                 <asp:ListItem Value="Male">Male</asp:ListItem>
+                                                 <asp:ListItem Value="Female">Female</asp:ListItem>
+                                                </asp:DropDownList>
+                                                </div>
+                                    </div>
+                                                          <div class="col-sm-3" >
+                                            <div class="form-group">
+                                            <asp:TextBox ID="txtapgar3" CssClass="form-control"  runat="server" placeholder="" ></asp:TextBox>
+                                               
+                                                </div>
+                                    </div>
+
+                                                      </div>
+                                                     </div>
+                                                 
+                                                
+
+                                                 </div>
+                                               <div class="col-lg-4  text-left">
+                                                     <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                                           <div class="col-sm-6" >
+                                            <div class="form-group">
+                                                No.of Fetuses
+                                                </div>
+                                             </div>
+                                <div class="col-sm-6" >
+                                            <div class="form-group">
+                                                <asp:TextBox ID="txtnooffetuses" CssClass="form-control"  runat="server" placeholder="" ></asp:TextBox>
+                                                </div>
+                                    </div>
+                                        
+
+                                                      </div>
+                                                     </div>
+                                                    <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                                           <div class="col-sm-6" >
+                                            <div class="form-group">
+                                                PLACENTA & MEMBRANES
+                                                </div>
+                                             </div>
+                                <div class="col-sm-6" >
+                                            <div class="form-group">
+                                                <asp:TextBox ID="txtPLACENTA" CssClass="form-control"  runat="server" placeholder="" ></asp:TextBox>
+                                                </div>
+                                    </div>
+                                        
+
+                                                      </div>
+                                                     </div>
+                                                   <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                                           <div class="col-sm-6" >
+                                            <div class="form-group">
+                                                Intact
+                                                </div>
+                                             </div>
+                                <div class="col-sm-6" >
+                                            <div class="form-group">
+                                                <asp:DropDownList ID="ddlIntact"  CssClass="form-control form-select"  runat="server" >
+                                          <asp:ListItem Value=""></asp:ListItem>
+                                                <asp:ListItem Value="Yes">Yes</asp:ListItem>
+                                                <asp:ListItem Value="No">No</asp:ListItem>
+                                                
+                                                </asp:DropDownList>
+                                                </div>
+                                    </div>
+                                        
+
+                                                      </div>
+                                                     </div>
+
+                                                    <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                                           <div class="col-sm-6" >
+                                            <div class="form-group">
+                                                BLADDER:Intact
+                                                </div>
+                                             </div>
+                                <div class="col-sm-6" >
+                                            <div class="form-group">
+                                                <asp:DropDownList ID="ddlBLADDERIntact"  CssClass="form-control form-select"  runat="server" >
+                                          <asp:ListItem Value=""></asp:ListItem>
+                                                <asp:ListItem Value="Yes">Yes</asp:ListItem>
+                                                <asp:ListItem Value="No">No</asp:ListItem>
+                                                
+                                                </asp:DropDownList>
+                                                </div>
+                                    </div>
+                                        
+
+                                                      </div>
+                                                     </div>
+                                                   <div class="col-lg-12 mt-2">
+                                                      <div class="row">
+                                                           <div class="col-sm-6" >
+                                            <div class="form-group">
+                                                ADHESIONS
+                                                </div>
+                                             </div>
+                                <div class="col-sm-6" >
+                                            <div class="form-group">
+                                                <asp:DropDownList ID="ddlADHESIONS"  CssClass="form-control form-select"  runat="server" >
+                                          <asp:ListItem Value=""></asp:ListItem>
+                                                <asp:ListItem Value="Yes">Yes</asp:ListItem>
+                                                <asp:ListItem Value="No">No</asp:ListItem>
+                                                
+                                                </asp:DropDownList>
+                                                </div>
+                                    </div>
+                                        
+
+                                                      </div>
+                                                     </div>
+                                                   
+                                                   </div>
+                                            
+                                            </div>
+                
+
+                  
+                   <div class="messagealert" id="alert_container">
+            </div>
+                                        </div>
+                     </div>
+                     </div>
+                 <div class="col-lg-12 mt-3">
+                 <div class="row">                
+                    <div class="col-lg-12 mt-3 text-center">
+                         <asp:Button ID="btnsave" runat="server" Text="Save" OnClick="btnSave_Click" 
+                                        TabIndex="12" Width="80px" CssClass="btn btn-success"   CausesValidation="False"   UseSubmitBehavior="false" OnClientClick="this.disabled='true';this.Value='Please Wait...';" />
+                                       <asp:Button ID="btnPrint" runat="server" Text="Print" CssClass="btn btn-primary"   CausesValidation="False"   UseSubmitBehavior="false" OnClientClick="this.disabled='true';this.Value='Please Wait...';" OnClick="btnPrint_Click" />              
+                        </div>
+                     </div>
+                     </div>
+                 </section>
+             <script language="javascript" type="text/javascript">
+                 function OpenReport() {
+
+                     window.open("Reports.aspx");
+                 }
+               </script>
+            </ContentTemplate>
+         </asp:UpdatePanel>
+</asp:Content>
+

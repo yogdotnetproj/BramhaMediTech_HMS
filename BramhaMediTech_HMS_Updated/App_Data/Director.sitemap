@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<siteMap>
+  <siteMapNode url="#" title="Master" description="Master">
+    <siteMapNode url="#" title="Admin" description="Master">
+      <siteMapNode url="~/Masters/PatientStatus.aspx" title="Patient Status" description="Admin" />
+      <siteMapNode url="~/Masters/RegistrationStatus.aspx" title="Registration Status" description="Admin" />
+      <siteMapNode url="~/Masters/LoginReport.aspx" title="Login Report" description="Admin" />
+      <siteMapNode url="~/Masters/MenuMaster.aspx" title="Menu Master" description="Admin" />
+      <siteMapNode url="~/Masters/Marquee.aspx" title="Marquee" description="Admin" />
+      <siteMapNode url="~/Masters/SystemConstant.aspx" title="System Constant" description="Admin" />
+      <siteMapNode url="~/Masters/ColorConstant.aspx" title="Color Constant" description="Admin" />
+      <siteMapNode url="~/Masters/FinancialYear.aspx" title="Financial Year" description="Admin" />
+    </siteMapNode>
+    <siteMapNode url="#" title="User Management" description="Master">
+      <siteMapNode url="~/Masters/Role.aspx" title="Role" description="User Management" />
+      <siteMapNode url="~/Masters/RoleRight.aspx" title="Role Right" description="User Management" />
+      <siteMapNode url="~/Masters/UserType.aspx" title="User Type" description="User Management" />
+      <siteMapNode url="~/Masters/User.aspx" title="User" description="User Management" />
+      <siteMapNode url="~/Masters/AssignRole.aspx" title="AssignRole" description="User Management" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Demographic Master" description="Master">
+      <siteMapNode url="~/Masters/Title.aspx" title="Title" description="Demographic Master" />
+      <siteMapNode url="~/Masters/BloodGroup.aspx" title="Blood Group" description="Demographic Master" />
+      <siteMapNode url="~/Masters/Gender.aspx" title="Gender" description="Demographic Master" />
+      <siteMapNode url="~/Masters/MaritalStatus.aspx" title="Marital Status" description="Demographic Master" />
+      <siteMapNode url="~/Masters/Country.aspx" title="Country" description="Demographic Master" />
+      <siteMapNode url="~/Masters/State.aspx" title="State" description="Demographic Master" />
+      <siteMapNode url="~/Masters/District.aspx" title="District" description="Demographic Master" />
+      <siteMapNode url="~/Masters/Area.aspx" title="Area" description="Demographic Master" />
+      <siteMapNode url="~/Masters/LandMark.aspx" title="LandMark" description="Demographic Master" />
+      <siteMapNode url="~/Masters/PatientCategory.aspx" title="Patient Category" description="Demographic Master" />
+      <siteMapNode url="~/Masters/PatientSubCategory.aspx" title="Patient SubCategory" description="Demographic Master" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Company" description="Master">
+      <siteMapNode url="~/Masters/Section.aspx" title="Section" description="Company" />
+      <siteMapNode url="~/Masters/Department.aspx" title="Department" description="Company" />
+      <siteMapNode url="~/Masters/SubDepartment.aspx" title="Sub Department" description="Company" />
+      <siteMapNode url="~/Masters/Designation.aspx" title="Designation" description="Company" />
+      <siteMapNode url="~/Masters/EmployeeType.aspx" title="Employee Type" description="Company" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Account" description="Master">
+      <siteMapNode url="~/Masters/BillGroupCategory.aspx" title="Bill Group Category" description="Account" />
+      <siteMapNode url="~/Masters/BillGroup.aspx" title="Bill Group" description="Account" />
+      <siteMapNode url="~/Masters/BillParticular.aspx" title="Bill Particular" description="Account" />
+      <siteMapNode url="~/BillCharges.aspx" title="Bill Charges" description="Account" />
+      <siteMapNode url="~/Masters/HealthPackage.aspx" title="Health Package" description="Account" />
+      <siteMapNode url="~/Masters/RateType.aspx" title="Rate Type" description="Account" />
+      <siteMapNode url="~/Masters/SetRateType.aspx" title="Set Rate Type IPD/OPD]" description="Account" />
+      <siteMapNode url="~/Masters/CopyRateType.aspx" title="Copy Rate Type" description="Account" />
+      <siteMapNode url="~/Masters/ModeOfPayment.aspx" title="Mode of Payment" description="Account" />
+      <siteMapNode url="~/Masters/DiscountGivenBy.aspx" title="Discount Given By" description="Account" />
+      <siteMapNode url="~/Masters/ReasonForBalance.aspx" title="Reason For Balance" description="Account" />
+      <siteMapNode url="~/Masters/ReasonForDiscount.aspx" title="Reason For Discount" description="Account" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Operation" description="Master">
+      <siteMapNode url="~/Masters/OperationTheatre.aspx" title="Operation Theatre" description="Operation" />
+      <siteMapNode url="~/Masters/OperationType.aspx" title="Operation Type" description="Operation" />
+      <siteMapNode url="~/Masters/OperationGroup.aspx" title="Operation Group" description="Operation" />
+      <siteMapNode url="~/Masters/OperationMaster.aspx" title="Operation Name Entry" description="Operation" />
+      <siteMapNode url="~/Masters/Specimen.aspx" title="Speciman" description="Operation" />
+    </siteMapNode>
+    <siteMapNode url="#" title="EMR Master" description="Master">
+      <siteMapNode url="~/Masters/ProvisionalDiagnosis.aspx" title="Provisional Diagnosis" description="EMR Master" />
+      <siteMapNode url="~/Masters/Antenatal.aspx" title="Antenatal" description="EMR Master" />
+      <siteMapNode url="~/Masters/Diagnosis.aspx" title="Diagnosis" description="EMR Master" />
+      <siteMapNode url="~/Masters/MileStone.aspx" title="Mile Stone" description="EMR Master" />
+      <siteMapNode url="~/Masters/Vaccination.aspx" title="Vaccination" description="EMR Master" />
+      <siteMapNode url="~/Masters/VaccineType.aspx" title="Vaccine Type" description="EMR Master" />
+      <siteMapNode url="~/Masters/DWMY.aspx" title="DWMY" description="EMR Master" />
+      <siteMapNode url="~/Masters/DoseMaster.aspx" title="Dose Master" description="EMR Master" />
+      <siteMapNode url="~/Masters/PatientComplaint.aspx" title="Patient Complaint" description="EMR Master" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Room" description="Master">
+      <siteMapNode url="~/Masters/RoomType.aspx" title="Room Type" description="Room" />
+      <siteMapNode url="~/Masters/RoomMaster.aspx" title="Room Master" description="Room" />
+      <siteMapNode url="~/Masters/BedMaster.aspx" title="Bed Master" description="Room" />
+      <siteMapNode url="~/Masters/BedAllot.aspx" title="Bed Allot" description="Room" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Diat Management" description="Master">
+      <siteMapNode url="#" title="Diat Setting" description="Diat Management" />
+      <siteMapNode url="#" title="Diat Unit Master" description="Diat Management" />
+      <siteMapNode url="#" title="Diat Type" description="Diat Management" />
+      <siteMapNode url="~/Masters/MealType.aspx" title="Meal Type" description="Diat Management" />
+      <siteMapNode url="~/Masters/MealItem.aspx" title="Meal Item" description="Diat Management" />
+      <siteMapNode url="~/Masters/MealItemUnit.aspx" title="Meal Item Unit" description="Diat Management" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Vehicle Master" description="Master">
+      <siteMapNode url="~/Masters/AmbulanceType.aspx" title="Ambulance Type" description="Vehicle Master" />
+      <siteMapNode url="~/Masters/VehicleMaster.aspx" title="Vehicle Detail" description="Vehicle Master" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Insurance Master" description="Master">
+      <siteMapNode url="~/Masters/InsuranceCompany.aspx" title="Insurance Company" description="Insurance Master" />
+      <siteMapNode url="~/Masters/Scheme.aspx" title="Scheme" description="Insurance Master" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Corporate Master" description="Master">
+      <siteMapNode url="~/Masters/CorporateCompany.aspx" title="Corporate Company" description="Corporate Master" />
+      <siteMapNode url="#" title="Company Insurance Entilement" description="Corporate Master" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Drug Master" description="Master">
+      <siteMapNode url="~/Masters/DrugCompany.aspx" title="Drug Company" description="Drug Master" />
+      <siteMapNode url="~/Masters/DrugGroup.aspx" title="Drug Group" description="Drug Master" />
+      <siteMapNode url="~/Masters/DrugMaster.aspx" title="Drug Name Entry" description="Drug Master" />
+      <siteMapNode url="~/Masters/DrugType.aspx" title="Drug Type" description="Drug Master" />
+      <siteMapNode url="~/Masters/GenericDrug.aspx" title="Generic Drug" description="Drug Master" />
+    </siteMapNode>
+  </siteMapNode>
+  <siteMapNode url="#" title="Registration" description="Registration" />
+  <siteMapNode url="#" title="OPD" description="OPD">
+    <siteMapNode url="~/PatientRegistration.aspx" title="OPD Patient Registration" description="OPD" />
+    <siteMapNode url="~/PatientRegistrationList.aspx?FormType=Nurse" title="OPD Nurse Module" description="OPD" />
+    <siteMapNode url="~/PatientRegistrationList.aspx?FormType=Consultant" title="Consultant Doctor" description="OPD" />
+    <siteMapNode url="~/PatientRegistrationList.aspx?FormType=OrderInv" title="Order Investigation" description="OPD" />
+    <siteMapNode url="~/PatientRegistrationList.aspx?FormType=ViewInv" title="View Investigation" description="OPD" />
+    <siteMapNode url="#" title="OPD Appointment" description="OPD" />
+  </siteMapNode>
+  <siteMapNode url="#" title="IPD" description="IPD">
+    <siteMapNode url="~/Masters/RoomStatus.aspx" title="Room Status" description="IPD" />
+    <siteMapNode url="#" title="Admit" description="IPD">
+      <siteMapNode url="~/IPD/IPDAdmission.aspx" title="Admit Patient" description="Admit" />
+      <siteMapNode url="~/IPD/IPDPatientSelection.aspx" title="Cancle Admission" description="Admit" />
+      <siteMapNode url="~/IPD/ShiftPatient.aspx" title="Shift Patient" description="Admit" />
+      <siteMapNode url="~/IPD/EditPatient.aspx" title="Edit Information" description="Admit" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Discharge" description="IPD">
+      <siteMapNode url="~/Masters/DischargeDetail.aspx" title="Discharge Recommanded" description="Discharge" />
+      <siteMapNode url="#" title="Discharge Patient" description="Discharge" />
+    </siteMapNode>
+  </siteMapNode>
+  <siteMapNode url="#" title="Billing" description="Billing">
+    <siteMapNode url="#" title="OPD Bill" description="Billing">
+      <siteMapNode url="#" title="OPD Billing" description="OPD Bill" />
+      <siteMapNode url="#" title="OPD Refund" description="OPD Bill" />
+      <siteMapNode url="#" title="OPD Reciept" description="OPD Bill" />
+    </siteMapNode>
+    <siteMapNode url="#" title="IPD Bill" description="Billing" />
+  </siteMapNode>
+</siteMap>

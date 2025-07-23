@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<siteMap>
+  <siteMapNode url="" title="Registration" description="Registration">
+    <siteMapNode url="~/Masters/PatientInfoList.aspx" title="Patient Registration" description="Registration" />
+    <siteMapNode url="~/Masters/PatientInfo16.aspx" title="New Registration" description="Registration" /> 
+  </siteMapNode>
+
+  <siteMapNode url="" title="Appointment" description="Registration"> 
+    <siteMapNode url="~/Appointment/Appointment.aspx" title="Appointment" description="Registration" />
+    <siteMapNode url="~/Admin Report/PatientPreviousHostory.aspx" title="Patient Previous Hostory" description="OPD" />
+    <siteMapNode url="~/Masters/PatientDocument.aspx" title="Patient Document" description="Registration" />
+  </siteMapNode>
+  <siteMapNode url="" title="Casualty" description="Casualty">
+    <siteMapNode url="~/Casualty/CasualtyRegistration.aspx" title="Casualty Registration" description="OPD" />
+  </siteMapNode>
+  <siteMapNode url="" title="IPD" description="IPD">
+    <siteMapNode url="~/IPD/IPDAdmitedPatientList.aspx" title="Admitted Patient Details" description="IPD" /> 
+  </siteMapNode>
+  <siteMapNode url="" title="Billing" description="Billing">  
+    
+      <siteMapNode url="#" title="OPD Bill" description="Billing">
+        <siteMapNode url="~/PatientRegistrationList.aspx?FormType=OPDBill&amp;amp;PatientType=OPD" title="OPD Biiling" description="OPD" />
+        <siteMapNode url="~/PatientRegistrationList.aspx?FormType=BillRefund&amp;amp;PatientType=OPD" title="OPD Refund" description="OPD Bill" />
+        <siteMapNode url="~/Masters/OPDReceipt.aspx" title="OPD Reciept" description="OPD Bill" />
+        <siteMapNode url="~/Masters/DailyCollection.aspx" title="OPD Collection" description="OPD" /> 
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

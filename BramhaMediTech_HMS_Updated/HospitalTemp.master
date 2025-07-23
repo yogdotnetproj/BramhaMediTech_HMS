@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HospitalTemp.master.cs" Inherits="HospitalTemp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!--<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    
+</head>-->
+
+    
+     <form id="Form1" runat="server">
+ <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+       <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Dashboard | HIMS ERA INFOSOFT</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+          <%--<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet">--%>
+    <!-- GLOBAL MAINLY STYLES-->
+    <link href="cssmain/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="cssmain/master.css"/>
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css"/>
+    <link href="cssmain/main.min.css" rel="stylesheet" />
+  
+    <!-- THEME STYLES-->
+    <link rel="stylesheet" href="plugins/theme/css/theme.min.css">
+    <link href="cssmain/themify-icons/css/themify-icons.css" rel="stylesheet" />
+    
+    <!-- PAGE LEVEL STYLES-->
+    <link href="plugins/datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+   
+    </head>
+
+    <body class="fixed-navbar has-animation">
+        <div class="wrapper">
+            <header class="header">
+
+            <div class="page-brand p-1 align-self-center">
+                <a class="link" href="index.html">
+                    <span class="brand"> 
+                        <span class="brand-tip text-center">HIS Management System</span>
+                    </span>
+                    <span class="brand-mini">HIS</span>
+                </a>
+            </div>
+            <div class="flex-1 colorTheme">
+                <!-- START TOP-LEFT TOOLBAR-->
+                <div class="d-flex justify-content-between bd-highlight p-1">
+                    <div class="align-self-center"><a class="nav-link sidebar-toggler js-sidebar-toggler"><i class="ti-menu"></i></a></div>
+                    <div class="col text-center align-self-center"> HIMS Management System</div>
+                    <div class="p-2">
+                         <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                           
+                            <li class="dropdown tasks-menu">
+                                
+                               <%-- <a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-sign-in"></i>
+                                </a>--%>
+
+                                 <a href="Home.aspx">
+                                   <%-- <i class="fa fa-fw fa-sign-in"></i>--%>
+                                      <i class="fa fa-fw fa-home"></i>
+                                </a>
+
+
+                               
+                                 
+                            </li>
+                              <li>
+                                <%--<a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>--%>
+                                <a  href="ChangePassword.aspx">
+                                    <i class="fa fa-fw fa-key"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <%--<a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>--%>
+                                <a href="Login.aspx" >
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+            <!-- Left side column. contains the logo and sidebar -->
+          <nav class="page-sidebar" id="sidebar">
+            <div id="sidebar-collapse">
+                <div class="admin-block d-flex">
+                    <div>
+                        <img src="images/admin-avatar.png" width="45px" />
+                    </div>
+                    <div class="admin-info">
+                        <div class="font-strong"><asp:Label ID="UsernameLB2" runat="server" Text=""></asp:Label></div><small>Administrator</small></div>
+                </div>
+                <ul class="side-menu metismenu">
+                    <li>
+                        <a class="active" href="Home.aspx"><i class="sidebar-item-icon fa fa-th-large"></i>
+                            <span class="nav-label">Dashboard</span>
+                        </a>
+                    </li>
+                    <asp:PlaceHolder ID="SlidBarHolder" runat="server"></asp:PlaceHolder>
+                </ul>
+            </div>
+        </nav>
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+                        
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+                    </div>
+                    
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer text-center">
+                <strong>Copyright &copy; 1999-2017 <a href="#">Era Infosoft </a>.</strong> All rights reserved.
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+        <script src="jsmain/jquery.min.js" type="text/javascript"></script>
+        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/vendors/popper.js/dist/umd/popper.min.js" type="text/javascript"></script>
+    <script src="jsmain/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="jsmain/metisMenu/dist/metisMenu.min.js" type="text/javascript"></script>   
+    <script src="jsmain/app.min.js" type="text/javascript"></script>
+        
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button);
+        </script>
+        
+        <!-- datepicker -->
+        <script src="plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="plugins/theme/js/theme.min.js"></script>
+         <%--<script src="plugins/datepicker/js/bootstrap-datetimepicker.js"></script>
+       <script src="plugins/datepicker/js/bootstrap-datetimepicker.min.js"></script>--%>
+   
+    </body>
+           
+    </form>
+
+
+</html>

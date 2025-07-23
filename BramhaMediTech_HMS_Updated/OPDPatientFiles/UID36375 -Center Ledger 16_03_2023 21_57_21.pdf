@@ -1,0 +1,13 @@
+<div>
+	<table cellspacing="0" rules="all" class="table table-responsive table-sm table-bordered" border="1" id="GV_CenterLedger" style="width:100%;border-collapse:collapse;">
+		<tr style="color:Black;font-weight:bold;">
+			<td colspan="9">Center Ledger</td>
+		</tr><tr style="color:Black;font-weight:bold;">
+			<th scope="col">Center </th><th scope="col">Reg Date</th><th scope="col">Particular Field</th><th scope="col">RegNo</th><th scope="col">Debit </th><th scope="col">Credit </th><th scope="col">Patient Name</th><th scope="col">User Name</th><th scope="col">Remark </th><th scope="col">Dr Name</th>
+		</tr><tr>
+			<td>AAAAA1</td><td>28/01/2022</td><td>BONE BIOPSY</td><td>6</td><td>900</td><td>0</td><td>Mr BONE BIOPSY</td><td>Admin</td><td>&nbsp;</td><td> SELF  </td>
+		</tr><tr style="background-color:White;">
+			<td>AAAAA1</td><td>28/01/2022</td><td>APPENDIX BIOPSY</td><td>5</td><td>900</td><td></td><td>Mr KKKKKKKKKKK</td><td>Admin</td><td>&nbsp;</td><td> SELF  </td>
+		</tr>
+	</table>
+</div>

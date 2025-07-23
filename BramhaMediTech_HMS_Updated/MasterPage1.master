@@ -1,0 +1,284 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage1.master.cs" Inherits="MasterPage1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<style>
+        /*paging {
+        padding: 0px 6px;
+    background-color: #38c8dd;
+    color: #fff;
+    border: 3px solid #fff;
+        }*/
+          
+         .AutoExtender
+        {
+            font-family: Verdana, Helvetica, sans-serif;
+            font-size: .8em;
+           font-weight: normal;
+            /*font-size:large;
+            font-weight:bold;*/
+            border: solid 1px #006699;
+            line-height: 20px;
+            padding: 10px;
+            background-color: White;
+            margin-left:0px;
+        }
+        .AutoExtenderList
+        {
+            border-bottom: dotted 1px #006699;
+            
+            color: black;
+            font-size:larger;
+            font-weight:bolder;
+        }
+        .AutoExtenderHighlight
+        {
+            color: White;
+            background-color: #006699 ;
+            font-size:larger;
+            font-weight:bolder;
+
+            
+        }
+       
+
+    </style>
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard | Hospital Management</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- GLOBAL MAINLY STYLES-->
+    <link href="cssmain/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="cssmain/master.css"/>
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css"/>
+    <link href="cssmain/main.min.css" rel="stylesheet" />
+  
+    <!-- THEME STYLES-->
+    <link rel="stylesheet" href="plugins/theme/css/theme.min.css">
+    <link href="cssmain/themify-icons/css/themify-icons.css" rel="stylesheet" />
+    
+    <!-- PAGE LEVEL STYLES-->
+    <link href="plugins/datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+     
+    <style>
+        .CompletionListClass {
+            font-size: 11px;
+            color: #000;
+            padding: 3px 5px;
+            border: 1px solid;
+            background: #fff;
+            width: auto;
+            z-index: 1;
+            position: absolute;
+            margin-left: 0px;
+        }
+
+        .AjaxCalendar .ajax__calendar_container {
+            border: 1px solid #646464;
+            background-color: yellow;
+            color: red;
+            z-index: 1000;
+        }
+
+        .AjaxCalendar .ajax__calendar_other .ajax__calendar_day,
+        .AjaxCalendar .ajax__calendar_other .ajax__calendar_year {
+            color: Black;
+        }
+
+        .AjaxCalendar .ajax__calendar_hover .ajax__calendar_day,
+        .AjaxCalendar .ajax__calendar_hover .ajax__calendar_month,
+        .AjaxCalendar .ajax__calendar_hover .ajax__calendar_year {
+            color: black;
+        }
+
+        .AjaxCalendar .ajax__calendar_active .ajax__calendar_day,
+        .AjaxCalendar .ajax__calendar_active .ajax__calendar_month,
+        .AjaxCalendar .ajax__calendar_active .ajax__calendar_year {
+            color: Purple;
+            font-weight: bold;
+        }
+    </style>
+
+    
+    
+</head>
+<body>
+     <div class="content-wrapper1">
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <section class="col-lg-12 ">
+                        <form id="form1" runat="server">
+                             <div class="panel panel-info" >
+      <div class="panel-heading" style="font-size:medium;font-weight:bold ;background-color:#B24592" ">Patient Information:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <asp:Label  ID="lblVaccinationStatus" Visible="false" Font-Bold="true" ForeColor="Red"  runat="server" Text=""></asp:Label> </div>
+      <div class="panel-body bg-white"  >
+    
+                            <div class="col-lg-12 text-left">
+                                <div class="row">
+                                <div class="col-lg-3 text-left">
+                                    <div class="form-group">
+                                        <label for="lblPatientName" style="text-align: left">Name:</label>
+                                        <asp:Label ID="lblPatientName" ForeColor="Red" Font-Bold="true" Font-Italic="true" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 text-left" >
+                                    <div class="form-group">
+                                        <label for="lblPrnNo" title="" style="text-align: left">PRN:</label>
+                                        <asp:Label ID="txtpatientregid" ForeColor="Red" Font-Bold="true" Font-Italic="true" runat="server" Text="1"></asp:Label>
+                                    </div>
+                                </div>
+                                    <div class="col-lg-2 text-left">
+                                    <div class="form-group">
+                                        <label for="lblBranchId" style="text-align: left">DOB:</label>
+                                        <asp:Label ID="Label6" ForeColor="Red" Font-Bold="true" Font-Italic="true" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                                <div id="Div7" class="col-lg-2 text-left" runat="server" visible="false">
+                                    <div class="form-group">
+                                        <label for="lblIpd"   title="" style="text-align: left">IPD No:</label>
+                                        <asp:Label ID="lblIpd" runat="server" Text="0"></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 text-left" id="Div8" runat="server" >
+                                    <div class="form-group">
+                                        <label for="lblOpd" title="" style="text-align: left">OPD No:</label>
+                                        <asp:Label ID="lblOpd" runat="server" Text="11"></asp:Label>
+                                    </div>
+                                </div>
+
+                              
+                                <div class="col-lg-2 text-left">
+                                    <div class="form-group">
+                                        <label for="lblMobileNo" title="" style="text-align: left">Mobile No:</label>
+                                        <asp:Label ID="lblMobileNo" runat="server" Text="1"></asp:Label>
+                                    </div>
+                                </div>
+                                     
+                                    </div>
+                            </div>
+                             
+                       
+                            <div class="col-lg-12 text-left">
+                                <div class="row">
+                                <div class="col-lg-3 text-left">
+                                    <div class="form-group">
+                                        <label for="lbldName" title="" style="text-align: left">Consultant:</label>
+                                        <asp:Label ID="lbldrname" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 text-left" >
+                                    <div class="form-group">
+                                        <label for="lblDept" title="" style="text-align: left">Dept:</label>
+                                        <asp:Label ID="lblDept" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-2 text-left">
+                                    <div class="form-group">
+                                        <label for="lblAge" title="" style="text-align: left">Age:</label>
+                                        <asp:Label ID="lblAge" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-lg-2 text-left"  >
+                                    <div class="form-group">
+                                        <label for="lblToken" title="" style="text-align: left">Token No:</label>
+                                        <asp:Label ID="lblToken" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+
+                               
+                                 <div class="col-lg-2 text-left">
+                                    <div class="form-group">
+                                        <label for="lblVisitingNo"   title="" style="text-align: left">Visit No:</label>
+                                        <asp:Label ID="lblVisitingNo" runat="server" Text=" "></asp:Label>
+                                    </div>
+                                </div>
+                                    </div>
+                            </div>
+
+           <div class="col-lg-12 text-left" runat="server" id="IpdRmCat">
+                                <div class="row">
+                                <div class="col-lg-3 text-left">
+                                    <div class="form-group">
+                                        <asp:Label id="lblPa" runat="server"  Text="Sponsor:"></asp:Label>
+                                        <asp:Label ID="lblPatCat" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 text-left">
+                                    <div class="form-group">
+                                        <asp:Label id="lblAde" runat="server"  Text="Adm.Date:"> </asp:Label>
+                                        <asp:Label ID="lblAdmissionDate" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+
+                                
+                               
+                                     <div id="Div3" class="col-lg-2 text-left" runat="server" >
+                                    <div class="form-group">
+                                        <asp:Label id="lblm"   runat="server" Text="Room Name :"></asp:Label>
+                                        <asp:Label ID="lblRoomName" runat="server" Text="0"></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 text-left">
+                                    <div class="form-group">
+                                        <asp:label id="kk" runat="server"  Text="Bed number:"></asp:label>
+                                        <asp:Label ID="lblBedName" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+     
+            <div class="col-lg-12 text-left">
+                                  <div class="row">
+                                      <div class="col-lg-6 text-left" >
+                                    <div class="form-group">
+                                        <label for="lblAddress" title="" style="text-align: left">Address:</label>
+                                        <asp:Label ID="lblAddress" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                                      <div class="col-lg-2 text-left">
+                                    <div class="form-group">
+                                        <asp:Label id="Label1" runat="server"  Text="Relative:"></asp:Label>
+                                        <asp:Label ID="lblKin" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 text-left">
+                                    <div class="form-group">
+                                        <asp:Label id="Label3" runat="server"  Text="Contact:"> </asp:Label>
+                                        <asp:Label ID="lblConct" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+
+                                
+                               
+                                     <div id="Div2" class="col-lg-2 text-left" runat="server" >
+                                    <div class="form-group">
+                                        <asp:Label id="Label5"   runat="server" Text="Relation:"></asp:Label>
+                                        <asp:Label ID="lblRelation" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                                    </div>
+                                 </div>
+           </div>
+                                       <div style="height:2px; background:#B24592;"> </div>
+                            </div> 
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </form>
+                    </section>
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+</body>
+</html>

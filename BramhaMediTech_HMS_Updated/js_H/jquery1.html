@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js">    </script>
+    <script>
+         $(document).ready(function(){
+            // $("input").click(function(){
+            //     alert("hello");
+            // })
+            
+            $("#btnadd").click(function(){
+                var a=$("#txt1").val();
+                var b=$("#txt2").val();
+               // var c=Number(a)+Number(b);
+               var c=Number(a)+Number(b);
+                $("#msg").html("addition="+c);
+            })
+            $("#btnsub").click(function(){
+                var a=$("#txt1").val();
+                var b=$("#txt2").val();
+                var c=Number(a)-Number(b);
+                $("#msg1").html("subtraction="+c);
+            })
+            
+            $("#btnmulti").click(function(){
+                var a=$("#txt1").val();
+                var b=$("#txt2").val();
+                var c=Number(a)*Number(b);
+                $("#msg2").html("multiplication="+c);
+            })
+
+            $("#btndiv").click(function(){
+                var a=$("#txt1").val();
+                var b=$("#txt2").val();
+                var c=Number(a)/Number(b).toFixed();
+                $("#msg3").html("division="+c);
+            })
+            
+        })
+        
+</script>
+</head>
+<body>
+    <!-- <input type="button" value="submit" id="btnsubmit"/>
+    <input type="text" id="txt1"/>
+    <input type="radio"/>
+    <input type="button" value="dispaly" id="btndisplay"/> -->
+
+    Number 1<input type="text" id="txt1"/>
+    Number 2<input type="text" id="txt2"/><br><br>
+    <input type="button" value="addition" id="btnadd"/>
+    <input type="button" value="subtraction" id="btnsub"/>
+    <input type="button" value="multiplication" id="btnmulti"/>
+    <input type="button" value="division" id="btndiv"/>
+    <h1 id="msg"></h1>
+    <h1 id="msg1"></h1>
+    <h1 id="msg2"></h1>
+    <h1 id="msg3"></h1>
+    
+</body>
+</html>

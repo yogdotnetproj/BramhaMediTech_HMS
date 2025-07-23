@@ -1,0 +1,319 @@
+﻿<%@ Master Language="C#"  AutoEventWireup="true" CodeFile="IPDHospital.master.cs" Inherits="IPDHospital" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!--<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    
+</head>-->
+<link href="style/style.css" rel="stylesheet" />
+    <style>
+        paging {
+        padding: 0px 6px;
+    background-color: #38c8dd;
+    color: #fff;
+    border: 3px solid #fff;
+        }
+
+    </style>
+ <head>
+ <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Dashboard | HIMS ERA INFOSOFT</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+        <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="plugins/theme/css/theme.min.css"/>
+        <link rel="stylesheet" href="plugins/theme/css/skins/_all-skins.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+     <link href="plugins/datepicker/css/bootstrap-datepicker3.css" rel="stylesheet"  />
+     
+     
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+       
+        <link rel="stylesheet" href="plugins/theme/css/theme.min.css">
+        <link rel="stylesheet" href="plugins/theme/css/skins/_all-skins.min.css">
+        
+
+      
+        
+    
+        <link href="App_Themes/Default/GVCss.css" rel="stylesheet" type="text/css" />
+       <link href="css/bootstrap-datepicker.css"  rel="stylesheet" />
+    <link href="css1/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css1/bootstrap.min.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="css/style.css">
+  
+    
+
+
+      
+    </head>
+
+    
+    <body class="hold-transition skin-black sidebar-mini">
+        <form id="Form1" runat="server">
+            <div class="wrapper">
+            <header class="main-header">
+                <!-- Logo -->
+                <a href="" class="logo" style="width:194px">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <span class="logo-mini"><img src="images/logo.jpg" style="width:228px" /></span>
+                    <!-- logo for regular state and mobile devices -->
+                    <span class="logo-lg"><img src="images/logo.jpg" style="width:228px"/></span>
+                </a>
+                <!-- Header Navbar: style can be found in header.less -->
+                <nav class="navbar navbar-static-top">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                     
+                                   <div style="text-align:center;margin:auto;margin-top:13px"><p style="color:#fff;font-size:18px">HIMS Management System</p></div>
+                             
+                  
+                    <div class="navbar-custom-menu" style="margin-top:-40px">
+                        <ul class="nav navbar-nav">
+                           
+                            <li class="dropdown tasks-menu">
+                                
+                               <%-- <a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-sign-in"></i>
+                                </a>--%>
+
+                                 <a href="Home.aspx">
+                                   <%-- <i class="fa fa-fw fa-sign-in"></i>--%>
+                                      <i class="fa fa-fw fa-home"></i>
+                                </a>
+
+
+                               
+                                 
+                            </li>
+                              <li>
+                                <%--<a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>--%>
+                                <a href="#" >
+                                    <i class="fa fa-fw fa-key"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <%--<a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>--%>
+                                <a href="Login.aspx" >
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="images/profile.jpg" class="img-circle" alt="User Image" />
+                        </div>
+                        <div class="pull-left info" style="margin-top:5px">
+                            <p style="padding-bottom:6px">User Name</p>
+                            <a href="#"><i class="fa fa-circle text-success"></i><asp:Label ID="LblUtype" runat="server" Text="Label"></asp:Label> </a>
+                        </div>
+                    </div>
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="parentEle" id="newlist"></ul>
+                   <ul class="sidebar-menu" data-widget="tree"  hidden="hidden">
+                        <li class="treeview">
+
+                         <asp:TreeView ID="TrMenu"  Visible="true" runat="server"  ExpandDepth="1"   
+                                onselectednodechanged="TrMenu_SelectedNodeChanged"  >
+                                <HoverNodeStyle Font-Underline="false" />
+                                <NodeStyle Font-Names ="Tahoma" Font-Size="10pt"   HorizontalPadding="2px" NodeSpacing="0px" VerticalPadding="2px" >
+                                </NodeStyle>
+                                <ParentNodeStyle  />
+                                <SelectedNodeStyle  Font-Underline="false" HorizontalPadding="0px" 
+                                VerticalPadding="0px" />
+                
+                         </asp:TreeView>
+
+                           
+                           
+                        </li>                    
+                       
+                        
+                       
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+                        
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+                    </div>
+                    <div class="row">
+                        <section class="col-lg-5 connectedSortable">
+
+                        </section>
+                    </div>
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer text-center">
+                <strong>Copyright &copy;2019 <a href="#">Era InfoSoft</a>.</strong> All rights reserved.
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+        <script src="plugins/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button);
+        </script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+            <script src="Scripts/umd/popper.min.js"></script>
+        <!-- datepicker -->
+        <script src="plugins/datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+        <script src="plugins/theme/js/theme.min.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+
+                    $('#MainContent_datepicker1', "").datepicker({
+                        format: "dd/mm/yyyy"
+                    }).on('change', function () {
+                        $('.datepicker').hide();
+                    });
+                    $('#MainContent_txtToDate').datepicker({
+                        format: "dd/mm/yyyy"
+                    }).on('change', function () {
+                        $('.datepicker').hide();
+                    });
+
+                });
+            </script>
+            <script src="js0/bootstrap.js" type="text/javascript"></script>
+    <script src="js0/jquery-1.11.0.min.js" type="text/javascript"></script>
+     
+        <link href="css1/11.css" rel="stylesheet" type="text/css" />
+        <link href="css1/12.css" rel="stylesheet" type="text/css" />
+         <script src="js0/1.js" type="text/javascript"></script>
+         <script src="js0/2.js" type="text/javascript"></script>
+           <script src="js0/3.js" type="text/javascript"></script>
+   <%--<script type="text/javascript">
+       $(document).ready(function () {
+
+           $.ajax({
+               type: "GET",
+               url: "Graphs.asmx/IPDMenusBind",
+               dataType: "json",
+               //contentType:'application/json; charset=utf-8',
+               success: function (res) {
+                   //alert(JSON.stringify(res));
+
+                   for (var i = 0; i < res.length; i++) {
+                       var items = '';
+                       debugger;
+                       items += '<li class="parents">' + res[i]["MenuName"] + '<span class="caret"></span>';
+
+                       var childs = '';
+                       var arr = res[i]["ChildMenus"];
+                       if (arr.length > 0) {
+                           childs = '<ul class="childEle">';
+                           for (var j = 0; j < arr.length; j++) {
+                               childs += '<li class="childs"><a href="' + arr[j]["Url"] + '" style="text-decoration:none;">' +
+                                           arr[j]["ChildMenuName"] +
+                                   '</a></li>';
+                           }
+                           childs += '</ul>';
+                       }
+
+                       items += childs;
+
+                       items += '</li>';
+
+                       $("#newlist").append(items);
+                   }
+
+                   $('.parentEle ul').hide();
+
+                   $('.parents').click(function () {
+                       $(this).find('ul').slideToggle(550);
+                   });
+
+                   $('.childs').hover(function () {
+
+                       $(this).css("background-color", "green");
+                       $("li").css("color", "white");
+                   },
+                     function () {
+                         $(this).css("background-color", "black");
+                     });
+
+                   $('a').hover(function () {
+                       $(this).css("color", "white");
+                   });
+
+
+                   $('.toggle').click(function (e) {
+                       e.preventDefault();
+
+                       var $this = $(this);
+
+                       if ($this.next().hasClass('show')) {
+                           $this.next().removeClass('show');
+                           $this.next().slideUp(350);
+                       } else {
+                           $this.parent().parent().find('li .inner').removeClass('show');
+                           $this.parent().parent().find('li .inner').slideUp(350);
+                           $this.next().toggleClass('show');
+                           $this.next().slideToggle(350);
+                       }
+                   });
+
+
+               },
+               failure: function () {
+                   alert('fail');
+               },
+               error: function (jqXHR, exception) {
+                   var msg = '';
+                   if (jqXHR.status === 0) {
+                       msg = 'Not connect.\n Verify Network.';
+                   } else if (jqXHR.status == 404) {
+                       msg = 'Requested page not found. [404]';
+                   } else if (jqXHR.status == 500) {
+                       msg = 'Internal Server Error [500].';
+                   } else if (exception === 'parsererror') {
+                       msg = 'Requested JSON parse failed.';
+                   } else if (exception === 'timeout') {
+                       msg = 'Time out error.';
+                   } else if (exception === 'abort') {
+                       msg = 'Ajax request aborted.';
+                   } else {
+                       msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                   }
+                   alert(msg);
+               },
+           });
+       });
+</script>--%>
+    
+    </form>
+</body>
+</html>

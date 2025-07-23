@@ -1,0 +1,7 @@
+Sp_Vw_IPDBillServicesDetailsReport
+Sp_Vw_IpdAdmissionRegister
+Sp_GetAllLabServiceName -- LAbDBName
+Sp_LabServiceDetails -- LabDBName
+SP_phpatrecfrm -- Trigger
+
+ 

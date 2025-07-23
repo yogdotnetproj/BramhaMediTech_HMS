@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class UserControls_ucPatientConsultant : System.Web.UI.UserControl
+{
+    BLLPatientInfo objPatientInfo = new BLLPatientInfo();
+    DOPatientInfo objDOPatientInfo = new DOPatientInfo();
+    BLLPatientRegistration objBLLPatientRegistration = new BLLPatientRegistration();
+    DOPatientRegistration objDOPatientRegistration = new DOPatientRegistration();
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            //objDOPatientRegistration = objBLLPatientRegistration.GetPatientRegistrationByPatientId(Convert.ToInt32(Session["PatientInfoId"]));
+            //lblRegNo.Text = objDOPatientRegistration.RegistrationNo;
+            //objDOPatientInfo = objPatientInfo.SelectOne(Convert.ToInt32(Session["PatientInfoId"]));
+            //lblPatientName.Text = objDOPatientInfo.TitleName + " " + objDOPatientInfo.PatientName;
+            //lblEntryDate.Text = Convert.ToString(objDOPatientInfo.EntryDate);
+        }
+    }
+
+    public void Load(int PatientRegistrationId)
+    {
+        objDOPatientRegistration = objBLLPatientRegistration.SelectOne(PatientRegistrationId);
+        lblRegNo.Text = objDOPatientRegistration.RegistrationNo;
+        lblEntryDate.Text = objDOPatientRegistration.RegistrationDateTime;
+        ViewState["PatientRegistrationID"] = objDOPatientRegistration.PatientRegistrationId;
+        objDOPatientInfo = objPatientInfo.SelectOne(objDOPatientRegistration.PatientInfoId);
+        lblPatientName.Text = objDOPatientInfo.PatientName;
+    }
+
+    public void LoadByPatientInfoId(int PatientInfoId)
+    {
+        objDOPatientInfo = objPatientInfo.SelectOne(PatientInfoId);
+        lblPatientName.Text = objDOPatientInfo.PatientName;
+        objDOPatientRegistration = objBLLPatientRegistration.GetPatientRegistrationByPatientId(PatientInfoId);
+        lblRegNo.Text = objDOPatientRegistration.RegistrationNo;
+        lblPatientName.Text = objDOPatientInfo.PatientName;
+    }
+}

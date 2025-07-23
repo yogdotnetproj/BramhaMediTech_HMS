@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<siteMap>
+  <siteMapNode url="#" title="Billing" description="Billing">
+    <siteMapNode url="#" title="OPD Bill" description="Billing">
+      <siteMapNode url="#" title="OPD Billing" description="OPD Bill" />
+      <siteMapNode url="#" title="OPD Refund" description="OPD Bill" />
+      <siteMapNode url="#" title="OPD Reciept" description="OPD Bill" />
+    </siteMapNode>
+    <siteMapNode url="#" title="IPD Bill" description="Billing" />
+  </siteMapNode>
+</siteMap>

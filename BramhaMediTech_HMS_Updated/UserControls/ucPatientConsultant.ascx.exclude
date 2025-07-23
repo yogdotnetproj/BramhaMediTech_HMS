@@ -1,0 +1,127 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucPatientConsultant.ascx.cs"
+    Inherits="UserControls_ucPatientConsultant" %>
+<%--<table>
+    <tr>
+         <td>
+        </td>
+        <td>
+            Reg No.:
+        </td>
+        <td>
+        </td>
+        <td>
+            <asp:Label ID="lblRegNo" runat="server"></asp:Label>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+            Name
+        </td>
+        <td>
+            :
+        </td>
+        <td>
+            <asp:Label ID="lblPatientName" runat="server" Text=""></asp:Label>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+            EntryDate
+        </td>
+        <td>
+            :
+        </td>
+        <td>
+            <asp:Label ID="lblEntryDate" runat="server" Text=""></asp:Label>
+        </td>
+      
+    </tr>
+</table>--%>
+
+<table width="1000px" style="height :50px">
+    
+    <tr style="height :23px">
+        <td width="3px">
+        </td>
+        <td style="width: 60px;">
+            Reg No.</td> <td width="3px">
+            :</td>
+        <td style="width: 82px;">
+            <asp:Label ID="lblRegNo" runat="server"></asp:Label>
+        </td>
+        <td width="3px">
+        </td>
+        <td style="width: 94px;">
+            EntryDate</td>
+        <td width="3px">
+            :</td>
+        <td width="135px">   <asp:Label ID="lblEntryDate" runat="server"></asp:Label>
+        </td>
+        
+        <td width="3px">
+        </td>
+        <td style="width: 106px">
+            Patient Name
+        </td>
+       <td width="3px">
+            :
+        </td>
+        <td style="width:205">
+            <asp:Label ID="lblPatientName" runat="server" Text=""></asp:Label>
+        </td>
+        </tr>
+    </table>
+
+ <%--<section class="content" style="height:35px">
+ <div class="box" runat="server" id="Show" style="height:35px">
+                               
+                          <div class="box-body">
+                               <div class="row">    
+                                         <div class="col-lg-12" style="height:35px"> 
+                                             <div class="row">
+                                                  <div class="col-lg-2">
+                                            <div class="form-group"> 
+                                                <asp:Label ID="Label1" Text="Reg.No." runat="server"></asp:Label>
+                                                </div>
+                                            </div>
+                                          <div class="col-lg-2">
+                                            <div class="form-group"> 
+                                                <asp:Label ID="lblRegNo" runat="server"></asp:Label>
+                                            </div>
+                                          </div>
+                                          <div class="col-lg-2">
+                                             <div class="form-group"> 
+                                                <asp:Label ID="Label2" runat="server" Text="Patient Name"></asp:Label>
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-2">
+                                            <div class="form-group"> 
+                                                <asp:Label ID="lblPatientName" runat="server"></asp:Label>
+                                                </div>
+                                           </div>
+                                                 <div class="col-lg-2">
+                                             <div class="form-group"> 
+                                                <asp:Label ID="Label3" runat="server" Text="Entry Date:"></asp:Label>
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-2">
+                                            <div class="form-group"> 
+                                                <asp:Label ID="lblEntryDate" runat="server"></asp:Label>
+                                                </div>
+                                           </div>
+                                                 </div>
+                                             </div>
+                                   </div>
+                              </div>
+     </div>
+     </section>--%> 
+                                                                             
+                                   

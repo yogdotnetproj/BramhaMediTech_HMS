@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<siteMap>
+  <siteMapNode url="#" title="Registration" description="Registration">
+    <siteMapNode url="~/OPD/CancelRegistration.aspx" title="Cancle Registration" description="Registration" />
+  </siteMapNode>
+  <siteMapNode url="#" title="OPD" description="OPD">
+    <siteMapNode url="~/PatientRegistration.aspx" title="OPD Patient Registration" description="OPD" />
+    <siteMapNode url="~/PatientRegistrationList.aspx?FormType=Nurse" title="OPD Nurse Module" description="OPD" />
+    <siteMapNode url="~/PatientRegistrationList.aspx?FormType=Consultant" title="Consultant Doctor" description="OPD" />
+    <siteMapNode url="~/PatientRegistrationList.aspx?FormType=OrderInv" title="Order Investigation" description="OPD" />
+    <siteMapNode url="~/PatientRegistrationList.aspx?FormType=ViewInv" title="View Investigation" description="OPD" />
+    <siteMapNode url="#" title="OPD Appointment" description="OPD" />
+  </siteMapNode>
+  <siteMapNode url="#" title="IPD" description="IPD">
+    <siteMapNode url="~/Masters/RoomStatus.aspx" title="Room Status" description="IPD" />
+    <siteMapNode url="#" title="Admit" description="IPD">
+      <siteMapNode url="~/IPD/IPDAdmission.aspx" title="Admit Patient" description="Admit" />
+      <siteMapNode url="~/IPD/IPDPatientSelection.aspx" title="Cancle Admission" description="Admit" />
+      <siteMapNode url="~/IPD/ShiftPatient.aspx" title="Shift Patient" description="Admit" />
+      <siteMapNode url="~/IPD/EditPatient.aspx" title="Edit Information" description="Admit" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Discharge" description="IPD">
+      <siteMapNode url="~/Masters/DischargeDetail.aspx" title="Discharge Recommanded" description="Discharge" />
+      <siteMapNode url="#" title="Discharge Patient" description="Discharge" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<siteMap>
+  <siteMapNode url="#" title="Master" description="Master">
+    <siteMapNode url="#" title="Admin" description="Master">
+      <siteMapNode url="~/Masters/PatientStatus.aspx" title="Patient Status" description="Admin" />
+      <siteMapNode url="~/Masters/RegistrationStatus.aspx" title="Registration Status" description="Admin" />
+      <siteMapNode url="~/Masters/LogReport.aspx" title="Log Report" description="Admin" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Diat Management" description="Master">
+      <siteMapNode url="#" title="Diat Setting" description="Diat Management" />
+      <siteMapNode url="#" title="Diat Unit Master" description="Diat Management" />
+      <siteMapNode url="#" title="Diat Type" description="Diat Management" />
+      <siteMapNode url="~/Masters/MealType.aspx" title="Meal Type" description="Diat Management" />
+      <siteMapNode url="~/Masters/MealItem.aspx" title="Meal Item" description="Diat Management" />
+      <siteMapNode url="~/Masters/MealItemUnit.aspx" title="Meal Item Unit" description="Diat Management" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Corporate Master" description="Master" />
+    <siteMapNode url="#" title="Drug" description="Master">
+      <siteMapNode url="~/Masters/DrugCompany.aspx" title="Drug Company" description="Drug" />
+      <siteMapNode url="~/Masters/DrugGroup.aspx" title="Drug Group" description="Drug" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Test Menu" description="Master" />
+  </siteMapNode>
+  <siteMapNode url="#" title="Billing" description="Billing">
+    <siteMapNode url="#" title="OPD Bill" description="Billing">
+      <siteMapNode url="~/frmBillIPD.aspx" title="OPD Billing" description="OPD Bill" />
+      <siteMapNode url="#" title="OPD Refund" description="OPD Bill" />
+      <siteMapNode url="#" title="OPD Reciept" description="OPD Bill" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

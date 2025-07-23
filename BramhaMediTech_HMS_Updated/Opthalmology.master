@@ -1,0 +1,501 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Opthalmology.master.cs" Inherits="Opthalmology" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <!-- <link href="style/style.css" rel="stylesheet" />-->
+    <style>
+        /*paging {
+        padding: 0px 6px;
+    background-color: #38c8dd;
+    color: #fff;
+    border: 3px solid #fff;
+        }*/
+          
+         .AutoExtender
+        {
+            font-family: Verdana, Helvetica, sans-serif;
+            font-size: .8em;
+           font-weight: normal;
+            /*font-size:large;
+            font-weight:bold;*/
+            border: solid 1px #006699;
+            line-height: 20px;
+            padding: 10px;
+            background-color: White;
+            margin-left:0px;
+        }
+        .AutoExtenderList
+        {
+            border-bottom: dotted 1px #006699;
+            
+            color: black;
+            font-size:larger;
+            font-weight:bolder;
+        }
+        .AutoExtenderHighlight
+        {
+            color: White;
+            background-color: #006699 ;
+            font-size:larger;
+            font-weight:bolder;
+
+            
+        }
+       
+
+    </style>
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard | Hospital Management</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- GLOBAL MAINLY STYLES-->
+    <link href="cssmain/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="cssmain/master.css"/>
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css"/>
+    <link href="cssmain/main.min.css" rel="stylesheet" />
+  
+    <!-- THEME STYLES-->
+    <link rel="stylesheet" href="plugins/theme/css/theme.min.css">
+    <link href="cssmain/themify-icons/css/themify-icons.css" rel="stylesheet" />
+    
+    <!-- PAGE LEVEL STYLES-->
+    <link href="plugins/datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+     
+    <style>
+        .CompletionListClass {
+            font-size: 11px;
+            color: #000;
+            padding: 3px 5px;
+            border: 1px solid;
+            background: #fff;
+            width: auto;
+            z-index: 1;
+            position: absolute;
+            margin-left: 0px;
+        }
+
+        .AjaxCalendar .ajax__calendar_container {
+            border: 1px solid #646464;
+            background-color: yellow;
+            color: red;
+            z-index: 1000;
+        }
+
+        .AjaxCalendar .ajax__calendar_other .ajax__calendar_day,
+        .AjaxCalendar .ajax__calendar_other .ajax__calendar_year {
+            color: Black;
+        }
+
+        .AjaxCalendar .ajax__calendar_hover .ajax__calendar_day,
+        .AjaxCalendar .ajax__calendar_hover .ajax__calendar_month,
+        .AjaxCalendar .ajax__calendar_hover .ajax__calendar_year {
+            color: black;
+        }
+
+        .AjaxCalendar .ajax__calendar_active .ajax__calendar_day,
+        .AjaxCalendar .ajax__calendar_active .ajax__calendar_month,
+        .AjaxCalendar .ajax__calendar_active .ajax__calendar_year {
+            color: Purple;
+            font-weight: bold;
+        }
+    </style>
+
+    
+    
+</head>
+<body class="fixed-navbar has-animation bluetheme" >
+    <div class="wrapper">
+      <header class="header">
+
+            <div class="page-brand p-1 align-self-center">
+                <a class="link" href="index.html">
+                    <span class="brand"> 
+                        <span class="brand-tip text-center">HIS Management System</span>
+                    </span>
+                    <span class="brand-mini">HIS</span>
+                </a>
+            </div>
+            <div class="flex-1 colorTheme">
+                <!-- START TOP-LEFT TOOLBAR-->
+                <div class="d-flex justify-content-between bd-highlight p-1">
+                    <div class="align-self-center"><a class="nav-link sidebar-toggler js-sidebar-toggler"><i class="ti-menu"></i></a></div>
+                    <div class="col text-center align-self-center"> HIMS Management System</div>
+
+                   
+                    <div class="p-2">
+                         <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                           
+                            <li class="dropdown tasks-menu">
+                                
+                               <%-- <a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-sign-in"></i>
+                                </a>--%>
+
+                                 <a href="Home.aspx">
+                                   <%-- <i class="fa fa-fw fa-sign-in"></i>--%>
+                                      <i class="fa fa-fw fa-home"></i>
+                                </a>
+
+
+                               
+                                 
+                            </li>
+                              <li>
+                                <%--<a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>--%>
+                                <a  href="ChangePassword.aspx">
+                                    <i class="fa fa-fw fa-key"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <%--<a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>--%>
+                                <a href="Login.aspx" >
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                     
+                </div>
+                
+            </div>
+         
+        </header>
+        
+   
+         <nav class="page-sidebar" id="sidebar">
+            <div id="sidebar-collapse">
+                <div class="admin-block d-flex">
+                    <div>
+                        <img src="images/admin-avatar.png" width="45px" />
+                    </div>
+                    <div class="admin-info">
+                        <div class="font-strong"><asp:Label ID="UsernameLB2" runat="server" Text=""></asp:Label></div><small>Administrator</small></div>
+                </div>
+                <ul class="side-menu metismenu">
+                    <li class="nav-label">
+                        <a class="active" href="ListPatients.aspx"><i class="sidebar-item-icon fa fa-th-large"></i>
+                            <span class="nav-label">Dashboard</span>
+
+                              <li runat="server" id="IPDEMRDashboard" visible="false" class="nav-label">
+                        <a href="IPDEMRDashboard.aspx"><span>IPD EMR Dashboard</span></a>
+                    </li>
+                    <li runat="server" id="IntakeOutputSheet"  class="nav-label">
+                        <a href="Opthalmology_Clinic.aspx"><span>Doctor Assessment</span></a>
+                    </li>
+                           <li runat="server" id="Refractive"  class="nav-label">
+                        <a href="RefractiveWorkup.aspx"><span>Refractive Workup</span></a>
+                    </li>
+                      <li runat="server" id="Li1"  class="nav-label">
+                        <a href="FaceExamination.aspx"><span>Face Examination</span></a>
+                    </li>
+                     <li runat="server" id="Li2"  class="nav-label">
+                        <a href="New_Opthalmology_Clinic.aspx"><span>Ophthalmology</span></a>
+                    </li>
+                   
+                   
+                    
+                    
+                   
+                  
+                           
+                        </a>
+                    </li>
+                   <%-- <asp:PlaceHolder ID="SlidBarHolder" runat="server"></asp:PlaceHolder>--%>
+                </ul>
+            </div>
+        </nav>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <section class="col-lg-12 ">
+                        <form id="form1" runat="server">
+                             <div class="panel panel-info" >
+      <div class="panel-heading" style="font-size:medium;font-weight:bold ;background-color:#B24592" ">Patient Information:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <asp:Label  ID="lblVaccinationStatus" Visible="false" Font-Bold="true" ForeColor="Red"  runat="server" Text=""></asp:Label> </div>
+      <div class="panel-body bg-white"  >
+    
+                            <div class="col-lg-12 text-left">
+                                <div class="row">
+                                <div class="col-lg-3 text-left">
+                                    <div class="form-group">
+                                        <label for="lblPatientName" style="text-align: left">Name:</label>
+                                        <asp:Label ID="lblPatientName" ForeColor="Red" Font-Bold="true" Font-Italic="true" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 text-left" >
+                                    <div class="form-group">
+                                        <label for="lblPrnNo" title="" style="text-align: left">PRN:</label>
+                                        <asp:Label ID="txtpatientregid" ForeColor="Red" Font-Bold="true" Font-Italic="true" runat="server" Text="1"></asp:Label>
+                                    </div>
+                                </div>
+                                    <div class="col-lg-2 text-left">
+                                    <div class="form-group">
+                                        <label for="lblBranchId" style="text-align: left">DOB:</label>
+                                        <asp:Label ID="Label6" ForeColor="Red" Font-Bold="true" Font-Italic="true" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                                <div id="Div7" class="col-lg-2 text-left" runat="server" visible="false">
+                                    <div class="form-group">
+                                        <label for="lblIpd"   title="" style="text-align: left">IPD No:</label>
+                                        <asp:Label ID="lblIpd" runat="server" Text="0"></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 text-left" id="Div8" runat="server" >
+                                    <div class="form-group">
+                                        <label for="lblOpd" title="" style="text-align: left">OPD No:</label>
+                                        <asp:Label ID="lblOpd" runat="server" Text="11"></asp:Label>
+                                    </div>
+                                </div>
+
+                              
+                                <div class="col-lg-2 text-left">
+                                    <div class="form-group">
+                                        <label for="lblMobileNo" title="" style="text-align: left">Mobile No:</label>
+                                        <asp:Label ID="lblMobileNo" runat="server" Text="1"></asp:Label>
+                                    </div>
+                                </div>
+                                     
+                                    </div>
+                            </div>
+                             
+                       
+                            <div class="col-lg-12 text-left">
+                                <div class="row">
+                                <div class="col-lg-3 text-left">
+                                    <div class="form-group">
+                                        <label for="lbldName" title="" style="text-align: left">Consultant:</label>
+                                        <asp:Label ID="lbldrname" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 text-left" >
+                                    <div class="form-group">
+                                        <label for="lblDept" title="" style="text-align: left">Dept:</label>
+                                        <asp:Label ID="lblDept" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-2 text-left">
+                                    <div class="form-group">
+                                        <label for="lblAge" title="" style="text-align: left">Age:</label>
+                                        <asp:Label ID="lblAge" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-lg-2 text-left"  >
+                                    <div class="form-group">
+                                        <label for="lblToken" title="" style="text-align: left">Token No:</label>
+                                        <asp:Label ID="lblToken" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+
+                               
+                                 <div class="col-lg-2 text-left">
+                                    <div class="form-group">
+                                        <label for="lblVisitingNo"   title="" style="text-align: left">Visit No:</label>
+                                        <asp:Label ID="lblVisitingNo" runat="server" Text=" "></asp:Label>
+                                    </div>
+                                </div>
+                                    </div>
+                            </div>
+
+           <div class="col-lg-12 text-left" runat="server" id="IpdRmCat">
+                                <div class="row">
+                                <div class="col-lg-3 text-left">
+                                    <div class="form-group">
+                                        <asp:Label id="lblPa" runat="server"  Text="Sponsor:"></asp:Label>
+                                        <asp:Label ID="lblPatCat" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 text-left">
+                                    <div class="form-group">
+                                        <asp:Label id="lblAde" runat="server"  Text="Adm.Date:"> </asp:Label>
+                                        <asp:Label ID="lblAdmissionDate" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+
+                                
+                               
+                                     <div id="Div3" class="col-lg-2 text-left" runat="server" >
+                                    <div class="form-group">
+                                        <asp:Label id="lblm"   runat="server" Text="Room Name :"></asp:Label>
+                                        <asp:Label ID="lblRoomName" runat="server" Text="0"></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 text-left">
+                                    <div class="form-group">
+                                        <asp:label id="kk" runat="server"  Text="Bed number:"></asp:label>
+                                        <asp:Label ID="lblBedName" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+     
+            <div class="col-lg-12 text-left">
+                                  <div class="row">
+                                      <div class="col-lg-6 text-left" >
+                                    <div class="form-group">
+                                        <label for="lblAddress" title="" style="text-align: left">Address:</label>
+                                        <asp:Label ID="lblAddress" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                                      <div class="col-lg-2 text-left">
+                                    <div class="form-group">
+                                        <asp:Label id="Label1" runat="server"  Text="Relative:"></asp:Label>
+                                        <asp:Label ID="lblKin" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 text-left">
+                                    <div class="form-group">
+                                        <asp:Label id="Label3" runat="server"  Text="Contact:"> </asp:Label>
+                                        <asp:Label ID="lblConct" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>
+
+                                
+                               
+                                    <%-- <div id="Div2" class="col-lg-2 text-left" runat="server" >
+                                    <div class="form-group">
+                                        <asp:Label id="Label5"   runat="server" Text="Relation:"></asp:Label>
+                                        <asp:Label ID="lblRelation" runat="server" Text=""></asp:Label>
+                                    </div>
+                                </div>--%>
+                                    </div>
+                                 </div>
+           </div>
+                                       <div style="height:2px; background:#B24592;"> </div>
+                            </div> 
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </form>
+                    </section>
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer text-center">
+            <strong>Copyright &copy; 1999-2017 <a href="#">ERA Infosoft</a>.</strong> All rights reserved.
+        </footer>
+    </div>
+     <script src="jsmain/jquery.min.js" type="text/javascript"></script>
+        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/vendors/popper.js/dist/umd/popper.min.js" type="text/javascript"></script>
+    <script src="jsmain/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="jsmain/metisMenu/dist/metisMenu.min.js" type="text/javascript"></script>   
+    <script src="jsmain/app.min.js" type="text/javascript"></script>
+    
+        <script src="plugins/datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            //alert('Dom ready');
+            //bindMenuLists();
+
+        });
+
+        bindMenuLists = function () {
+            $.ajax({
+                type: "POST",
+                contentType: 'application/x-www-form-urlencoded',
+                url: "k_CommonServices.asmx/BindMenuList",
+                dataType: "json",
+                success: function (json) {
+                    //alert(JSON.stringify(json));
+                    debugger;
+                    var tr;
+                    $.each(json, function (key, value) {
+                        tr = $('<li>');
+
+                        tr.append('<a href="#"><i class="fa fa-fw fa-user"></i><span><span class="pull-right-container">' +
+                            '<i class="fa fa-angle-left pull-right"></i></span>' +
+                               value.MenuName + '</span></a>');
+
+                        var ul;
+                        ul = $('<ul class="treeview-menu">');
+                        $.each(value.SubMenuNames, function (key1, value1) {
+                            ul.append('<li class="active"><a href="' + value1 + '"><i class="fa fa-circle-o"></i>' +
+                                key1 + '</a></li>');
+                        });
+                        ul.append('</ul>')
+                        tr.append(ul);
+                        tr.append('</li>');
+                        $('#idSideBar').append(tr);
+                    });
+                }
+            });
+        }
+
+        function numeric_only(e) {
+            var keycode;
+            if (window.event)
+                keycode = window.event.keyCode;
+            else if (event)
+                keycode = event.keyCode;
+            else if (e)
+                keycode = e.which;
+            else
+                return true;
+            if ((keycode == 45) || (keycode == 46) || (keycode >= 48 && keycode <= 57)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+            return true;
+        }
+
+        function alpha_only(e) {
+            var keycode;
+            if (window.event)
+                keycode = window.event.keyCode;
+            else if (event)
+                keycode = event.keyCode;
+            else if (e)
+                keycode = e.which;
+            else
+                return true;
+            if ((keycode == 32) || (keycode >= 65 && keycode <= 90) || (keycode >= 97 && keycode <= 122)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+            return true;
+        }
+
+        function AlphaNumeric(e) {
+            var keycode;
+            if (window.event)
+                keycode = window.event.keyCode;
+            else if (event)
+                keycode = event.keyCode;
+            else if (e)
+                keycode = e.which;
+            else
+                return true;
+            if ((keycode == 32) || (keycode == 38 || keycode == 45) || (keycode >= 47 && keycode <= 57) || (keycode >= 65 && keycode <= 90) || (keycode >= 97 && keycode <= 122)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

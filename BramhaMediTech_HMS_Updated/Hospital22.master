@@ -1,0 +1,276 @@
+﻿<%@ Master Language="C#"  AutoEventWireup="true" CodeFile="Hospital22.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!--<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    
+</head>-->
+    <head>
+ <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Dashboard | HIMS ERA INFOSOFT</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+       
+    <!-- GLOBAL MAINLY STYLES-->
+    <link href="cssmain/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="cssmain/master.css"/>
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css"/>
+    <link href="cssmain/main.min.css" rel="stylesheet" />
+  
+    <!-- THEME STYLES-->
+    <link rel="stylesheet" href="plugins/theme/css/theme.min.css">
+    <link href="cssmain/themify-icons/css/themify-icons.css" rel="stylesheet" />
+    
+    <!-- PAGE LEVEL STYLES-->
+    <link href="plugins/datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+
+      
+    </head>
+
+    
+    <body class="fixed-navbar has-animation bluetheme">
+        <form id="Form1" runat="server">
+            <ul class="color-theme">
+                       <li><a href="#" class="dark-theme"></a></li>
+                       <li><a href="#" class="light-theme"></a></li>
+                    <li><a href="#" class="red-theme"></a></li>
+                    <li><a href="#" class="blue-theme"></a></li>
+                       <li><a href="#" class="darkblue-theme"></a></li>
+                    <li><a href="#" class="green-theme"></a></li>
+                    <li><a href="#" class="orange-theme"></a></li>
+                </ul>
+            <div class="wrapper">
+           <header class="header">
+
+            <div class="page-brand p-1 align-self-center">
+                <a class="link" href="index.html">
+                    <span class="brand"> 
+                        <span class="brand-tip text-center">HIS Management System ...</span>
+                    </span>
+                    <span class="brand-mini">HIS</span>
+                </a>
+            </div>
+            <div class="flex-1 flexbox">
+                <!-- START TOP-LEFT TOOLBAR-->
+                
+                    <div class="align-self-center"><a class="nav-link sidebar-toggler js-sidebar-toggler"><i class="ti-menu"></i></a></div>
+                    <div class="col text-center align-self-center"> HIMS Management System....</div>
+                    <div class="d-flex">
+                         <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                           
+                            <li class="dropdown tasks-menu">
+                                
+                               <%-- <a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-sign-in"></i>
+                                </a>--%>
+
+                                 <a href="Home.aspx">
+                                   <%-- <i class="fa fa-fw fa-sign-in"></i>--%>
+                                      <i class="fa fa-fw fa-home"></i>
+                                </a>
+
+
+                               
+                                 
+                            </li>
+                              <li>
+                                <%--<a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>--%>
+                                <a  href="ChangePassword.aspx">
+                                    <i class="fa fa-fw fa-key"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <%--<a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>--%>
+                                <a href="Login.aspx" >
+                                    <i class="fa fa-fw fa-power-off"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+              
+                
+            </div>
+        </header>
+            <!-- Left side column. contains the logo and sidebar -->
+           <!-- <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less --
+                <section class="sidebar">
+                    <!-- Sidebar user panel --
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="images/profile.jpg" class="img-circle" alt="User Image" />
+                        </div>
+                        <div class="pull-left info" style="margin-top:5px">
+                            <p style="padding-bottom:6px">User Name</p>
+                            <a href="#"><i class="fa fa-circle text-success"></i><asp:Label ID="LblUtype" runat="server" Text="Label"></asp:Label> </a>
+                        </div>
+                    </div>
+                    <!-- sidebar menu: : style can be found in sidebar.less 
+                    <ul class="parentEle" id="newlist"></ul>
+                   <ul class="sidebar-menu" data-widget="tree"  hidden="hidden">
+                        <li class="treeview">
+
+                         <asp:TreeView ID="TrMenu"  Visible="true" runat="server"  ExpandDepth="1"   
+                                onselectednodechanged="TrMenu_SelectedNodeChanged"  >
+                                <HoverNodeStyle Font-Underline="false" />
+                                <NodeStyle Font-Names ="Tahoma" Font-Size="10pt"   HorizontalPadding="2px" NodeSpacing="0px" VerticalPadding="2px" >
+                                </NodeStyle>
+                                <ParentNodeStyle  />
+                                <SelectedNodeStyle  Font-Underline="false" HorizontalPadding="0px" 
+                                VerticalPadding="0px" />
+                
+                         </asp:TreeView>
+                           
+                        </li>    
+                       
+                    </ul>
+                </section>
+                <!-- /.sidebar 
+            </aside>-->
+                 <nav class="page-sidebar" id="sidebar">
+            <div id="sidebar-collapse">
+                <div class="admin-block d-flex">
+                    <div>
+                        <img src="images/admin-avatar.png" width="45px" />
+                    </div>
+                    <div class="admin-info">
+                        <div class="font-strong"><asp:Label ID="UsernameLB2" runat="server" Text=""></asp:Label></div><small>Administrator</small></div>
+                </div>
+                <ul class="side-menu metismenu">
+                    <li>
+                        <a class="active" href="Home.aspx"><i class="sidebar-item-icon fa fa-th-large"></i>
+                            <span class="nav-label">Dashboard</span>
+                        </a>
+                    </li>
+                    <asp:PlaceHolder ID="SlidBarHolder" runat="server"></asp:PlaceHolder>
+                </ul>
+            </div>
+        </nav>
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+                        
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+                    </div>
+                    <div class="row">
+                        <section class="col-lg-5 connectedSortable">
+
+                        </section>
+                    </div>
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer text-center">
+                <strong>Copyright &copy;2019 <a href="#">Era InfoSoft</a>.</strong> All rights reserved.
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+        <script src="plugins/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button);
+        </script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+            <script src="Scripts/umd/popper.min.js"></script>
+        <!-- datepicker -->
+        <script src="plugins/datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+        <script src="plugins/theme/js/theme.min.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+
+                    $('#MainContent_datepicker1', "").datepicker({
+                        format: "dd/mm/yyyy"
+                    }).on('change', function () {
+                        $('.datepicker').hide();
+                    });
+                    $('#MainContent_txtToDate').datepicker({
+                        format: "dd/mm/yyyy"
+                    }).on('change', function () {
+                        $('.datepicker').hide();
+                    });
+
+                });
+            </script>
+           
+     
+        
+         <script src="js0/1.js" type="text/javascript"></script>
+         <script src="js0/2.js" type="text/javascript"></script>
+           <script src="js0/3.js" type="text/javascript"></script>
+  
+    </form>
+        <script src="jsmain/jquery.min.js" type="text/javascript"></script>
+        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/vendors/popper.js/dist/umd/popper.min.js" type="text/javascript"></script>
+    <script src="jsmain/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="jsmain/metisMenu/dist/metisMenu.min.js" type="text/javascript"></script>   
+    <script src="jsmain/app.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $('a.red-theme').on('click', function () {
+                $('body').addClass('redtheme');
+                $('body').removeClass('bluetheme greentheme orangetheme lighttheme darktheme darkbluetheme');
+                e.preventDefault();
+
+            });
+            $('a.blue-theme').on('click', function () {
+                $('body').addClass('bluetheme');
+                $('body').removeClass('redtheme greentheme orangetheme lighttheme darktheme darkbluetheme');
+                e.preventDefault();
+
+            });
+            $('a.green-theme').on('click', function () {
+                $('body').addClass('greentheme');
+                $('body').removeClass('redtheme bluetheme orangetheme lighttheme darktheme darkbluetheme');
+                e.preventDefault();
+
+            });
+            $('a.orange-theme').on('click', function () {
+                $('body').addClass('orangetheme');
+                $('body').removeClass('redtheme bluetheme greentheme lighttheme darktheme darkbluetheme');
+                e.preventDefault();
+
+            });
+            $('a.light-theme').on('click', function () {
+                $('body').addClass('lighttheme');
+                $('body').removeClass('redtheme bluetheme greentheme orangetheme darktheme darkbluetheme');
+                e.preventDefault();
+
+            });
+            $('a.dark-theme').on('click', function () {
+                $('body').addClass('darktheme');
+                $('body').removeClass('redtheme bluetheme greentheme lighttheme orangetheme darkbluetheme');
+                e.preventDefault();
+
+            });
+            $('a.darkblue-theme').on('click', function () {
+                $('body').addClass('darkbluetheme');
+                $('body').removeClass('redtheme bluetheme greentheme lighttheme darktheme orangetheme');
+                e.preventDefault();
+
+            });
+</script>
+</body>
+</html>

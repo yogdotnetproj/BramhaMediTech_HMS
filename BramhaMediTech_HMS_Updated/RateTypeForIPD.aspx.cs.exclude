@@ -1,0 +1,261 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class RateTypeForIPD : BaseClass
+{
+    string UserId = "";
+    BELIpdRateType objBELIpdRateType = new BELIpdRateType();
+    DALIpdRateType objDALIpdRateType = new DALIpdRateType();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            try
+            {
+                show.Visible = false;
+                List.Visible = true;
+
+            }
+            catch (Exception)
+            {
+            }
+            FillSetRateTypeIPDGrid();
+            LoadPatientMainType();
+            LoadPatientSubType();
+            LoadRateTypeName();
+            LoadRoomTypeName();
+
+
+        }
+    }
+
+
+    protected void FillSetRateTypeIPDGrid()
+    {
+        gvSetRateTypeIPD.DataSource = objDALIpdRateType.FillGrid();
+        gvSetRateTypeIPD.DataBind();
+    }
+
+
+    protected void LoadPatientSubType()
+    {
+        ddlPatSubType.DataSource = objDALIpdRateType.FillPatInsuTypeDrop(Convert.ToInt32(ViewState["PatMainTypeId"]));
+        ddlPatSubType.DataTextField = "PatientInsuType";
+        ddlPatSubType.DataValueField = "PatientInsuTypeId";
+        ddlPatSubType.DataBind();
+
+    }
+
+    protected void LoadRateTypeName()
+    {
+        ddlRateType.DataSource = objDALIpdRateType.FillRateTypeDrop();
+        ddlRateType.DataTextField = "RateType";
+        ddlRateType.DataValueField = "RateTypeId";
+        ddlRateType.DataBind();
+    }
+    protected void LoadRoomTypeName()
+    {
+        ddlRoomType.DataSource = objDALIpdRateType.FillRoomTypeDrop();
+        ddlRoomType.DataTextField = "RType";
+        ddlRoomType.DataValueField = "RTypeId";
+        ddlRoomType.DataBind();
+    }
+    protected void LoadPatientMainType()
+    {
+
+        ddlPatMainType.DataSource = objDALIpdRateType.FillPatMainTypeDrop();
+        ddlPatMainType.DataTextField = "PatMainType";
+        ddlPatMainType.DataValueField = "PatMainTypeId";
+        ddlPatMainType.DataBind();
+    }
+
+
+    protected void ddlPatMainType_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        ViewState["PatMainTypeId"] = Convert.ToInt32(ddlPatMainType.SelectedValue);
+        LoadPatientSubType();
+    }
+
+
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+
+        string Message = "";
+
+        if (Convert.ToInt32(ViewState["RateTypeIpdId"]) > 0)
+        {
+
+            objBELIpdRateType.RateTypeIpdId = Convert.ToInt32(ViewState["RateTypeIpdId"]);
+            objBELIpdRateType.RateTypeId = Convert.ToInt32(ddlRateType.SelectedValue);
+            objBELIpdRateType.PatientInsuTypeId = Convert.ToInt32(ddlPatSubType.SelectedValue);
+            objBELIpdRateType.PatMainTypeId = Convert.ToInt32(ddlPatMainType.SelectedValue);
+            objBELIpdRateType.RTypeId = Convert.ToInt32(ddlRoomType.SelectedValue);
+            objBELIpdRateType.UpdatedBy = Convert.ToString(Session["username"]);
+            Message = objDALIpdRateType.UpdateIpdRateType(objBELIpdRateType);
+        }
+        else
+        {
+            objBELIpdRateType.RateTypeId = Convert.ToInt32(ddlRateType.SelectedValue);
+            objBELIpdRateType.PatientInsuTypeId = Convert.ToInt32(ddlPatSubType.SelectedValue);
+            objBELIpdRateType.PatMainTypeId = Convert.ToInt32(ddlPatMainType.SelectedValue);
+            objBELIpdRateType.RTypeId = Convert.ToInt32(ddlRoomType.SelectedValue);
+            objBELIpdRateType.CreatedBy = Session["username"].ToString();
+            objBELIpdRateType.FId = "1";
+            objBELIpdRateType.BranchId = Convert.ToInt32(Session["Branchid"]);
+            Message = objDALIpdRateType.InsertRateTypeIpd(objBELIpdRateType);
+        }
+
+        DynamicMessage(lblMessage, Message);
+        FillSetRateTypeIPDGrid();
+        clearall();
+
+        show.Visible = false;
+        List.Visible = true;
+    }
+
+    protected void btnaddnew_Click(object sender, EventArgs e)
+    {
+        show.Visible = true;
+        List.Visible = false;
+        lblMessage.Text = "";
+    }
+    protected void gvSetRateTypeIPD_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+
+        string RateTypeIpdId = (gvSetRateTypeIPD.DataKeys[e.RowIndex]["RateTypeIpdId"].ToString());
+        string Message = objDALIpdRateType.DeleteIpdRateType(Convert.ToInt32(RateTypeIpdId));//Convert.ToInt32(ViewState["PCId"])
+        DynamicMessage(lblMessage, Message);
+        FillSetRateTypeSearchGrid();
+        clearall();
+
+
+    }
+
+    private void clearall()
+    {
+        ddlRateType.SelectedValue = "0";
+        ddlPatSubType.SelectedValue = "0";
+        ddlPatMainType.SelectedValue = "0";
+        ddlRoomType.SelectedValue = "0";
+        ViewState["RateTypeIpdId"] = 0;
+    }
+
+    protected void gvSetRateTypeIPD_RowEditing(object sender, GridViewEditEventArgs e)
+    {
+
+        show.Visible = true;
+        List.Visible = false;
+
+        try
+        {
+            string RateTypeIpdId = (gvSetRateTypeIPD.DataKeys[e.NewEditIndex]["RateTypeIpdId"].ToString());
+            ViewState["RateTypeIpdId"] = RateTypeIpdId;
+            FillPage();
+            e.Cancel = true;
+        }
+        catch (Exception ex)
+        {
+            lblMessage.Text = ex.Message;
+        }
+    }
+
+
+    protected void FillPage()
+    {
+        try
+        {
+            objBELIpdRateType = objDALIpdRateType.SelectOne(Convert.ToInt32(ViewState["RateTypeIpdId"]));
+
+            ddlPatMainType.SelectedValue = Convert.ToString(objBELIpdRateType.PatMainTypeId);
+            ddlPatSubType.SelectedValue = Convert.ToString(objBELIpdRateType.PatientInsuTypeId);
+            ddlRateType.SelectedValue = Convert.ToString(objBELIpdRateType.RateTypeId);
+            ddlRoomType.SelectedValue = Convert.ToString(objBELIpdRateType.RTypeId);
+        }
+        catch (Exception ex)
+        {
+            lblMessage.Text = ex.Message;
+        }
+    }
+
+    protected void btnReset_Click(object sender, EventArgs e)
+    {
+        ViewState["RateTypeIpdId"] = 0;
+
+        lblMessage.Text = "";
+        LoadRateTypeName();
+        LoadPatientSubType();
+        LoadPatientMainType();
+        LoadRoomTypeName();
+        show.Visible = false;
+        List.Visible = true;
+
+    }
+
+
+
+    protected void btnShow_Click(object sender, EventArgs e)
+    {
+        FillSetRateTypeSearchGrid();
+    }
+
+
+    private void FillSetRateTypeSearchGrid()
+    {
+        objBELIpdRateType.RateType = txtRateType.Text;
+        objBELIpdRateType.PatMainType = txtPatientMainType.Text;
+        objBELIpdRateType.PatientInsuType = txtPatientSubType.Text;
+        gvSetRateTypeIPD.DataSource = objDALIpdRateType.FillSearchGrid(objBELIpdRateType);
+        gvSetRateTypeIPD.DataBind();
+    }
+
+
+    protected void btnResetSearch_Click(object sender, EventArgs e)
+    {
+        ResetSearch();
+    }
+
+
+    private void ResetSearch()
+    {
+        txtRateType.Text = "";
+        txtPatientMainType.Text = "";
+        txtPatientSubType.Text = "";
+
+    }
+
+    //protected void btnPrint_Click(object sender, EventArgs e)
+    //{
+    //    try
+    //    {
+    //        BLLReports objBLLReports = new BLLReports();
+    //        DataSet dsCustomers = new DataSet();
+    //        ReportDocument crystalReport = new ReportDocument();
+    //        crystalReport.Load(Server.MapPath("~/Report/RptSetRateType.rpt"));
+    //        dsCustomers = objBLLReports.GetSetRateType();
+    //        crystalReport.SetDataSource(dsCustomers);
+    //        crystalReport.ParameterFields["HospitalName"].CurrentValues.AddValue(Convert.ToString(Application["OrgnizationName"]));
+    //        crystalReport.ParameterFields["HospitalAddress"].CurrentValues.AddValue(Convert.ToString(Application["OrgnizationAddress"]));
+    //        //crystalReport.ParameterFields["Image"].CurrentValues.AddValue(Application["ImagePath"]);
+    //        crystalReport.ParameterFields["ReportFooter"].CurrentValues.AddValue("Hospital Software | Ph.020 0000000000");
+    //        crystalReport.ExportToHttpResponse
+    //        (CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, Response, false, "Employee");
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        lblMessage.Text = ex.Message;
+    //    }
+    //}
+
+    protected void ddlPatSubType_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+    protected void ddlRateType_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+}

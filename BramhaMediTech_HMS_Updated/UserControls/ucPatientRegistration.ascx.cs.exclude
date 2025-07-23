@@ -1,0 +1,108 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class UserControls_ucPatientRegistration : System.Web.UI.UserControl
+{
+    BLLPatientInfo objPatientInfo = new BLLPatientInfo();
+    DOPatientInfo objDOPatientInfo = new DOPatientInfo();
+
+    BLLPatientRegistration objBLLPatientRegistration = new BLLPatientRegistration();
+    DOPatientRegistration objDOPatientRegistration = new DOPatientRegistration();
+
+    DOPatientDiagnosis objDOPatientDiagnosis = new DOPatientDiagnosis();
+    BLLPatientDiagnosis objBLLPatientDiagnosis = new BLLPatientDiagnosis();
+
+    DOProvisionalDiagnosis objDOProvisionalDiagnosis = new DOProvisionalDiagnosis();
+    BLLProvisionalDiagnosis objBLLProvisionalDiagnosis = new BLLProvisionalDiagnosis();
+
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //if (!IsPostBack)
+        //{
+        //    objDOPatientInfo = objPatientInfo.SelectOne(Convert.ToInt32(Session["PatientId"]));
+        //    lblPatientName.Text = objDOPatientInfo.TitleName + " " + objDOPatientInfo.PatientName;
+        //    objDOPatientRegistration = objBLLPatientRegistration.GetPatientRegistrationByPatientId(Convert.ToInt32(Session["PatientId"]));
+        //    lblRegNo.Text = objDOPatientRegistration.RegistrationNo;
+        //    //   lblRegNo.Text=
+        //    //lblPrnNo.Text = objDOPatientInfo.PrnNo;
+        //    //lblPatientCategory.Text = objDOPatientInfo.PatientCategoryName;
+        //    //lblAddress.Text = objDOPatientInfo.PatientAddress;
+        //    //lblPatientSubCategory.Text = objDOPatientInfo.PatientSubCategoryName;
+        //    //lblEntryDate.Text =  Convert.ToString(objDOPatientInfo.EntryDate);
+        //    //lblBloodGroup.Text = Convert.ToString(objDOPatientInfo.BloodGroupName);
+        //}        
+    }
+
+
+    /// <summary>
+    /// It Fills And Sets the PatientDiagnosis From Table Data
+    /// </summary>
+    private void LoadPatientDiagnosisList()
+    {
+        int i = 0;
+        List<DOPatientDiagnosis> DOPatientDiagnosises = objBLLPatientDiagnosis.SelectAllByPatientRegistrationId(Convert.ToInt32(ViewState["PatientRegistrationID"]));
+        Label[] lblArray = new Label[DOPatientDiagnosises.Count];
+        foreach (DOPatientDiagnosis obj1 in DOPatientDiagnosises)
+        {
+            lblArray[i] = new Label();
+            lblArray[i].Text = obj1.DiagnosisName;
+            pnlPatientlDiagnosis.Controls.Add(lblArray[i]);
+            if (i < (DOPatientDiagnosises.Count - 1))
+                pnlPatientlDiagnosis.Controls.Add(new LiteralControl("<br />"));
+            i++;
+        }
+    }
+
+    /// <summary>
+    /// It Fills And Sets the ProvisionalDiagnosis From Table Data
+    /// </summary>
+    private void LoadProvisionalDiagnosis()
+    {
+        int i = 0;
+        List<DOProvisionalDiagnosis> DOProvisionalDiagnosises = objBLLProvisionalDiagnosis.SelectAllByPatientRegistrationId(Convert.ToInt32(ViewState["PatientRegistrationID"]));
+        Label[] lblArray = new Label[DOProvisionalDiagnosises.Count];
+        foreach (DOProvisionalDiagnosis obj1 in DOProvisionalDiagnosises)
+        {
+            lblArray[i] = new Label();
+            lblArray[i].Text = obj1.ProvisionalDiagnosisName;
+            pnlProvisionalDiagnosis.Controls.Add(lblArray[i]);
+            if (i < (DOProvisionalDiagnosises.Count - 1))
+                pnlProvisionalDiagnosis.Controls.Add(new LiteralControl("<br />"));
+            i++;
+        }
+    }
+
+
+
+    public void LoadByPatientInfoId(int PatientInfoId)
+    {
+        //objDOPatientInfo = objPatientInfo.SelectOne(PatientInfoId);
+        //lblDoctorName.Text = objDOPatientInfo.TitleName + " " + objDOPatientInfo.PatientName;
+        objDOPatientRegistration = objBLLPatientRegistration.GetPatientRegistrationByPatientId(PatientInfoId);
+        lblRegNo.Text = objDOPatientRegistration.RegistrationNo;
+        lblDoctorName.Text = objDOPatientRegistration.EmployeeName;
+        lblRegistrationDate.Text = objDOPatientRegistration.RegistrationDateTime;
+        ViewState["PatientRegistrationID"] = objDOPatientRegistration.PatientRegistrationId;
+        LoadPatientDiagnosisList();
+        LoadProvisionalDiagnosis();
+    }
+   
+    public void Load(int PatientRegistrationId)
+    {
+        objDOPatientRegistration = objBLLPatientRegistration.SelectOne(PatientRegistrationId);
+        lblRegNo.Text = objDOPatientRegistration.RegistrationNo;
+        lblDoctorName.Text = objDOPatientRegistration.EmployeeName;
+        Session["DoctorName"] = objDOPatientRegistration.EmployeeName;
+        Session["DoctorId"] = objDOPatientRegistration.EmployeeId;
+        lblRegistrationDate.Text = objDOPatientRegistration.RegistrationDateTime;
+        ViewState["PatientRegistrationID"] = PatientRegistrationId;
+        LoadPatientDiagnosisList();
+        LoadProvisionalDiagnosis();
+    }
+  
+}
