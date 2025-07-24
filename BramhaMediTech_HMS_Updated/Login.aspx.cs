@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-public partial class Login : BaseClass
+public partial class Login :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C(); 
     LoginDetails_b ld = new LoginDetails_b();

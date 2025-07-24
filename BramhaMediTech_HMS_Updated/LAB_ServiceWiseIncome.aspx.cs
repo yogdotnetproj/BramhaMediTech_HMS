@@ -20,7 +20,7 @@ using System.Net;
 using System.IO;
 
 
-public partial class LAB_ServiceWiseIncome : BasePage
+public partial class LAB_ServiceWiseIncome :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
 

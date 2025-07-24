@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class OTCathLabRegisterAdd : BaseClass
+public partial class OTCathLabRegisterAdd :BasePage
 {
     DALIPDDesk ObjDALIpd = new DALIPDDesk();
     BELOPDPatReg objBELIpd = new BELOPDPatReg();

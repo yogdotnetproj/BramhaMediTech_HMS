@@ -17,7 +17,7 @@ using System.IO;
 using System.Drawing;
 
 
-public partial class Nurse_PostCharges : BaseClass
+public partial class Nurse_PostCharges :BasePage
 {
     DALIPDDesk ObjDALIpd = new DALIPDDesk();
     BELOPDPatReg objBELIpd = new BELOPDPatReg();

@@ -17,7 +17,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class PreOperativeOrder : BasePage
+public partial class PreOperativeOrder :BasePage
 {
     clsEmr obj = new clsEmr();
 

@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 using System.Data.SqlClient;
 
-public partial class frmTreatment2 : BasePage
+public partial class frmTreatment2 :BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

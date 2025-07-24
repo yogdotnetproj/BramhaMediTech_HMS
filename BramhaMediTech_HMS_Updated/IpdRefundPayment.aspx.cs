@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class IpdRefundPayment : BasePage
+public partial class IpdRefundPayment :BasePage
 {
     DALIPDDesk ObjDALIpd = new DALIPDDesk();
 

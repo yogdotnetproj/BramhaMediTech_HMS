@@ -17,7 +17,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class OT_Template_Link : BasePage
+public partial class OT_Template_Link :BasePage
 {
     clsEmr obj = new clsEmr();
 

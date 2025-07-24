@@ -29,7 +29,7 @@ using ZXing;
 using ZXing.QrCode;
 using ZXing.Common;
 
-public partial class MRC_FinalBillList : BasePage
+public partial class MRC_FinalBillList :BasePage
 {
     BELOPDPatReg objBELOpdReg = new BELOPDPatReg();
     DALOpdReg objDALOpdReg = new DALOpdReg();

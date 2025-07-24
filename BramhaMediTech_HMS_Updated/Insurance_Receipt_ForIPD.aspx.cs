@@ -19,7 +19,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class Insurance_Receipt_ForIPD : BasePage
+public partial class Insurance_Receipt_ForIPD :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
     decimal total = 0;

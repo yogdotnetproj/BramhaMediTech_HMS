@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class BillTypeForPatient : BaseClass
+public partial class BillTypeForPatient :BasePage
 {
     BELPatBillType objBELBillType = new BELPatBillType();
     DALPatBillType objDALBillType = new DALPatBillType();

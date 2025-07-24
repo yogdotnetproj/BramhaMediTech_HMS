@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class AllOPDPatients : BasePage
+public partial class AllOPDPatients :BasePage
 {
 
     BELPatientInformation objBELPatInfo = new BELPatientInformation();

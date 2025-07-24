@@ -24,7 +24,7 @@ using System.Drawing;
 using System.Net.Mail;
 using System.Web.Management;
 
-public partial class EditFrontDeskBill : BaseClass
+public partial class EditFrontDeskBill :BasePage
 {
     BELPatientInformation objBELPatInfo = new BELPatientInformation();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

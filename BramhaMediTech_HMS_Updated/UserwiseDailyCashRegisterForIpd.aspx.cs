@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class UserwiseDailyCashRegisterForIpd : BasePage
+public partial class UserwiseDailyCashRegisterForIpd :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
    

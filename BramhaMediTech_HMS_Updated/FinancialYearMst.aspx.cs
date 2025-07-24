@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class FinancialYearMst : BaseClass
+public partial class FinancialYearMst :BasePage
 {
     BELFinancialYear objBELFinancialYear = new BELFinancialYear();
     DALFinancialYear objDALFinancialYear = new DALFinancialYear();

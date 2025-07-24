@@ -7,7 +7,7 @@ using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class PatientDischarge : BasePage
+public partial class PatientDischarge :BasePage
 {
     clsEmr obj = new clsEmr();
     BELOPDPatReg objBELIpd = new BELOPDPatReg();

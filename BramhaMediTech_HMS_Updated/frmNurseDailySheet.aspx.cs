@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class frmNurseDailySheet : BasePage
+public partial class frmNurseDailySheet :BasePage
 {
     clsDocSche obj = new clsDocSche();
     protected void Page_Load(object sender, EventArgs e)

@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class OperationNameMst : BaseClass
+public partial class OperationNameMst :BasePage
 {
     BELOperationTheater objBELOt = new BELOperationTheater();
     DALOperationTheater objDALOt = new DALOperationTheater();

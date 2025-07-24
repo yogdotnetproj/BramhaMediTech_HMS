@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class BillSubServices : BaseClass
+public partial class BillSubServices :BasePage
 {
     BELBillSubService objBELSubService = new BELBillSubService();
     DALBillSubService objDALSubService = new DALBillSubService();

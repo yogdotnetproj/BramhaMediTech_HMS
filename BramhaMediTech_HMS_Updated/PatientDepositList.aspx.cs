@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 
 
-public partial class PatientDepositList : BasePage
+public partial class PatientDepositList :BasePage
 {
     BELPatientInformation objBELPatInfo = new BELPatientInformation();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

@@ -10,7 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using CrystalDecisions.CrystalReports.Engine;
 
-public partial class StateMaster : BaseClass
+public partial class StateMaster :BasePage
 {
     BELSDC objBELSDC = new BELSDC();
     DALSDC objDALSDC = new DALSDC();

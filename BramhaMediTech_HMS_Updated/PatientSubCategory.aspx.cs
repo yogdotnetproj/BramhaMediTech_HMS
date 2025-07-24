@@ -17,7 +17,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class PatientSubCategory : BaseClass
+public partial class PatientSubCategory :BasePage
 {
     BLLPatientCategory objBLLPatientCategory = new BLLPatientCategory();
     DOPatientCategory objDOPatientCategory;

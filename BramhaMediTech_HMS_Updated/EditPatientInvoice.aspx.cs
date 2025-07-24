@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class EditPatientInvoice : BasePage
+public partial class EditPatientInvoice :BasePage
 {
     clsEmr obj = new clsEmr();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

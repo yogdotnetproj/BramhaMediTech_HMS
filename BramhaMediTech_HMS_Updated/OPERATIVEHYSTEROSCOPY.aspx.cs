@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 using System.Media;
-public partial class OPERATIVEHYSTEROSCOPY : BasePage
+public partial class OPERATIVEHYSTEROSCOPY :BasePage
 {
     public enum MessageType { Success, Error, Info, Warning };
     OT_Clinical_Template_C ObjOCT = new OT_Clinical_Template_C();

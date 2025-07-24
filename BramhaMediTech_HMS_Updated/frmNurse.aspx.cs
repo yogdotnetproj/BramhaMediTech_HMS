@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class frmNurse : BasePage
+public partial class frmNurse :BasePage
 {
     clsDocSche objDocSche = new clsDocSche();
     clsData objData = new clsData();

@@ -10,7 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using CrystalDecisions.CrystalReports.Engine;
 
-public partial class StaticialReport : BasePage
+public partial class StaticialReport :BasePage
 {
     BLLPatientCategory objBLLPatientCategory = new BLLPatientCategory();
     DOPatientCategory objDOPatientCategory;

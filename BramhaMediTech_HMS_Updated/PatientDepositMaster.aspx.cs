@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class PatientDepositMaster : BasePage
+public partial class PatientDepositMaster :BasePage
 {
     BELBillInfo objBELBillInfo = new BELBillInfo();
     DALBillInfo objDALBillInfo = new DALBillInfo();

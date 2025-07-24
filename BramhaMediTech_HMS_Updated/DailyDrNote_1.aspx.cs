@@ -17,7 +17,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class DailyDrNote_1 : BasePage
+public partial class DailyDrNote_1 :BasePage
 {
     clsEmr obj = new clsEmr();
 

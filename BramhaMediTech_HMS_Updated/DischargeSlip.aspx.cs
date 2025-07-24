@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class DischargeSlip : BasePage
+public partial class DischargeSlip :BasePage
 {
     DALIPDDesk ObjDALIpd = new DALIPDDesk();
    

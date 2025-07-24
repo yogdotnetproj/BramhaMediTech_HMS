@@ -24,7 +24,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Configuration;
 
-public partial class OPDDashboard : BasePage
+public partial class OPDDashboard :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     GrapReport_C ObjGR = new GrapReport_C();

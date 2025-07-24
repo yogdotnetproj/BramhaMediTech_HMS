@@ -7,7 +7,7 @@ using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class frmTreatment : BasePage
+public partial class frmTreatment :BasePage
 {
     clsTreatment objTreat = new clsTreatment();
     protected void Page_Load(object sender, EventArgs e)

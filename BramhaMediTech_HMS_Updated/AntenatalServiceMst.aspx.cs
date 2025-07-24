@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class AntenatalServiceMst : BaseClass
+public partial class AntenatalServiceMst :BasePage
 {
     BELAntenatal objBELAnte = new BELAntenatal();
     DALAntenatal objDALAnte = new DALAntenatal();

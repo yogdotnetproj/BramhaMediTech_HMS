@@ -16,7 +16,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class NurseGeneralEmr : BasePage
+public partial class NurseGeneralEmr :BasePage
 {
     clsEmr obj = new clsEmr();
 

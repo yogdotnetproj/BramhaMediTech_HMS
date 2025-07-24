@@ -16,7 +16,7 @@ using CrystalDecisions.Shared;
 using System.Web.Management;
 using System.Data;
 
-public partial class Adduser : BasePage
+public partial class Adduser :BasePage
 {
     AddUser Objau = new AddUser();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class MealItemMaster : BaseClass
+public partial class MealItemMaster :BasePage
 {
     BELMeal objBELMeal = new BELMeal();
     DALMeal objDALMeal = new DALMeal();

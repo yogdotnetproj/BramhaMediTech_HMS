@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class AddServicesToPackage : BaseClass
+public partial class AddServicesToPackage :BasePage
 {
     BELHealthPackage objBELHPack=new BELHealthPackage();
     DALHealthPackage objDALHPack=new DALHealthPackage ();

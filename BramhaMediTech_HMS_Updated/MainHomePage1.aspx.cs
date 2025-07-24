@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class MainHomePage1 : BasePage
+public partial class MainHomePage1 :BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

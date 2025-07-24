@@ -11,7 +11,7 @@ using System.Web.Services;
 using CrystalDecisions.CrystalReports.Engine;
 using System.Drawing;
 
-public partial class IPDPatientDrugListForNurse : BasePage
+public partial class IPDPatientDrugListForNurse :BasePage
 {
     clsTreatmentTransaction transaction = new clsTreatmentTransaction();
     protected void Page_Load(object sender, EventArgs e)

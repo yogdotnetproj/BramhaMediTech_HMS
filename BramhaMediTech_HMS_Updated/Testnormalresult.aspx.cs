@@ -18,7 +18,7 @@ using System.IO;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 
-public partial class Testnormalresult : BasePage
+public partial class Testnormalresult :BasePage
 {
     string Date1 = DateTime.Now.ToString("ddMMyyyy");
     string selectonFormula = "", regno = "", FID = "";

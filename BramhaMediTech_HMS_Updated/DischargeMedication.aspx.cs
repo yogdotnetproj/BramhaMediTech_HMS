@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 using System.Data.SqlClient;
 
-public partial class DischargeMedication : BasePage
+public partial class DischargeMedication :BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

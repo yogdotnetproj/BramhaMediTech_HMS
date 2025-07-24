@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class DermatologyOutPatient : BasePage
+public partial class DermatologyOutPatient :BasePage
 {
     public enum MessageType { Success, Error, Info, Warning };
     Dermatology_C ObjDer = new Dermatology_C();

@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class IPDDashboardReport : BasePage
+public partial class IPDDashboardReport :BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

@@ -21,7 +21,7 @@ using System.Web.Security;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-public partial class EmployeeMaster : BaseClass
+public partial class EmployeeMaster :BasePage
 {
     BELEmpReg objBELEmpReg = new BELEmpReg();
     DALEmpReg objDALEmpReg = new DALEmpReg();

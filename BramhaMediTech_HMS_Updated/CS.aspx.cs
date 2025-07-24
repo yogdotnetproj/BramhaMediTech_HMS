@@ -29,7 +29,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Drawing;
 
-public partial class CS : BasePage
+public partial class CS :BasePage
 {
     [WebMethod()]
     public static bool SaveCapturedImage(string data)

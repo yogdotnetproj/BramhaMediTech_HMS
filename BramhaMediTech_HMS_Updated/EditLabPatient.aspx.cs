@@ -19,7 +19,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class EditLabPatient : BasePage
+public partial class EditLabPatient :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
     decimal total = 0;

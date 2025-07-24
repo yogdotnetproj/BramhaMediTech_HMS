@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 using System.Media;
-public partial class MajorCase_Section : BasePage
+public partial class MajorCase_Section :BasePage
 {
     public enum MessageType { Success, Error, Info, Warning };
 

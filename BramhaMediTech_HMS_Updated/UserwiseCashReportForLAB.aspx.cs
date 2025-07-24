@@ -20,7 +20,7 @@ using System.Net;
 using System.IO;
 
 
-public partial class UserwiseCashReportForLAB : BasePage
+public partial class UserwiseCashReportForLAB :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
 

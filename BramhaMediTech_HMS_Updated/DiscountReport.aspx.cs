@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class DiscountReport : BasePage
+public partial class DiscountReport :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
    

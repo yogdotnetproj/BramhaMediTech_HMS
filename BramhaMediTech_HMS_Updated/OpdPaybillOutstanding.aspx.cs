@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class OpdPaybillOutstanding : BasePage
+public partial class OpdPaybillOutstanding :BasePage
 {
     BELOPDPatReg objBELOpdPatReg = new BELOPDPatReg();
     DALOpdReg objDALOpdPatReg = new DALOpdReg();

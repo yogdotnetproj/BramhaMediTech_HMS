@@ -20,7 +20,7 @@ using ZXing;
 using ZXing.QrCode;
 using ZXing.Common;
 
-public partial class Edit_RadiologyRegistration : BaseClass
+public partial class Edit_RadiologyRegistration :BasePage
 {
     clsEmr obj = new clsEmr();
     BELPatientInformation objBELPatInfo = new BELPatientInformation();

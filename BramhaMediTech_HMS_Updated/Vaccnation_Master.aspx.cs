@@ -10,7 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using CrystalDecisions.CrystalReports.Engine;
 
-public partial class Vaccnation_Master : BasePage
+public partial class Vaccnation_Master :BasePage
 {
     BLLPatientCategory objBLLPatientCategory = new BLLPatientCategory();
     DOPatientCategory objDOPatientCategory;

@@ -12,7 +12,7 @@ using CrystalDecisions;
 using CrystalDecisions.Shared;
 using CrystalDecisions.CrystalReports.Engine;
 
-public partial class Reports : BasePage
+public partial class Reports :BasePage
 {
     dbconnection da = new dbconnection();
     protected void Page_Load(object sender, EventArgs e)

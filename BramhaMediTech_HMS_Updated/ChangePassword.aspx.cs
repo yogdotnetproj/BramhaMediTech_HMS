@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
-public partial class Masters_ChangePassword : BasePage
+public partial class Masters_ChangePassword :BasePage
 {
     LoginDetails_b objBLLUser = new LoginDetails_b();
     public enum MessageType { Success, Error, Info, Warning };

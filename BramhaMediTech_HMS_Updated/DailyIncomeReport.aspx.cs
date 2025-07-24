@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class DailyIncomeReport : BasePage
+public partial class DailyIncomeReport :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
     decimal total = 0;

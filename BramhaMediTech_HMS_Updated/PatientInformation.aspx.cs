@@ -17,7 +17,7 @@ using System.IO;
 using System.Drawing;
 using System.Media;
 
-public partial class PatientInformation : BaseClass
+public partial class PatientInformation :BasePage
 {
     BELPatientInformation objBELPatInfo = new BELPatientInformation();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

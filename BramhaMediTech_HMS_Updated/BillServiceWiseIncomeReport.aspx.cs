@@ -17,7 +17,7 @@ using System.IO;
 
 
 
-public partial class BillServiceWiseIncomeReport : BaseClass
+public partial class BillServiceWiseIncomeReport :BasePage
     {
     BELOPDPatReg objBELOpdReg = new BELOPDPatReg();
     DALOpdReg objDALOpdReg = new DALOpdReg();

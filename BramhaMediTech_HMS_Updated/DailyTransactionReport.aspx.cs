@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class DailyTransactionReport : BasePage
+public partial class DailyTransactionReport :BasePage
 {
 
     BLLReports ObjDOReport = new BLLReports();

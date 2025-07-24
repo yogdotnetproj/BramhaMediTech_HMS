@@ -11,7 +11,7 @@ using System.Web.Services;
 using CrystalDecisions.CrystalReports.Engine;
 
 
-public partial class UserActiveControl : BasePage
+public partial class UserActiveControl :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     protected void Page_Load(object sender, EventArgs e)

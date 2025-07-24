@@ -17,7 +17,7 @@ using System.IO;
 using System.Drawing;
 
 
-public partial class OTGeneralRegisterAdd : BaseClass
+public partial class OTGeneralRegisterAdd :BasePage
 {
     DALIPDDesk ObjDALIpd = new DALIPDDesk();
     BELOPDPatReg objBELIpd = new BELOPDPatReg();

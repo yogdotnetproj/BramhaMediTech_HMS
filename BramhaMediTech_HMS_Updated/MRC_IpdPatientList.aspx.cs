@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 
 
-public partial class MRC_IpdPatientList : BasePage
+public partial class MRC_IpdPatientList :BasePage
 {
     BELOPDPatReg objBELOpdReg = new BELOPDPatReg();
     DALOpdReg objDALOpdReg = new DALOpdReg();

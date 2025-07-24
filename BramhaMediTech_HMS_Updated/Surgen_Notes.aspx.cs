@@ -17,7 +17,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class Surgen_Notes : BasePage
+public partial class Surgen_Notes :BasePage
 {
     clsEmr obj = new clsEmr();
 

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class PatientComplaintMst : BaseClass
+public partial class PatientComplaintMst :BasePage
 {
     BELComplaint objBELComplaint = new BELComplaint();
     DALComplaint objDALComplaint = new DALComplaint();

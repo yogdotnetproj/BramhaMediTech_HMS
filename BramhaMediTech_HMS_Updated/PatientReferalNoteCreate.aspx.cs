@@ -17,7 +17,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class PatientReferalNoteCreate : BasePage
+public partial class PatientReferalNoteCreate :BasePage
 {
     clsEmr obj = new clsEmr();
 

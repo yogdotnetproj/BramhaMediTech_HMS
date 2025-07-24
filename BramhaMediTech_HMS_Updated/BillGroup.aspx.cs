@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
-public partial class BillGroup : BaseClass
+public partial class BillGroup :BasePage
 {
     BELBillGroup objBELBillGroup = new BELBillGroup();
     DALBillGroup objDALBillGroup = new DALBillGroup();

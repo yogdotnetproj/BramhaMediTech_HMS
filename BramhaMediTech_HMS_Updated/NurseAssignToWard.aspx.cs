@@ -19,7 +19,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class NurseAssignToWard : BasePage
+public partial class NurseAssignToWard :BasePage
 {
     AddRoleRight_C ObjRoleRight = new AddRoleRight_C();
     // dbconnection dc = new dbconnection();

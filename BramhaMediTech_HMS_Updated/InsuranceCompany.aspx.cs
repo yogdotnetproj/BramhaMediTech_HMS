@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 
 
-public partial class InsuranceCompany : BaseClass
+public partial class InsuranceCompany :BasePage
 {
     BELInsurance objBELInsu = new BELInsurance();
     DAlInsurance objDALInsu = new DAlInsurance();

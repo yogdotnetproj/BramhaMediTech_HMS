@@ -9,7 +9,7 @@ using System.Configuration;
 using System.Collections;
 
 
-public partial class AddUsertype : BasePage
+public partial class AddUsertype :BasePage
 {
     AddUserType_C ObjAddUserType = new AddUserType_C();
     TreeviewBind_C ObjTB = new TreeviewBind_C();

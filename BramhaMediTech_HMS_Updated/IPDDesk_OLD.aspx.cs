@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class IPDDesk_OLD : BasePage
+public partial class IPDDesk_OLD :BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     DataTable dt = new DataTable();

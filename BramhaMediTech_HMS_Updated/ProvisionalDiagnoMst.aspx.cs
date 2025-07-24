@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class ProvisionalDiagnoMst : BaseClass
+public partial class ProvisionalDiagnoMst :BasePage
 {
     BELProvDiagno objBELProvDiagno = new BELProvDiagno();
     DALProvDiagno objDALProvDiagno = new DALProvDiagno();
