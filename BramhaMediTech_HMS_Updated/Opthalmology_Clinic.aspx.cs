@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 using System.Media;
-public partial class Opthalmology_Clinic : System.Web.UI.Page
+public partial class Opthalmology_Clinic : BasePage
 {
     public enum MessageType { Success, Error, Info, Warning };
     Dental_Clinic_C ObjDC = new Dental_Clinic_C();

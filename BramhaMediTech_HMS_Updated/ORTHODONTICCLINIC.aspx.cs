@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class ORTHODONTICCLINIC : System.Web.UI.Page
+public partial class ORTHODONTICCLINIC : BasePage
 {
     ORTHODONTICCLINIC_C ObjOC = new ORTHODONTICCLINIC_C();
     public enum MessageType { Success, Error, Info, Warning };

@@ -17,7 +17,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class PatientReferalNoteFormat : System.Web.UI.Page
+public partial class PatientReferalNoteFormat : BasePage
 {
     clsEmr obj = new clsEmr();
 

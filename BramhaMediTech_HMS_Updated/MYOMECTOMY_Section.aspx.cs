@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 using System.Media;
-public partial class MYOMECTOMY_Section : System.Web.UI.Page
+public partial class MYOMECTOMY_Section : BasePage
 {
     OT_Clinical_Template_C ObjOCT = new OT_Clinical_Template_C();
     BELIntakeOutputChart objBELIO = new BELIntakeOutputChart();

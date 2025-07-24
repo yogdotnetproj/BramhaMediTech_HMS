@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class SearchQuotationPatientList : System.Web.UI.Page
+public partial class SearchQuotationPatientList : BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
     BELOPDPatReg objBELOpdReg = new BELOPDPatReg();

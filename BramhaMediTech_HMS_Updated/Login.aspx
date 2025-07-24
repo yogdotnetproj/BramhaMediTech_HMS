@@ -1,192 +1,112 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Log in  </title>
+        <title>BramhaMediTech</title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <%--<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet">--%>
-    <!-- GLOBAL MAINLY STYLES-->
-    <link href="cssmain/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="cssmain/master.css"/>
-    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css"/>
-    <link href="cssmain/main.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="plugins/theme/css/theme.min.css">
-        <link rel="stylesheet" href="css/style.css">
-       <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">-->
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-      <!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"> -->
-       <style type="text/css">
-		body{
-			font-family: 'Source Sans Pro';
-		}
-
-		.extralight{
-			
-			font-weight: 100;
-		}
-
-		.light{
-			
-			font-weight: 300;
-		}
-
-		.regular{
-			
-			font-weight: 400;
-		}
-
-		.semibold{
-			
-			font-weight: 600;	
-		}
-
-		.bold{
-			
-			font-weight: 700;	
-		}
-
-		.black{
-			
-			font-weight: 900;		
-		}
-
-        .form-control:focus, .form-control:hover {
-    box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
-    color: #1f2022;
-}
-.form-control:hover {
-    background: #ebebeb;
-    border-color: #ebebeb;
-}
-.form-control {
-    background: #ebebeb;
-    border: 1px solid #ebebeb;
-    border-radius: 20px;
-    color: #1f2022;
-    display: block;
-    font-size: 1rem;
-    height: auto;
-    line-height: 1.43;
-    outline: none;
-    padding: calc(0.61429rem - 1px) 1.42857rem !important;
-    transition: background .2s ease-in-out,border .2s ease-in-out,box-shadow .2s ease-in-out,color .2s ease-in-out;
-    
-    width: 100%;
-}
-	</style>
+        <!-- Favicon icon-- >
+        <link rel="icon" href="customTheme/images/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="customTheme/images/favicon.png" type="image/x-icon">
+        <!-- Google font-->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&amp;display=swap" rel="stylesheet">
+        <!-- Flag icon css -->
+        <link rel="stylesheet" href="customTheme/css/vendors/flag-icon.css">
+        <!-- iconly-icon-->
+        <link rel="stylesheet" href="customTheme/css/iconly-icon.css">
+        <link rel="stylesheet" href="customTheme/css/bulk-style.css">
+        <!-- iconly-icon-->
+        <link rel="stylesheet" href="customTheme/css/themify.css">
+        <!--fontawesome-->
+        <link rel="stylesheet" href="customTheme/css/fontawesome-min.css">
+        <!-- Whether Icon css-->
+        <link rel="stylesheet" type="text/css" href="customTheme/css/vendors/weather-icons/weather-icons.min.css">
+        <!-- App css -->
+        <link id="color" rel="stylesheet" href="customTheme/css/color-1.css" media="screen">
+        <link rel="stylesheet" href="customTheme/css/style.css">
     </head>
-<class="hold-transition login-page" >
- <body class="hold-transition login-page">
-    <form id="form1" runat="server">
-         <asp:ScriptManager ID="ScriptManager1" runat="server">
-    </asp:ScriptManager>
-     <div  class="regular">
-       <div class="login-box">
-            <div class="login-box-body">
-                <div class="login-logo">
-                    <img src="images/pis-logo.jpg" alt="" class="logo-img">
-                   
-                </div>  
-                      <div class="content-body">
-                          <%-- <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                <ContentTemplate>
-                    
-                         <asp:Panel ID="PopupGrid" runat="server" Height="50px" Width="1000px">
-        <table border="0" cellpadding="0" cellspacing="0" style="border-right: steelblue 2px solid;
-            border-top: steelblue 2px solid; font-size: 8pt; text-transform: capitalize;
-            border-left: steelblue 2px solid; color: #043454; border-bottom: steelblue 2px solid;
-            font-family: Verdana; background-color: #e5f4ff; text-align: left" width="900">
-            <tr>
-                <td align="center" colspan="1" style="width: 10px; height: 14px">
-                </td>
-                <td align="center" colspan="6" style="height: 14px">
-                    &nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td align="center" colspan="1" style="width: 10px; height: 14px">
-                    &nbsp; &nbsp;
-                </td>
-                <td align="center" colspan="6" style="height: 14px">
-                    <strong>To use this product, you must buy it.&nbsp;</strong>
-                </td>
-            </tr>
-            <tr>
-                <td align="center" colspan="1" style="width: 10px; height: 14px">
-                </td>
-                <td align="center" colspan="6" style="height: 14px">
-                    You have installed products in evaluation mode.
-                </td>
-            </tr>
-            </table>
-                             </asp:Panel>
-                    <cc1:modalpopupextender id="ModalPopupExtender1" runat="server" backgroundcssclass="AutoPOPup"
-        dropshadow="true" popupcontrolid="PopupGrid" targetcontrolid="hdnTarget">
-    </cc1:modalpopupextender>
-    <asp:HiddenField ID="lblhide" runat="server" />
-    <asp:HiddenField ID="hdnTarget" runat="server" />
-                    </ContentTemplate>
-                        </asp:UpdatePanel>--%>
-                <h3 class="login-box-msg mb-5">Login to your account</h3>
-                <form action="dashboard.html" method="post" >
-                    
-                    <div class="form-group has-feedback mb-3 d-flex mt-3">
-                       <!-- <input type="email" class="form-control" placeholder="Email"> -->
-                        <!--<span class="far fa-user mr-1"></span>-->
-                        <asp:TextBox ID="txtUName" runat="server" class="form-control" ></asp:TextBox>
+    <class="hold-transition login-page">
+    <body class="light">
+        <!-- tap on top starts-->
+        <div class="tap-top"><i class="iconly-Arrow-Up icli"></i></div>
+        <!-- tap on tap ends-->
+        <!-- loader-->
+        <form id="form1" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <!-- login page start-->
+            <div class="container-fluid p-0">
+              <div class="row m-0">
+                <div class="col-12 p-0">    
+                  <div class="login-card login-dark">
+                    <div>
+                      <!--div><a class="logo"><img class="img-fluid for-light m-auto" src="customTheme/brahmaMedicalDark.png" alt="looginpage"><img class="img-fluid for-dark" src="customTheme/brahmaMedicalDark.png" alt="logo"></a></!--div-->
+                      <!--div><h1 class="text-center mb-4">Bramha MediTech<br />Software Solution</h1></div-->
+                      <h1 class="text-center" style="margin-bottom: 30px;">Hospital Information<br>Management System</h1>
+                      <div class="login-main">
+                        <form action="dashboard.html" method="post" class="theme-form">
+                            <!--h2 class="text-center">Hospital information management system</!--h2-->
+                            <div><a class="logo"><img width="170px" class="img-fluid for-light m-auto" src="customTheme/brahmaMedicalDark.png" alt="looginpage"><img width="170px" class="img-fluid for-dark" src="customTheme/brahmaMedicalDark.png" alt="logo"></a></div>
+                            <!--p class="text-center">Tech-Driven Hospital Care</!--p-->
+                            <div class="form-group">
+                              <label class="col-form-label">Login ID</label>
+                              <asp:TextBox ID="txtUName" runat="server" class="form-control" ></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-form-label">Password</label>
+                              <div class="form-input position-relative">
+                                <asp:textbox id="txtPassword" runat="server" class="form-control" textmode="Password"></asp:textbox>
+                                <!--div class="show-hide" style="display: block;">
+                                    <span class="show"></span>
+                                </div-->
+                                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                                <asp:requiredfieldvalidator id="RequiredFieldValidator2" runat="server" controltovalidate="txtPassword" display="Dynamic" errormessage="*" setfocusonerror="True" validationgroup="loginGroup"> </asp:requiredfieldvalidator>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4"></div>
+                                <div class="col-xs-4">
+                                    <!-- <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button> -->
+                                    <asp:button id="btnLogin" runat="server" class="btn btn-primary btn-block w-100" OnClick="btnLogin_Click" text="Login" validationgroup="loginGroup"  />
+                                </div>
+                                <div class="col-xs-4"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-2"></div>
+                                <div class="col-xs-4">
+                                    <asp:Label ID="lblerrorLogin" runat="server" ForeColor="Red" Width="300px" Text=""></asp:Label>
+                                </div>
+                                <div class="col-xs-4"></div>
+                            </div>
+                            <div class="row pt10">
+                                <div class="col-xs-2"></div>
+                                <div class="col-xs-8 text-center">
+                                    <!-- <a href="#">Forgot Password?</a-->
+                                </div>
+                                <div class="col-xs-2"></div>
+                            </div>
+                        </form>
+                      </div>
                     </div>
-                    <div class="form-group has-feedback d-flex mb-5 mt-5">
-                      <!--  <input type="password" class="form-control" placeholder="Password">-->
-                       <!-- <span class="fas fa-key mr-1"></span>-->
-                             <asp:textbox id="txtPassword" runat="server" class="form-control" textmode="Password" >
-                                </asp:textbox>
-                        <span class="glyphicon glyphicon-lock form-control-feedback"></span <asp:requiredfieldvalidator id="RequiredFieldValidator2" runat="server"
-                                    controltovalidate="txtPassword" display="Dynamic" errormessage="*" setfocusonerror="True"
-                                    validationgroup="loginGroup"> </asp:requiredfieldvalidator>
-                        
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-4"></div>
-                        <div class="col-xs-4">
-                           <!-- <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button> -->
-                             <asp:button id="btnLogin" runat="server" class="btn btn-primary btn-block btn-flat"  OnClick="btnLogin_Click"
-                                    text="Login" validationgroup="loginGroup"  />
-                        </div>
-                        <div class="col-xs-4"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-2"></div>
-                        <div class="col-xs-4">
-                           <asp:Label ID="lblerrorLogin" runat="server" ForeColor="Red" Width="300px" Text=""></asp:Label>
-                        </div>
-                        <div class="col-xs-4"></div>
-                    </div>
-                   
-                    <div class="row pt10">
-                        <div class="col-xs-2"></div>
-                        <div class="col-xs-8 text-center">
-                           <!-- <a href="#">Forgot Password?</a-->
-                        </div>
-                        <div class="col-xs-2"></div>
-                    </div>
-                </form>
-                          </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-        </div>
-        <script src="plugins/jquery/jquery.min.js"></script>
-        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-       
-       
-    </form>
-</body>
+            <!--script src="plugins/jquery/jquery.min.js"></!--script>
+            <script src="plugins/bootstrap/js/bootstrap.min.js"></script-->
+            <!-- jquery-->
+            <script src="customTheme/js/vendors/jquery/jquery.min.js"></script>
+            <!-- bootstrap js-->
+            <script src="customTheme/js/vendors/bootstrap/dist/js/bootstrap.bundle.min.js" defer=""></script>
+            <script src="customTheme/js/vendors/bootstrap/dist/js/popper.min.js" defer=""></script>
+            <!--fontawesome-->
+            <script src="customTheme/js/vendors/font-awesome/fontawesome-min.js"></script>
+            <!-- password_show-->
+            <script src="customTheme/js/password.js"></script>
+            <!-- custom script -->
+            <script src="customTheme/js/script.js"></script>
+        </form>
+    </body>
 </html>

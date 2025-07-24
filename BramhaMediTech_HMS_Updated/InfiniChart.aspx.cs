@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class InfiniChart : System.Web.UI.Page
+public partial class InfiniChart : BasePage
 {
     public enum MessageType { Success, Error, Info, Warning };
     Dermatology_C ObjDer = new Dermatology_C();

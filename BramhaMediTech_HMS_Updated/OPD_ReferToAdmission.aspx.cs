@@ -17,7 +17,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class OPD_ReferToAdmission : System.Web.UI.Page
+public partial class OPD_ReferToAdmission : BasePage
 {
     clsEmr obj = new clsEmr();
 

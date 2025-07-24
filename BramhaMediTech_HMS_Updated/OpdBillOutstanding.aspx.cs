@@ -19,7 +19,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class OpdBillOutstanding : System.Web.UI.Page
+public partial class OpdBillOutstanding : BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
     decimal total = 0;

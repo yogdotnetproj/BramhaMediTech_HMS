@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-public partial class VaccinationAssignToPatient : System.Web.UI.Page
+public partial class VaccinationAssignToPatient : BasePage
 {
         clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

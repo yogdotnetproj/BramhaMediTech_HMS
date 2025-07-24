@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class ProcedureBillGroupSalesReport : System.Web.UI.Page
+public partial class ProcedureBillGroupSalesReport : BasePage
 {
     BELBillInfo ObjBELBillInfo = new BELBillInfo();
     DALBillInfo ObjDALBillInfo = new DALBillInfo();

@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class MonthlySurgicalProductivityData : System.Web.UI.Page
+public partial class MonthlySurgicalProductivityData : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 
-public partial class NurseRequestToPharmacy_IpdPatients : System.Web.UI.Page
+public partial class NurseRequestToPharmacy_IpdPatients : BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

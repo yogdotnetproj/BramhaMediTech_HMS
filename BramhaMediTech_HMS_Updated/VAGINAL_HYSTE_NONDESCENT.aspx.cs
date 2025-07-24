@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 using System.Media;
-public partial class VAGINAL_HYSTE_NONDESCENT : System.Web.UI.Page
+public partial class VAGINAL_HYSTE_NONDESCENT : BasePage
 {
     public enum MessageType { Success, Error, Info, Warning };
     OT_Clinical_Template_C ObjOCT = new OT_Clinical_Template_C();

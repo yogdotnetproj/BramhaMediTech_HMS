@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class Count_OPDvisitsforchildrenandadolescents : System.Web.UI.Page
+public partial class Count_OPDvisitsforchildrenandadolescents : BasePage
 {
     BELPatientInformation objBELPatInfo = new BELPatientInformation();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

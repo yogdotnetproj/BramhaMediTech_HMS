@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class DoctorWiseCashReport : System.Web.UI.Page
+public partial class DoctorWiseCashReport : BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
     DALOpdReg objDALOpdReg = new DALOpdReg();

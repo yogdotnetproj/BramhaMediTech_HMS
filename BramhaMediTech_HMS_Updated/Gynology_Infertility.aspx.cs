@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 
 
-public partial class Gynology_Infertility : System.Web.UI.Page
+public partial class Gynology_Infertility : BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

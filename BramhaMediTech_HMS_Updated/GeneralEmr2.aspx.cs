@@ -17,7 +17,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class GeneralEmr2 : System.Web.UI.Page
+public partial class GeneralEmr2 : BasePage
 {
     clsEmr obj = new clsEmr();
 

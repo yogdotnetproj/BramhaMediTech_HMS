@@ -13,7 +13,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
-public partial class GynologyExaminationFinding : System.Web.UI.Page
+public partial class GynologyExaminationFinding : BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

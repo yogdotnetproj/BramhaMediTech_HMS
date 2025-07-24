@@ -2,7 +2,7 @@
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public class BasePage : BaseClass
+public class BasePage : System.Web.UI.Page
 {
     protected override void OnPreRender(EventArgs e)
     {

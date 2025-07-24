@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class IpdAdvancePayment : System.Web.UI.Page
+public partial class IpdAdvancePayment : BasePage
 {
     DALIPDDesk ObjDALIpd = new DALIPDDesk();
    

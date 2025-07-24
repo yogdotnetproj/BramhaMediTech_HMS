@@ -20,7 +20,7 @@ using System.Net;
 using System.IO;
 
 
-public partial class MonthWiseIncome : System.Web.UI.Page
+public partial class MonthWiseIncome : BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
 

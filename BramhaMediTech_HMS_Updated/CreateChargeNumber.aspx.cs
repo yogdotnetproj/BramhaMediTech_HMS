@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class CreateChargeNumber : System.Web.UI.Page
+public partial class CreateChargeNumber : BasePage
 {
     clsEmr obj = new clsEmr();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

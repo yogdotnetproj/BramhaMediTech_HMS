@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 using System.IO;
-public partial class AssignDiagnosis : System.Web.UI.Page
+public partial class AssignDiagnosis : BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

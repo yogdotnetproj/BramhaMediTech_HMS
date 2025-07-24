@@ -25,7 +25,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 
 
-public partial class HomeTemp : System.Web.UI.Page
+public partial class HomeTemp : BasePage
 {
     TreeviewBind_C ObjTB = new TreeviewBind_C();
     

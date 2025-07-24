@@ -17,7 +17,7 @@ using System.IO;
 using System.Drawing;
 using System.Media;
 
-public partial class ResourceUpload : System.Web.UI.Page
+public partial class ResourceUpload : BasePage
 {
     AddMedicalRecord_C ObjAMR = new AddMedicalRecord_C();
     DataTable dt = new DataTable();

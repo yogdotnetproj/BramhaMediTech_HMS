@@ -18,7 +18,7 @@ using System.Drawing.Design;
 
 using System.Drawing;
 
-public partial class RefractiveWorkup : System.Web.UI.Page
+public partial class RefractiveWorkup : BasePage
 {
     public enum MessageType { Success, Error, Info, Warning };
     Dental_Clinic_C ObjDC = new Dental_Clinic_C();

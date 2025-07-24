@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class frmHistoryMaster : System.Web.UI.Page
+public partial class frmHistoryMaster : BasePage
 {
     cls_frmHistoryMaster objHis = new cls_frmHistoryMaster();
     protected void Page_Load(object sender, EventArgs e)

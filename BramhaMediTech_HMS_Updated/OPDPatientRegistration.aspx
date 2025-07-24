@@ -633,9 +633,9 @@
        <div runat="server" id="UploadedFiles" style="height:100px;  overflow:scroll"    >                                          
  <div class="table-responsive" style="width:100%" >
 
-<asp:GridView ID="gvImages" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None"
-                                class="table table-responsive table-sm table-bordered" Width="100%"
-                                HeaderStyle-ForeColor="Black" AlternatingRowStyle-BackColor="White" DataKeyNames="Path,FileId" AutoGenerateColumns="False" OnRowDeleting="gvImages_RowDeleting">
+<asp:GridView ID="gvImages" runat="server" 
+                                class="table table-striped table-bordered table-hover custom-gridview" Width="100%"
+                                DataKeyNames="Path,FileId" AutoGenerateColumns="False" OnRowDeleting="gvImages_RowDeleting">
     <Columns>
         <asp:BoundField DataField="FileId" HeaderText=" Id" />
         <asp:BoundField DataField="FileName" HeaderText="Name" />
@@ -743,15 +743,14 @@
                                                     <div class="form-group">  
                                         <div class="table-responsive" style="width:100%" >
                                 <asp:GridView ID="gvBill" runat="server" AutoGenerateColumns="False" DataKeyNames="BillServiceDetailId"
-                                OnRowDeleting="gvBill_RowDeleting"  BackColor="White" BorderColor="#CCCCCC" BorderStyle="None"
-                                class="table table-responsive table-sm table-bordered" Width="100%"
-                                HeaderStyle-ForeColor="Black" AlternatingRowStyle-BackColor="White"   
+                                OnRowDeleting="gvBill_RowDeleting"  
+                                class="table table-striped table-bordered table-hover custom-gridview" Width="100%"
+                            
                                  BorderWidth="1px" CellPadding="3" AllowPaging="True" TabIndex="17"
                                  ShowHeaderWhenEmpty="True" OnPageIndexChanging="gvBill_PageIndexChanging" 
                                  EmptyDataText="No Records to Display" onrowdatabound="gvBill_RowDataBound" 
                                 ShowFooter="True" onselectedindexchanged="gvBill_SelectedIndexChanged">
-                                 <FooterStyle Font-Bold="true" BackColor="#61A6F8" ForeColor="black" />
-                                    <AlternatingRowStyle BackColor="#95deff"></AlternatingRowStyle>
+                                
                             <Columns>
                                 
                                     <asp:BoundField DataField="Empname" HeaderText="Consultant Dr"  > 
@@ -779,11 +778,7 @@
                                     <ItemStyle Width="30px" HorizontalAlign="Center" />
                                 </asp:TemplateField>
                             </Columns>
-                             <FooterStyle BackColor="White" ForeColor="#000066" />
-                                        <HeaderStyle BackColor="#38C8DD" Font-Bold="True" ForeColor="White" />
-                                        <PagerStyle CssClass="pagination" BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                                        <RowStyle ForeColor="#000066" />
-                                        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                            
                                         <SortedAscendingCellStyle BackColor="#F1F1F1" />
                                         <SortedAscendingHeaderStyle BackColor="#007DBB" />
                                         <SortedDescendingCellStyle BackColor="#CAC9C9" />

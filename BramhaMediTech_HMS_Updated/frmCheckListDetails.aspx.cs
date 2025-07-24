@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class frmCheckListDetails : System.Web.UI.Page
+public partial class frmCheckListDetails : BasePage
 {
     clsCheckListDetails objCheck = new clsCheckListDetails();
     List<clsCheckListTrans> trans = new List<clsCheckListTrans>();
