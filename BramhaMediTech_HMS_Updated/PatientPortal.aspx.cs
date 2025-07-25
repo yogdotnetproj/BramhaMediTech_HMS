@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 using System.Drawing;
-public partial class PatientPortal : System.Web.UI.Page
+public partial class PatientPortal :BasePage
 {
     clsEmr obj = new clsEmr();
     DataTable dt = new DataTable();

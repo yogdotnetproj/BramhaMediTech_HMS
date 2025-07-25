@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class OPDvisitsforMalechildren : System.Web.UI.Page
+public partial class OPDvisitsforMalechildren :BasePage
 {
     BELPatientInformation objBELPatInfo = new BELPatientInformation();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

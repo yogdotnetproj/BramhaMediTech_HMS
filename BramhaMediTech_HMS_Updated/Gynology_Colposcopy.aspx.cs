@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class Gynology_Colposcopy : System.Web.UI.Page
+public partial class Gynology_Colposcopy :BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
-public partial class Theatre_CheckList : System.Web.UI.Page
+public partial class Theatre_CheckList :BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

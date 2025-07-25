@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class OperationMainCategory : BaseClass
+public partial class OperationMainCategory :BasePage
 {
     BELOperationTheater objBELOt = new BELOperationTheater();
     DALOperationTheater objDALOt = new DALOperationTheater();

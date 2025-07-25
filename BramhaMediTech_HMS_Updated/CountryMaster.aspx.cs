@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using CrystalDecisions.CrystalReports.Engine;
 
-public partial class CountryMaster : BaseClass
+public partial class CountryMaster :BasePage
 {
     BELSDC objBELSDC = new BELSDC();
     DALSDC objDALSDC = new DALSDC();

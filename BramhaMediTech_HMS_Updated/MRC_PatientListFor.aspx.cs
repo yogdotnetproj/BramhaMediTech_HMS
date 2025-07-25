@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class MRC_PatientListFor : System.Web.UI.Page
+public partial class MRC_PatientListFor :BasePage
 {
     BELOPDPatReg objBELOpdReg = new BELOPDPatReg();
     DALOpdReg objDALOpdReg = new DALOpdReg();

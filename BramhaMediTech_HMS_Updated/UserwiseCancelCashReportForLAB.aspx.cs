@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class UserwiseCancelCashReportForLAB : System.Web.UI.Page
+public partial class UserwiseCancelCashReportForLAB :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
    // BLLReports objreports = new BLLReports();

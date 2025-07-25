@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 using System.Drawing;
-public partial class CashPayment_Voucher : BaseClass
+public partial class CashPayment_Voucher :BasePage
 {
     BELDepartment objBELDept = new BELDepartment();
     DALDepartment objDALDept = new DALDepartment();

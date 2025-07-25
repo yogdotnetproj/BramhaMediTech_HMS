@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;   
 
-public partial class InsuranceCompTransactionLedger : System.Web.UI.Page
+public partial class InsuranceCompTransactionLedger :BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class InsuranceSummaryForProcedure : System.Web.UI.Page
+public partial class InsuranceSummaryForProcedure :BasePage
 {
     BELOPDPatReg objBELOpdReg = new BELOPDPatReg();
     DALOpdReg objDALOpdReg = new DALOpdReg();

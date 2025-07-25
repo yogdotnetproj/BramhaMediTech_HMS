@@ -7,7 +7,7 @@ using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class HIVEncounter : System.Web.UI.Page
+public partial class HIVEncounter :BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

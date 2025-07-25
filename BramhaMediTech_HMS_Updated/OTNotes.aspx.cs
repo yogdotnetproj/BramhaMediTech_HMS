@@ -20,7 +20,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Drawing.Design;
 
-public partial class OTNotes : BaseClass
+public partial class OTNotes :BasePage
 {
     DALIPDDesk ObjDALIpd = new DALIPDDesk();
     BELOPDPatReg objBELIpd = new BELOPDPatReg();

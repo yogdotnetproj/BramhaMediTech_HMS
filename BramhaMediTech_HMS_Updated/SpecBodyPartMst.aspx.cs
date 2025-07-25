@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class SpecBodyPartMst : BaseClass
+public partial class SpecBodyPartMst :BasePage
 {
     BELBodyPart objBELBodyPart = new BELBodyPart();
     DALBodyPart objDALBodyPart = new DALBodyPart();

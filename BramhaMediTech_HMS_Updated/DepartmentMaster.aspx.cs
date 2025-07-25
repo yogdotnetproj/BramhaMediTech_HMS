@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using CrystalDecisions.CrystalReports.Engine;
 using System.Data;
 
-public partial class DepartmentMaster : BaseClass
+public partial class DepartmentMaster :BasePage
 {
     BELDepartment objBELDept = new BELDepartment();
     DALDepartment objDALDept = new DALDepartment();

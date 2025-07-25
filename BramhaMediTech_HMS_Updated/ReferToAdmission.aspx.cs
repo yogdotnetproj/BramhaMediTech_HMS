@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 
 
-public partial class ReferToAdmission : System.Web.UI.Page
+public partial class ReferToAdmission :BasePage
 {
     BELOPDPatReg objBELOpdReg = new BELOPDPatReg();
     DALOpdReg objDALOpdReg = new DALOpdReg();

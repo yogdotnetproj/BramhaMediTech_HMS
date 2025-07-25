@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class SetIPDRoomCharges : BaseClass
+public partial class SetIPDRoomCharges :BasePage
 {
     BELBillCharges objBELBillCharges = new BELBillCharges();
     DALBillCharges objDALBillCharges = new DALBillCharges();

@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using CrystalDecisions.CrystalReports.Engine;
 
-public partial class CityMaster : BaseClass
+public partial class CityMaster :BasePage
 {
     BELSDC objBELSDC = new BELSDC();
     DALSDC objDALSDC = new DALSDC();

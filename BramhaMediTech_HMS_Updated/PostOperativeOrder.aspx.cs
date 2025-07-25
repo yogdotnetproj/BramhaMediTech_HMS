@@ -17,7 +17,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class PostOperativeOrder : System.Web.UI.Page
+public partial class PostOperativeOrder :BasePage
 {
     clsEmr obj = new clsEmr();
 

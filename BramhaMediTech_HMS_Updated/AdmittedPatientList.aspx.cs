@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class AdmittedPatientList : System.Web.UI.Page
+public partial class AdmittedPatientList :BasePage
 {
     BLLReports objreports = new BLLReports();
     protected void Page_Load(object sender, EventArgs e)

@@ -7,7 +7,7 @@ using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class frmDoctorSchedule2 : System.Web.UI.Page
+public partial class frmDoctorSchedule2 :BasePage
 {
     clsDocSche obj = new clsDocSche();
     clsDocSchedule objs = new clsDocSchedule();

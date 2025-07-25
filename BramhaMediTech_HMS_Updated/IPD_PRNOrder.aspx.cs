@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class IPD_PRNOrder : BaseClass
+public partial class IPD_PRNOrder :BasePage
 {
     DALIPDDesk ObjDALIpd = new DALIPDDesk();
     BELOPDPatReg objBELIpd = new BELOPDPatReg();

@@ -20,7 +20,7 @@ using ZXing;
 using ZXing.QrCode;
 using ZXing.Common;
 
-public partial class LabPatientRegistration : BaseClass
+public partial class LabPatientRegistration :BasePage
 {
     clsEmr obj = new clsEmr();
     BELPatientInformation objBELPatInfo = new BELPatientInformation();

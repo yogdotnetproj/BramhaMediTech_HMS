@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class OTOPTORegister : System.Web.UI.Page
+public partial class OTOPTORegister :BasePage
 {
     BELOPDPatReg objBELOpdReg = new BELOPDPatReg();
     DALOpdReg objDALOpdReg = new DALOpdReg();

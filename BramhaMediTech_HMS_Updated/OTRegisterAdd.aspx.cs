@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class IpdBillForPatientServices : BaseClass
+public partial class IpdBillForPatientServices :BasePage
 {
     DALIPDDesk ObjDALIpd = new DALIPDDesk();
     BELOPDPatReg objBELIpd = new BELOPDPatReg();

@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
-public partial class DesignationMst : BaseClass
+public partial class DesignationMst :BasePage
 {
     BELDesignation objBELDesg = new BELDesignation();
     DALDesignation objDALDesg = new DALDesignation();

@@ -17,7 +17,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class SurgeryDepositMaster : BaseClass
+public partial class SurgeryDepositMaster :BasePage
 {
     BLLPatientCategory objBLLPatientCategory = new BLLPatientCategory();
     DOPatientCategory objDOPatientCategory;

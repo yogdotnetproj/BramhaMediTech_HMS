@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class SpecialityProductivityData : System.Web.UI.Page
+public partial class SpecialityProductivityData :BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

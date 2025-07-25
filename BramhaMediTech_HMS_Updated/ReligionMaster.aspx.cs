@@ -10,7 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using CrystalDecisions.CrystalReports.Engine;
 
-public partial class ReligionMaster : BaseClass
+public partial class ReligionMaster :BasePage
 {
     BELReligion ObjBELReligion = new BELReligion();
     DALReligion ObjDALReligion = new DALReligion();

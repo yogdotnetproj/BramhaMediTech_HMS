@@ -21,7 +21,7 @@ using System.Net.Mail;
 using System.Web.Management;
 using System.Text.RegularExpressions;
 
-public partial class frmPathologyInves : System.Web.UI.Page
+public partial class frmPathologyInves :BasePage
 {
    // API_DataTransfer_C Obj_Adt = new API_DataTransfer_C();
     string maintestshort = "";

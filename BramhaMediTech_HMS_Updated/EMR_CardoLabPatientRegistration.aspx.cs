@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class EMR_CardoLabPatientRegistration : BaseClass
+public partial class EMR_CardoLabPatientRegistration :BasePage
 {
     clsEmr obj = new clsEmr();
     BELPatientInformation objBELPatInfo = new BELPatientInformation();

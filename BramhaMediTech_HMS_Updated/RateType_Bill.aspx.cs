@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class RateType_Bill : BaseClass
+public partial class RateType_Bill :BasePage
 {
     BELRateType objBELRateType = new BELRateType();
     DALRateType objDALRateType = new DALRateType();

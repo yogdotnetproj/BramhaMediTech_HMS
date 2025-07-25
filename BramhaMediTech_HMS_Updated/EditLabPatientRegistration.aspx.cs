@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class EditLabPatientRegistration : BaseClass
+public partial class EditLabPatientRegistration :BasePage
 {
     BELPatientInformation objBELPatInfo = new BELPatientInformation();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

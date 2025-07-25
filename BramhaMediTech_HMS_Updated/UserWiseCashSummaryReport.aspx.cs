@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class UserWiseCashSummaryReport : System.Web.UI.Page
+public partial class UserWiseCashSummaryReport :BasePage
 {
 
     BLLReports ObjDOReport = new BLLReports();

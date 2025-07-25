@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class PatientInfoList : System.Web.UI.Page
+public partial class PatientInfoList :BasePage
 {
     BELPatientInformation objBELPatInfo = new BELPatientInformation();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();
@@ -28,7 +28,7 @@ public partial class PatientInfoList : System.Web.UI.Page
         {
             LoadPatientMainType();
             LoadPatientSubCategoryName();
-            PAtValidate();
+           // PAtValidate();
            // txtEntryDate.Text = DateTime.Now.ToShortDateString();
             txtToDate.Text = System.DateTime.Now.ToShortDateString();
             txtFromDate.Text = System.DateTime.Now.ToShortDateString();
@@ -52,7 +52,7 @@ public partial class PatientInfoList : System.Web.UI.Page
             string BCount = Patmst_New_Bal_C.PatientCountBanner(1);
             if (Convert.ToInt32(BCount) > 1111)
             {
-                Server.Transfer("~/Login.aspx", true);
+               // Server.Transfer("~/Login.aspx", true);
             }
         }
     }

@@ -19,7 +19,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class FrontDesk_BillPayment : System.Web.UI.Page
+public partial class FrontDesk_BillPayment :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
     decimal total = 0;

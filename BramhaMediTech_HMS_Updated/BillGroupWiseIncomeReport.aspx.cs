@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class BillGroupWiseIncomeReport : System.Web.UI.Page
+public partial class BillGroupWiseIncomeReport :BasePage
 {
     BELBillInfo ObjBELBillInfo = new BELBillInfo();
     DALBillInfo ObjDALBillInfo = new DALBillInfo();

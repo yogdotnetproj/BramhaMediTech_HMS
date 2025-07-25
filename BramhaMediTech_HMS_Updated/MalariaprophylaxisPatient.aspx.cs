@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class MalariaprophylaxisPatient : System.Web.UI.Page
+public partial class MalariaprophylaxisPatient :BasePage
 {
     BELPatientInformation objBELPatInfo = new BELPatientInformation();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

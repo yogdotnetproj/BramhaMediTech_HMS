@@ -17,7 +17,7 @@ using System.IO;
 using System.Drawing;
 
 
-public partial class GenerateInvoiceForOPD_Insu : System.Web.UI.Page
+public partial class GenerateInvoiceForOPD_Insu :BasePage
 {
     BELOPDPatReg objBELOpdReg = new BELOPDPatReg();
     DALOpdReg objDALOpdReg = new DALOpdReg();

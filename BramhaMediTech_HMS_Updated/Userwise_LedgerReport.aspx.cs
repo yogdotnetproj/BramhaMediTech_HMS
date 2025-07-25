@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 
 
-public partial class Userwise_LedgerReport : System.Web.UI.Page
+public partial class Userwise_LedgerReport :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
 

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class BedMaster : BaseClass
+public partial class BedMaster :BasePage
 {
     BELRoom objBELRoom = new BELRoom();
     DALRoom objDALRoom = new DALRoom();

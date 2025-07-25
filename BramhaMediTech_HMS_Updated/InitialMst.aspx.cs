@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using CrystalDecisions.CrystalReports.Engine;
 
 
-public partial class InitialMst : BaseClass
+public partial class InitialMst :BasePage
 {
     BELInitial objBELInitial = new BELInitial();
     DALInitial ObjDALInitial = new DALInitial();

@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class Gynology_Antenatal : System.Web.UI.Page
+public partial class Gynology_Antenatal :BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

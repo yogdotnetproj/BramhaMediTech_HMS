@@ -19,7 +19,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class PatientFollowUp : BaseClass
+public partial class PatientFollowUp :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
    

@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class DiseaseMst : BaseClass
+public partial class DiseaseMst :BasePage
 {
     BELDisease objBELDisease = new BELDisease();
     DALDisease objDALDisease = new DALDisease();

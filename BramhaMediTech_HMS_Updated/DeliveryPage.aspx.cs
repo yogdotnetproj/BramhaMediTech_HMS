@@ -13,7 +13,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 
-public partial class DeliveryPage : System.Web.UI.Page
+public partial class DeliveryPage :BasePage
 {
     BELDeliveryPage ObjDp = new BELDeliveryPage();
     protected void Page_Load(object sender, EventArgs e)

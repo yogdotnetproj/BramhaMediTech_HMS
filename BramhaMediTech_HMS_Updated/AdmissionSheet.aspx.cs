@@ -17,7 +17,7 @@ using System.IO;
 using System.Drawing;
 using System.Media;
 
-public partial class AdmissionSheet : System.Web.UI.Page
+public partial class AdmissionSheet :BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

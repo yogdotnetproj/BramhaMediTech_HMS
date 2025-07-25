@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class LabIPDPatientRegistration : BaseClass
+public partial class LabIPDPatientRegistration :BasePage
 {
     clsEmr obj = new clsEmr();
     BELPatientInformation objBELPatInfo = new BELPatientInformation();

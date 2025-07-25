@@ -17,7 +17,7 @@ using System.IO;
 using System.Drawing;
 using System.Media;
 using System.Net.Mail;
-public partial class Patientonlineregistration : System.Web.UI.Page
+public partial class Patientonlineregistration :BasePage
 {
     BELPatientInformation objBELPatInfo = new BELPatientInformation();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

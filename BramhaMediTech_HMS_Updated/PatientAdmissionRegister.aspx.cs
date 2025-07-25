@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class PatientAdmissionRegister : System.Web.UI.Page
+public partial class PatientAdmissionRegister :BasePage
 {
     DALIPDDesk objDalIpdDesk = new DALIPDDesk();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

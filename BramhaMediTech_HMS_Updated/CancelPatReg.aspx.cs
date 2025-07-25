@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class CancelPatReg : BaseClass
+public partial class CancelPatReg :BasePage
 
 {
     BELPatientInformation objBELPatInfo = new BELPatientInformation();

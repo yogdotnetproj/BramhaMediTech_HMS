@@ -14,7 +14,7 @@ using System.Web.UI.HtmlControls;
 using System.Configuration;
 using System.Collections;
 
-public partial class DentalClinic : System.Web.UI.Page
+public partial class DentalClinic :BasePage
 {
     Dental_Clinic_C ObjDC = new Dental_Clinic_C();
     protected void Page_Load(object sender, EventArgs e)

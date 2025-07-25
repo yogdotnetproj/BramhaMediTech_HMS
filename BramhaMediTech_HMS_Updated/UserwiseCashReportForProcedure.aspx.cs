@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class UserwiseCashReportForProcedure : System.Web.UI.Page
+public partial class UserwiseCashReportForProcedure :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
 

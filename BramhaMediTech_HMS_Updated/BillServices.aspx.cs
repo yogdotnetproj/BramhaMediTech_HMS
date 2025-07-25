@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 
 
-public partial class BillServices : BaseClass
+public partial class BillServices :BasePage
 {
     BELBillService objBELService = new BELBillService();
     DALBillService objDALService = new DALBillService();

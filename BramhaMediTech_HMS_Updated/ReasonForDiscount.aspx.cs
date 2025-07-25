@@ -8,7 +8,7 @@ using CrystalDecisions.CrystalReports.Engine;
 using System.Data;
 
 
-public partial class ReasonForDiscount : BaseClass
+public partial class ReasonForDiscount :BasePage
 {
     BELReasonDiscount objBELDiscount = new BELReasonDiscount();
     DALReasonDiscount objDALDiscount = new DALReasonDiscount();

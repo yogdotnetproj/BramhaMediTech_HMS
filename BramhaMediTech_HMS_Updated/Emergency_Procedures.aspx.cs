@@ -24,7 +24,7 @@ using System.Drawing;
 using System.Net.Mail;
 using System.Web.Management;
 
-public partial class Emergency_Procedures : BaseClass
+public partial class Emergency_Procedures :BasePage
 {
     BELPatientInformation objBELPatInfo = new BELPatientInformation();
     DALPatientInformation objDALPatInfo = new DALPatientInformation();

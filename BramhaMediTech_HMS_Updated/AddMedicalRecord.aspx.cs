@@ -17,7 +17,7 @@ using System.IO;
 using System.Drawing;
 using System.Media;
 
-public partial class AddMedicalRecord : System.Web.UI.Page
+public partial class AddMedicalRecord :BasePage
 {
     AddMedicalRecord_C ObjAMR = new AddMedicalRecord_C();
     DataTable dt = new DataTable();

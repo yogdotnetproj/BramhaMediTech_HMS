@@ -19,7 +19,7 @@ using System.Web.Management;
 using System.Net;
 using System.IO;
 
-public partial class CancelOpdRegistration : BaseClass
+public partial class CancelOpdRegistration :BasePage
 {
     BLLReports ObjDOReport = new BLLReports();
    

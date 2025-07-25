@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 using System.Drawing;
-public partial class OTBookingForm : System.Web.UI.Page
+public partial class OTBookingForm :BasePage
 {
     public enum MessageType { Success, Error, Info, Warning };
     BELPatientInformation objBELPatInfo = new BELPatientInformation();

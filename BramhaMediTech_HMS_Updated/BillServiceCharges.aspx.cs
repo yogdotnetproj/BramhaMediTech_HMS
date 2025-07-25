@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
-public partial class BillServiceCharges : BaseClass
+public partial class BillServiceCharges :BasePage
 {
     BELBillCharges objBELBillCharges = new BELBillCharges();
     DALBillCharges objDALBillCharges = new DALBillCharges();

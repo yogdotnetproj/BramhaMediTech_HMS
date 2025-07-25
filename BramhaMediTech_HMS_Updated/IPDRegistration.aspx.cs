@@ -16,7 +16,7 @@ using System.Collections;
 using System.IO;
 using System.Drawing;
 
-public partial class IPDRegistration : BaseClass
+public partial class IPDRegistration :BasePage
 {
     DALPatientInformation objDALPatInfo = new DALPatientInformation();
     BELPatientInformation objBELPatInfo = new BELPatientInformation();

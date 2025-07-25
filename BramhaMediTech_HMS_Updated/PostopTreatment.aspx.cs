@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 using System.Data.SqlClient;
 
-public partial class PostopTreatment : System.Web.UI.Page
+public partial class PostopTreatment :BasePage
 {
     clsEmr obj = new clsEmr();
     clsTreatment objTreat = new clsTreatment();

@@ -15,7 +15,7 @@ using System.Configuration;
 using System.Collections;
 using System.IO;
 
-public partial class RoomStatusReport : System.Web.UI.Page
+public partial class RoomStatusReport :BasePage
 {
     BELRoom objBELRoom = new BELRoom();
     DALRoom objDALRoom = new DALRoom();
