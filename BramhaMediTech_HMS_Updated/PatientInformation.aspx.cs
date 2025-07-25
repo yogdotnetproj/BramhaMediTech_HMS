@@ -38,7 +38,7 @@ public partial class PatientInformation :BasePage
         {
             try
             {
-                PAtValidate();
+               // PAtValidate();
                 imgPatient.ImageUrl = "~/Images0/Preview.png";
                 ViewState["PhotoPath"] = "~/Images0/Preview.png";
                 

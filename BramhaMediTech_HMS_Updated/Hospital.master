@@ -43,7 +43,7 @@
     
     <body class="fixed-navbar has-animation bluetheme" id="bodyWrapper">
         <form id="Form1" runat="server">
-            <ul class="color-theme">
+         <%--   <ul class="color-theme">
                        <li><a href="#" class="dark-theme"></a></li>
                        <li><a href="#" class="light-theme"></a></li>
                     <li><a href="#" class="red-theme"></a></li>
@@ -51,7 +51,7 @@
                        <li><a href="#" class="darkblue-theme"></a></li>
                     <li><a href="#" class="green-theme"></a></li>
                     <li><a href="#" class="orange-theme"></a></li>
-                </ul>
+                </ul>--%>
             <div class="wrapper">
            <header class="page-header row">
           <div class="logo-wrapper d-flex align-items-center col-auto">
@@ -455,7 +455,6 @@
                 $('body').addClass('darkbluetheme');
                 $('body').removeClass('redtheme bluetheme greentheme lighttheme darktheme orangetheme');
                 e.preventDefault();
-
             });
             $('#notificationMenu').on('click', function () {
                 $('#notificationMenuWrapper').toggleClass('show');
