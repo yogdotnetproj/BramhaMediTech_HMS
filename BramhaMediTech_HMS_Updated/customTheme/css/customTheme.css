@@ -54094,3 +54094,11 @@ i.sidebar-item-icon.fa-solid.fa-chart-pie {
     color: #6610f2;
 }
 
+.radioButtonGroupRbl input[type="radio"] {
+    margin: 5px 15px 5px 0;
+}
+
+.radioButtonGroupRbl input[type="radio"] + label {
+    margin-left: 0;
+    margin-right: 20px;
+}
