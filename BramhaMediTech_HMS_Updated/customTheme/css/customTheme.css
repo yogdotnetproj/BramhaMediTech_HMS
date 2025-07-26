@@ -54102,3 +54102,60 @@ i.sidebar-item-icon.fa-solid.fa-chart-pie {
     margin-left: 0;
     margin-right: 20px;
 }
+
+.ipdDeskCards {
+    display: flex;
+}
+
+.ipdDeskCards input[type="image"] {
+    width: 70px !important;
+    padding: 15px 0;
+}
+
+.ipdDeskCards .card-body {
+    padding-left: 10px;
+}
+
+.deskCardWrapper {
+    margin-bottom: 0;
+    position: relative;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.bedNameWrapper {
+    position: absolute !important;
+    margin: auto;
+    background: #ccc;
+    color: #333;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    text-align: center;
+    font-weight: bold;
+    left: calc(50% - 20px);
+    top: -20px;
+    transition-duration: 500ms;
+}
+
+.deskCardWrapper:hover {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    background: #57375D;
+}
+
+.deskCardWrapper:hover * {
+    color: #fff;
+}
+
+.deskCardWrapper:hover .bedNameWrapper {
+    transition-duration: 500ms;
+    background: #fff;
+    color: #57375D;
+}
+
+.patientListDataTable tbody tr:nth-child(n + 2) {
+    background: #fff !important;
+}
