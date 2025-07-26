@@ -12,7 +12,7 @@
     </asp:ContentPlaceHolder>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <title>Dashboard | HIMS ERA INFOSOFT</title>
+        <title>Dashboard | HIMS BramhaMediTech</title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
        
     <!-- GLOBAL MAINLY STYLES-->
@@ -182,7 +182,7 @@
             </div>
             <!-- /.content-wrapper -->
             <footer class="main-footer text-center">
-                <strong>Copyright &copy;2019 <a href="#">Era InfoSoft</a>.</strong> All rights reserved.
+                <strong>Copyright &copy;2019 <a href="#">BramhaMediTech</a>.</strong> All rights reserved.
             </footer>
         </div>
         <!-- ./wrapper -->
