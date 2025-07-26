@@ -54159,3 +54159,16 @@ i.sidebar-item-icon.fa-solid.fa-chart-pie {
 .patientListDataTable tbody tr:nth-child(n + 2) {
     background: #fff !important;
 }
+
+
+/* Highlighted item when selected via keyboard or mouse */
+.AutoExtenderHighlight {
+    background-color: #a283cb !important;
+    color: #ffffff;
+}
+
+/* Hover effect on suggestion list items */
+.AutoExtenderList:hover {
+    background-color: #a283cb !important;
+    color: #ffffff;
+}

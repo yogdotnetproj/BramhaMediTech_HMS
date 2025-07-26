@@ -88,9 +88,15 @@ public partial class SearchProcedurePatientList :BasePage
     {
         if (txtPatientName.Text != "")
         {
-            string[] PatientInfo = txtPatientName.Text.Split('-');
-            txtPatientName.Text = PatientInfo[1];
-            ViewState["PatientInfoId"] = PatientInfo[0];
+            if (txtPatientName.Text.Contains("-"))
+            {
+                string[] PatientInfo = txtPatientName.Text.Split('-');
+                if (PatientInfo.Length > 0)
+                {
+                    txtPatientName.Text = PatientInfo[1];
+                    ViewState["PatientInfoId"] = PatientInfo[0];
+                }
+            }
         }
         else
         {

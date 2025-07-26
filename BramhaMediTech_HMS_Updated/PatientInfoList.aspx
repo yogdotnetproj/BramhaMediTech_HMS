@@ -25,7 +25,7 @@
                  });
              }, 500);//5000=5 seconds
          }
-    </script>
+     </script>
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
     
@@ -47,161 +47,114 @@
                            
                                     <span class="red pull-right">Fields marked with * are compulsory</span> 
                                 </div>
-                             <div class="box-body">
+                                <div class="box-body">
                                     <div class="row mb-3">                                
-                                         <div class="col-sm-2">
-                                                    <div class="form-group">
-                                                         <label for="txtFromDate">From Date:</label>                                                                                
-                                                    </div>
-                                         </div>
-                                        <div class="col-sm-2 text-left">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="txtFromDate">From Date:</label>                                                                                
+                                            </div>
                                             <div class="form-group">
                                                 <div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy">
-                                                        
-                                                      <asp:TextBox ID="txtFromDate" runat="server" AutoPostBack="true" CssClass="form-control" placeholder="Enter Entry Date(*)"></asp:TextBox>
-                                                         <span class="input-group-addon">
-                                                <i class="fa fa-calendar"></i>
-                                            </span>
-                                                 </div>
-                                             
+                                                    <asp:TextBox ID="txtFromDate" runat="server" AutoPostBack="true" CssClass="form-control" placeholder="Enter Entry Date(*)"></asp:TextBox>
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                </div>
                                             </div>
-                                          
                                         </div>
-                                        <div class="col-sm-2">
-                                                    <div class="form-group">
-                                                         <label for="txtToDate">To Date:</label>                                                                                
-                                                    </div>
-                                         </div>
-                                        <div class="col-sm-2">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="txtToDate">To Date:</label>                                                                                
+                                            </div>
                                             <div class="form-group">
                                                 <div class="input-group date" data-provide="datepicker" data-date-format="dd/mm/yyyy">
-                                                        
-                                                      <asp:TextBox ID="txtToDate" runat="server" AutoPostBack="true" CssClass="form-control" placeholder="Enter Entry Date(*)"></asp:TextBox>
-                                                        <span class="input-group-addon">
-                                                <i class="fa fa-calendar"></i>
-                                            </span>
-                                                 </div>
-                                             
+                                                    <asp:TextBox ID="txtToDate" runat="server" AutoPostBack="true" CssClass="form-control" placeholder="Enter Entry Date(*)"></asp:TextBox>
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                </div>
                                             </div>
-                                          
                                         </div>
-                                        
-                                       
-                                        <div class="col-sm-1 pr-0">
-                                                    <div class="form-group">
-                                                         <label for="txtPrnNo">PRN No:</label>                                                                                
-                                                    </div>
-                                         </div>
-                                         
-                                        <div class="col-sm-3">
-                                           <div class="form-group">
-                                             
-                                                 <asp:TextBox ID="txtSearchPatient" runat="server" AutoCompleteType="None"
-                                                 AutoPostBack="True" TabIndex="1" CssClass="form-control" placeholder="Enter Patient Name" ontextchanged="txtSearchPatient_TextChanged" ></asp:TextBox>
+                                        <div class="col-sm-4 pr-0">
+                                            <div class="form-group">
+                                                <label for="txtPrnNo">PRN No:</label>                                                                                
+                                            </div>
+                                            <div class="form-group">
+                                                <asp:TextBox ID="txtSearchPatient" runat="server" AutoCompleteType="None" AutoPostBack="True" TabIndex="1" CssClass="form-control" placeholder="Enter Patient Name" ontextchanged="txtSearchPatient_TextChanged"></asp:TextBox>
                                                 <asp:AutoCompleteExtender 
-                                                MinimumPrefixLength="1"  
-                                                ServiceMethod="SearchPatient"                                                
-                                                CompletionInterval="100"
-                                                EnableCaching="false" 
-                                                CompletionSetCount="10" 
-                                                      CompletionListCssClass="AutoExtender"
-                                            CompletionListItemCssClass="AutoExtenderList"
-                                            CompletionListHighlightedItemCssClass="AutoExtenderHighlight"
-                                                TargetControlID="txtSearchPatient"
-                                                ID="AutoCompleteExtender1"
-                                                runat="server">
-                                                   </asp:AutoCompleteExtender>
-                                       </div>
-                                           </div>
-                                     </div>  
-
-                                                            
-                                        
-                                            <div class="row mb-3">
-                                                <div class="col-sm-2">
-                                                    <div class="form-group">
-                                                         <label for="txtPatientName">Patient Name:</label>                                                                                
-                                                    </div>
-                                         </div>
-                                                <div class="col-sm-2">
+                                                    MinimumPrefixLength="1"  
+                                                    ServiceMethod="SearchPatient"                                                
+                                                    CompletionInterval="100"
+                                                    EnableCaching="false" 
+                                                    CompletionSetCount="10" 
+                                                    CompletionListCssClass="AutoExtender"
+                                                    CompletionListItemCssClass="AutoExtenderList"
+                                                    CompletionListHighlightedItemCssClass="AutoExtenderHighlight"
+                                                    TargetControlID="txtSearchPatient"
+                                                    ID="AutoCompleteExtender1"
+                                                    runat="server">
+                                                    </asp:AutoCompleteExtender>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="row mb-3">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="txtPatientName">Patient Name:</label>                                                                                
+                                            </div>
                                             <div class="form-group">       
-                                                 
                                                 <asp:TextBox ID="txtPatientName" runat="server" CssClass="form-control" placeholder="Enter Patient Name(*)" ></asp:TextBox>                                  
                                             </div>
                                         </div>
-                                                <div class="col-sm-2">
-                                                    <div class="form-group">
-                                                         <label for="txtMobileNo">Mobile No:</label>                                                                                
-                                                    </div>
-                                         </div>
-                                                 <div class="col-sm-2">
-                                              <div class="form-group">
-                                                 <asp:TextBox ID="txtMobileNo" runat="server" CssClass="form-control" placeholder="MobileNo.(*)" MaxLength="10" ></asp:TextBox>                       
-                                              </div>
-                                       </div>
-                                                <div class="col-sm-1" >
+                                        <div class="col-sm-4">
                                             <div class="form-group">
-                                                 <label for="txtBirthDate">BirthDate:</label>     
+                                                <label for="txtMobileNo">Mobile No:</label>                                                                                
+                                            </div>
+                                            <div class="form-group">
+                                                <asp:TextBox ID="txtMobileNo" runat="server" CssClass="form-control" placeholder="MobileNo.(*)" MaxLength="10" ></asp:TextBox>                       
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="txtBirthDate">BirthDate:</label>     
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group date"  data-provide="datepicker" data-date-format="dd/mm/yyyy" data-autoclose="true">  
+                                                    <asp:TextBox ID="txtBirthDate" runat="server"  CssClass="form-control" TabIndex="12" AutoPostBack="True"></asp:TextBox>
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                        <%-- <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </span> --%>
+                                                    </div>
                                                 </div>
-                                             </div> 
-                                               <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                                                                                                                                                                                                                 
-                                                        <div class="input-group date"  data-provide="datepicker" data-date-format="dd/mm/yyyy" data-autoclose="true">  
-                                                          <asp:TextBox ID="txtBirthDate" runat="server"  CssClass="form-control" TabIndex="12" 
-                                                             AutoPostBack="True" ></asp:TextBox>
-                                                             <span class="input-group-addon">
-                                                                <i class="fa fa-calendar"></i>
-                                                            </span>
-                                                                <%-- <span class="input-group-addon">
-                                                                    <span class="glyphicon glyphicon-calendar"></span>
-                                                                </span> --%>                                                    
-                        
-                                                        </div>
-                                                       
-                                                        </div>
-                                                    </div> 
-                                                </div>
-                                           
-                                    
-
-                                    <div class="row mb-3">                                
-                                                <div class="col-lg-9 text-center">
-                                            <%--<div class="row">
-                                        <div class="col-lg-4 text-left">   --%>                                 
-                                              <asp:Button ID="btnSearch" runat="server" CssClass="btn btn-success"   OnClick="btnSearch_Click" Text="Search"
-                                                 />
-                                              <asp:Button ID="btnNew" runat="server" CssClass="btn btn-warning"   onclick="btnNew_Click" Text="New" 
-                                                 />
-                                        <%--</div>
- 
+                                            </div> 
+                                        </div>
+                                        <div class="row mb-3">                                
+                                            <div class="col-lg-9 text-center">
+                                                <%--<div class="row">
+                                                    <div class="col-lg-4 text-left">   --%>                                 
+                                                <asp:Button ID="btnSearch" runat="server" CssClass="btn btn-success"   OnClick="btnSearch_Click" Text="Search" />
+                                                <asp:Button ID="btnNew" runat="server" CssClass="btn btn-warning"   onclick="btnNew_Click" Text="New" />
+                                                <%--</div>
                                             </div>--%>
                                         </div>
                                         <div class="col-lg-2 ">
-                                             <asp:TextBox ID="txtmergeRegno" runat="server" BorderColor="Red" CssClass="form-control" placeholder="Merge RegNo" MaxLength="10" AutoPostBack="false" OnTextChanged="txtmergeRegno_TextChanged" ></asp:TextBox>
-                                            </div>
-                                      
-                                       <div class="col-lg-1 ">
+                                            <asp:TextBox ID="txtmergeRegno" runat="server" BorderColor="Red" CssClass="form-control" placeholder="Merge RegNo" MaxLength="10" AutoPostBack="false" OnTextChanged="txtmergeRegno_TextChanged" ></asp:TextBox>
+                                        </div>
+                                        <div class="col-lg-1 ">
                                            <asp:Button ID="btnmerge" runat="server" CssClass="btn btn-danger"    Text="Merge" OnClick="btnmerge_Click"   />
-                                           </div>
-                                    
+                                        </div>
+                                    </div>
                                 </div>
-                             
-                                    
-                                        
-                                   
-                      
-                                 </div>
-                          </div>
-                      <div class="box" runat="server" id="List" >
-                             <div class="messagealert" id="alert_container">
-            </div>
-                                          
-                             <div class="box-header with-border">
+                            </div>
+                            <div class="box" runat="server" id="List" >
+                                <div class="messagealert" id="alert_container"></div>
+                                <div class="box-header with-border">
                                     <asp:Label ID="lblMessage" class="red pull-center"  runat="server" Text="" Font-Bold="true" ForeColor="green" ></asp:Label>
-                          
                                 </div>
-                             <div class="box-body">
+                                <div class="box-body">
                                    <div class="table-responsive" style="width:100%">          
                      
                                     <asp:GridView ID="gvPatientInfo" runat="server" AutoGenerateColumns="False" DataKeyNames="PatientInfoId"

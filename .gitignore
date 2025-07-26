@@ -11,3 +11,5 @@
 /BramhaMediTech_HMS_Updated/.vs/BramhaMediTech_HMS_Updated/v17/DocumentLayout.json
 /BramhaMediTech_HMS_Updated/.vs/BramhaMediTech_HMS_Updated/v17/HierarchyCache.v1.txt
 /BramhaMediTech_HMS_Updated/Print_Report/exported.pdf
+*.suo
+.vs/
