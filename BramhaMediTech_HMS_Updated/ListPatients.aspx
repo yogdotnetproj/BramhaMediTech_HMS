@@ -124,7 +124,7 @@
                                 <div class="row" id="GVOP" runat="server">
                                     <div class="col-lg-12">
                                         <div class="row">
-                                            <div class="table-responsive" style="width: 100%">
+                                            <div class="table-responsive patientListDataTable" style="width: 100%">
                                                 <asp:GridView ID="gvPatientInfo" runat="server" AutoGenerateColumns="False" DataKeyNames="RegId"
                                                     class="table table-responsive table-sm table-bordered" Width="100%"
                                                     HeaderStyle-ForeColor="Black" AlternatingRowStyle-BackColor="White" CellPadding="3"

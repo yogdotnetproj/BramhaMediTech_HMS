@@ -424,84 +424,60 @@
                                         <div class="row">
                                             <div class="col-sm-2">
                                                 <div class="card mb-3" style="max-width: 540px;">
-                                                    <div class="display-flex">
+                                                    <div class="ipdDeskCards">
                                                         <asp:ImageButton ID="btnAdmit1" runat="server" Width="50" ImageUrl="~/Images0/Admit.png" ToolTip="Patient Admit" Text="Admit" />
                                                         <div class="card-body">
-                                                            <h4 class="card-title"><asp:Label ID="Label2" runat="server" CssClass="h4 bd-brand-logos" Text="Admit:"></asp:Label></h4>
+                                                            <h4 class="card-title mt-2"><asp:Label ID="Label2" runat="server" CssClass="h4 bd-brand-logos" Text="Admit:"></asp:Label></h4>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
                                                 <div class="card mb-3" style="max-width: 540px;">
-                                                    <div class="row g-0">
-                                                        <div class="col-md-4 p-3">
-                                                            <asp:ImageButton ID="btnEdit1" runat="server" Width="30" ToolTip="Demography Edit" ImageUrl="~/Images0/Admitted.png"
-                                                        Text="Edit" />
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <div class="card-body">
-                                                                <h4 class="card-title"><asp:Label ID="Label3" runat="server" CssClass="h4 bd-brand-logos" Text="Demography:"></asp:Label></h4>
-                                                            </div>
+                                                    <div class="ipdDeskCards">
+                                                        <asp:ImageButton ID="btnEdit1" runat="server" Width="30" ToolTip="Demography Edit" ImageUrl="~/Images0/Admitted.png" Text="Edit" style="width: 40px !important; margin: 0 0 0 20px;" />
+                                                        <div class="card-body">
+                                                            <h4 class="card-title mt-2"><asp:Label ID="Label3" runat="server" CssClass="h4 bd-brand-logos" Text="Demography:"></asp:Label></h4>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
                                                 <div class="card mb-3" style="max-width: 540px;">
-                                                    <div class="row g-0">
-                                                        <div class="col-md-4 p-3">
-                                                            <asp:ImageButton ID="btnShift1" runat="server" Width="30" ToolTip="Shift" ImageUrl="~/Images0/ShiftPatient.jpg"
-                                                        Text="Shift" />
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <div class="card-body">
-                                                                <h4 class="card-title"><asp:Label ID="Label4" runat="server" CssClass="h4 bd-brand-logos" Text="Shift:"></asp:Label></h4>
-                                                            </div>
+                                                    <div class="ipdDeskCards">
+                                                        <asp:ImageButton ID="btnShift1" runat="server" Width="30" ToolTip="Shift" ImageUrl="~/Images0/ShiftPatient.jpg" Text="Shift" style="width: 40px !important; margin: 0 0 0 20px;" />
+                                                        <div class="card-body">
+                                                            <h4 class="card-title mt-2"><asp:Label ID="Label4" runat="server" CssClass="h4 bd-brand-logos" Text="Shift:"></asp:Label></h4>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
                                                 <div class="card mb-3" style="max-width: 540px;">
-                                                    <div class="row g-0">
-                                                        <div class="col-md-4 p-3">
-                                                            <asp:ImageButton ID="btnDischarge1" runat="server" Width="30" ImageUrl="~/Images0/Discharge.jpg"
-                                                        Text="Discharge" ToolTip="Discharge" />
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title"><asp:Label ID="Label5" runat="server" CssClass="h4 bd-brand-logos" Text="Discharge:"></asp:Label></h5>
-                                                            </div>
+                                                    <div class="ipdDeskCards">
+                                                        <asp:ImageButton ID="btnDischarge1" runat="server" Width="30" ImageUrl="~/Images0/Discharge.jpg" Text="Discharge" ToolTip="Discharge" style="width: 40px !important; margin: 0 0 0 20px;" />
+                                                        <div class="card-body">
+                                                            <h5 class="card-title mt-2"><asp:Label ID="Label5" runat="server" CssClass="h4 bd-brand-logos" Text="Discharge:"></asp:Label></h5>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
                                                 <div class="card mb-3" style="max-width: 540px;">
-                                                    <div class="row g-0">
-                                                        <div class="col-md-4 p-3">
-                                                            <asp:ImageButton ID="btnFrontSheet1" runat="server" ToolTip="FrontsheetReport" Width="30" ImageUrl="~/Images0/FrontReport.png"
-                                                        Text="FrontSheet" />
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <div class="card-body">
-                                                                <h4 class="card-title"><asp:Label ID="Label6" runat="server" CssClass="h4 bd-brand-logos" Text="Report:"></asp:Label></h4>
-                                                            </div>
+                                                    <div class="ipdDeskCards">
+                                                        <asp:ImageButton ID="btnFrontSheet1" runat="server" ToolTip="FrontsheetReport" Width="30" ImageUrl="~/Images0/FrontReport.png" Text="FrontSheet" style="width: 30px !important; height: 70px; margin: 0 0 0 20px;" />
+                                                        <div class="card-body">
+                                                            <h4 class="card-title mt-2"><asp:Label ID="Label6" runat="server" CssClass="h4 bd-brand-logos" Text="Report:"></asp:Label></h4>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-2">
                                                 <div class="card mb-3" style="max-width: 540px;">
-                                                    <div class="row g-0">
-                                                        <div class="col-md-4 p-3">
-                                                            <asp:ImageButton ID="btnpanic1" class="flashingTextcss" Width="30" ImageUrl="~/images/light-311119__340.png" runat="server"></asp:ImageButton>
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <div class="card-body">
-                                                                <h4 class="card-title"><asp:Label ID="Label7" runat="server" CssClass="h4 bd-brand-logos" Text="Precaution:"></asp:Label></h4>
-                                                            </div>
+                                                    <div class="ipdDeskCards">
+                                                        <asp:ImageButton ID="btnpanic1" class="flashingTextcss" Width="30" ImageUrl="~/images/light-311119__340.png" runat="server" style="width: 30px !important; margin: 0 0 0 20px; height: 70px;"></asp:ImageButton>
+                                                        <div class="card-body">
+                                                            <h4 class="card-title mt-2"><asp:Label ID="Label7" runat="server" CssClass="h4 bd-brand-logos" Text="Precaution:"></asp:Label></h4>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -600,13 +576,13 @@
                                                                                     <asp:DataList ID="BedDataList" runat="server" DataKeyField="BedId" RepeatColumns="4" RepeatDirection="Horizontal" OnEditCommand="BedDataList_EditCommand" OnItemDataBound="BedDataList_ItemDataBound" OnItemCommand="BedDataList_ItemCommand" class="table table-striped" Width="100%">
                                                                                         <ItemStyle />
                                                                                         <ItemTemplate>
-                                                                                            <div class="box">
+                                                                                            <div class="box deskCardWrapper">
                                                                                                 <div class="box-body">
                                                                                                     <div class="col-sm-12">
                                                                                                         <div class="row">
                                                                                                             <div>
                                                                                                                 <div class="form-group">
-                                                                                                                    <asp:Label ID="lblBedName" runat="server" Text='<%# Eval("BedName") %>' />
+                                                                                                                    <asp:Label ID="lblBedName" class="bedNameWrapper" runat="server" Text='<%# Eval("BedName") %>' />
                                                                                                                     <asp:HiddenField ID="hdnPatRegId" runat="server" Value='<%# Eval("PatRegId") %>' />
                                                                                                                     <asp:HiddenField ID="hdnIpdNo" runat="server" Value='<%# Eval("IpdNo") %>' />
                                                                                                                     <asp:HiddenField ID="hdnIpdId" runat="server" Value='<%# Eval("IpdId") %>' />

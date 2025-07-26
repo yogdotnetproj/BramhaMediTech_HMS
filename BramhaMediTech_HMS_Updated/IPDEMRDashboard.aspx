@@ -9,7 +9,7 @@
                 <h1>Dashboard</h1>
             </section>--%>
 
-            <section class="content">
+            <section class="content pt-4">
                 <div id="Div1" class="box" runat="server">
                     
                      <%-- <div class="box-body">--%>
@@ -132,9 +132,8 @@
 
                     </div>--%>
             <div class="panel-heading" style="font-size:medium;font-weight:bold ;background-color:#B24592" ">Patient Information:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <asp:Label  ID="lblVaccinationStatus" Visible="false" Font-Bold="true" ForeColor="Red"  runat="server" Text=""></asp:Label> </div>
-      <div class="panel-body bg-white"  >
-    
-                            <div class="col-lg-12 mt-2 text-left">
+                <div class="panel-body bg-white px-3">
+                            <div class="col-lg-12 text-left">
                                 <div class="row">
                                 <div class="col-lg-3 text-left">
                                     <div class="form-group">
@@ -179,7 +178,7 @@
                             </div>
                              
                        
-                            <div class="col-lg-12 mt-2 text-left">
+                            <div class="col-lg-12 text-left">
                                 <div class="row">
                                 <div class="col-lg-3 text-left">
                                     <div class="form-group">
@@ -218,7 +217,7 @@
                                     </div>
                             </div>
 
-           <div class="col-lg-12 mt-2 text-left" runat="server" id="IpdRmCat">
+           <div class="col-lg-12 text-left" runat="server" id="IpdRmCat">
                                 <div class="row">
                                 <div class="col-lg-3 text-left">
                                     <div class="form-group">
