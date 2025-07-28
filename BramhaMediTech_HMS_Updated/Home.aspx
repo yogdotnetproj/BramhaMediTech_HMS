@@ -358,10 +358,9 @@
                                         </div>
                          </div>
                         </div>
-                <div class="box">
-
-                   
-
+                <div class="row">
+                <div class="col-md-4 mt-4">
+                    <div class="box">
                     <div class="box-header with-border">
                         <h3 class="box-title">
                             Total number of patients daywise</h3>
@@ -374,15 +373,13 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="row">
-                             <div class="col-md-5">
-                                 </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                  <input type="text" class="form-control"  id="txtCenterName" />
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                                 <input type="text" class="form-control" id="datepicker11" />
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                                 <input type="text" class="form-control" id="datepicker1" />
                             </div>
                         </div>
@@ -397,8 +394,10 @@
                     </div>
                     <div class="box-footer" style="">
                     </div>
+                    </div>
                 </div>
-                <div class="box" hidden="hidden">
+                <div class="col-md-4 mt-4" hidden="hidden">
+                    <div class="box">
                     <div class="box-header with-border">
                         <h3 class="box-title">
                             Total number of patients daywise</h3>
@@ -411,9 +410,9 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="row">
-                            <div class="col-md-9">
+                            <div class="col-md-4">
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                                 <select name="months" class="months1 form-control" id="months2">
                                     <option value="1">January</option>
                                     <option value="2">February</option>
@@ -429,7 +428,7 @@
                                     <option value="12">December</option>
                                 </select>
                             </div>
-                            <div class="col-md-1">
+                            <div class="col-md-4">
                                 <input type="text" class="form-control" id="datepicker2" />
                             </div>
                         </div>
@@ -444,8 +443,10 @@
                     </div>
                     <div class="box-footer" style="">
                     </div>
+                    </div>
                 </div>
-                <div class="box">
+                <div class="col-md-4 mt-4">
+                    <div class="box">
                     <div class="box-header with-border">
                         <h3 class="box-title">
                             Total patients by department</h3>
@@ -496,8 +497,10 @@
                     <div class="box-footer" style="">
                     </div>
                     <!-- /.box-footer -->
+                    </div>
                 </div>
-                <div class="box col-md-12">
+                <div class="col-md-4 mt-4">
+                    <div class="box">
                     <div class="box-header with-border">
                         <h3 class="box-title">
                             Top 5 Referal Doctors</h3>
@@ -548,6 +551,8 @@
                     <div class="box-footer" style="">
                     </div>
                     <!-- /.box-footer -->
+                    </div>
+                </div>
                 </div>
                 </section>
                 <!-- /.content -->
@@ -610,7 +615,6 @@
             $(document).ready(function () {
 
                 $("#txtCenterName").change(function () {
-                    debugger;
                     //alert('in');
                     var Centername = $("#txtCenterName").val();
                     var selectedMonth1 = toDate($("#datepicker11").val());
@@ -636,7 +640,6 @@
 
                         for (var i = 0; i < res.length; i++) {
                             var items = '';
-                            debugger;
                             items += '<li class="parents">' + res[i]["MenuName"] + '<span class="caret"></span>';
 
                             var childs = '';
@@ -883,7 +886,6 @@
                     data: { month: selectedMonth1, year: selectedYear1, Center: Centername },
                     //contentType:'application/json; charset=utf-8',
                     success: function (res) {
-                        debugger;
                         //alert('success : ' + JSON.parse(res));
                         AmCharts.makeChart("chartdiv11",
 				{
@@ -902,20 +904,17 @@
 				    "trendLines": [],
 				    "graphs": [
 						{
-						    "fillAlphas": 0.7,
-						    "fillColors": "#84C5EB",
-						    "id": "AmGraph-1",
-						    "lineAlpha": 0,
-						    "title": "graph 1",
-						    "valueField": "NoOfPatients",
-						    "bullet": "bubble",
-						    "bulletBorderColor": "",
-						    "bulletColor": "#54D6EB",
-						    "bulletSize": 11,
-						    "labelText": "[[value]]",
-						    "lineColor": "#0D338C",
-						    "lineThickness": 2,
-						    "showBulletsAt": "open",
+                            "id": "AmGraph-1",
+                            "type": "column",                 // <-- Key change to make it a bar chart
+                            "title": "graph 1",
+                            "valueField": "NoOfPatients",
+                            "fillAlphas": 0.8,                // More opacity for bar fill
+                            "fillColors": "#84C5EB",          // Bar color
+                            "lineAlpha": 0.2,                 // Slight border for the bars
+                            "lineColor": "#0D338C",           // Optional: border color of the bar
+                            "labelText": "[[value]]",         // Display value on the bar
+                            "balloonText": "[[category]]: [[value]]", // Tooltip
+                            "color": "#000000"                // Text color (optional)
 						},
 				    ],
 				    "guides": [],
@@ -1256,7 +1255,13 @@
                 $('#userMenuWrapper').toggleClass('show');
                 e.preventDefault();
             });
+            $(document).ready(function () {
+                if (localStorage.getItem('sidebarMenuToggle') && localStorage.getItem('sidebarMenuToggle') != 'true') {
+                    $('#bodyWrapper').toggleClass('collapsed');
+                }
+            });
             $('#toggleMenu').on('click', function () {
+                localStorage.setItem('sidebarMenuToggle', '' + $('#bodyWrapper').hasClass('collapsed'));
                 $('#bodyWrapper').toggleClass('collapsed');
                 e.preventDefault();
             });

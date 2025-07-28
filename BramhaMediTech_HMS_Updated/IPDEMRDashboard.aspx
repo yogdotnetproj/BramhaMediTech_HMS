@@ -299,32 +299,32 @@
                             <div class="row">   
                                 <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnAdmisionSheet" ImageUrl="~/EmrDasImage/AdmissionSheet.jpg" OnClick="btnAdmisionSheet_Click" />
+                                                <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnAdmisionSheet" ImageUrl="~/EmrDasImage/EMR_icons/AdmissionSheet.jpg" OnClick="btnAdmisionSheet_Click" />
                                                 </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnvital" ImageUrl="~/EmrDasImage/vital-signs.png" OnClick="btnvital_Click" />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnvital" ImageUrl="~/EmrDasImage/EMR_icons/vital-signs.jpg" OnClick="btnvital_Click" />
                                                 </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnintakeoutput" ImageUrl="~/EmrDasImage/40780383.jpg" OnClick="btnintakeoutput_Click" />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnintakeoutput" ImageUrl="~/EmrDasImage/EMR_icons/Intake_Output_Chart.jpg" OnClick="btnintakeoutput_Click" />
                                                 </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btninvestigation" ImageUrl="~/EmrDasImage/LabReport.jpg" OnClick="btninvestigation_Click" />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btninvestigation" ImageUrl="~/EmrDasImage/EMR_icons/Investigation_Report.jpg" OnClick="btninvestigation_Click" />
                                                 </div>
                                     </div>
                                 <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                <asp:ImageButton runat="server" Width="100px" Height="70px"  ID="btnordersheet" ImageUrl="~/EmrDasImage/OrderSheet.jpg" OnClick="btnordersheet_Click" />
+                                                <asp:ImageButton runat="server" Width="100px" Height="70px"  ID="btnordersheet" ImageUrl="~/EmrDasImage/EMR_icons/Order_Sheet.jpg" OnClick="btnordersheet_Click" />
                                                 </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="byndrnote" ImageUrl="~/EmrDasImage/DoctorNote.jpg" OnClick="byndrnote_Click" />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="byndrnote" ImageUrl="~/EmrDasImage/EMR_icons/Doctor_Notes.jpg" OnClick="byndrnote_Click" />
                                                 </div>
                                     </div>
 
@@ -366,33 +366,33 @@
                                 
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnmar" ImageUrl="~/EmrDasImage/MAR.jpg" OnClick="btnmar_Click" />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnmar" ImageUrl="~/EmrDasImage/EMR_icons/MAR.jpg" OnClick="btnmar_Click" />
                                                 </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnnursenote" ImageUrl="~/EmrDasImage/NurseNote.jpg" OnClick="btnnursenote_Click" />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnnursenote" ImageUrl="~/EmrDasImage/EMR_icons/Nurses_Notes.jpg" OnClick="btnnursenote_Click" />
                                                 </div>
                                     </div>
 
                                 <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnsurgeryform" ImageUrl="~/EmrDasImage/SurgeryForm.jpg" OnClick="btnsurgeryform_Click" />
+                                                <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnsurgeryform" ImageUrl="~/EmrDasImage/EMR_icons/Surgery_Form.jpg" OnClick="btnsurgeryform_Click" />
                                                 </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btndrnote" ImageUrl="~/EmrDasImage/DoctorNote.jpg" OnClick="btndrnote_Click" />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btndrnote" ImageUrl="~/EmrDasImage/EMR_icons/Doctor_Notes.jpg" OnClick="btndrnote_Click" />
                                                 </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btndischargemedication" ImageUrl="~/EmrDasImage/prescription.png" OnClick="btndischargemedication_Click" />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btndischargemedication" ImageUrl="~/EmrDasImage/EMR_icons/Discharge_Medication.jpg" OnClick="btndischargemedication_Click" />
                                                 </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btndischargesummary" ImageUrl="~/EmrDasImage/DischargeSummary.png" OnClick="btndischargesummary_Click" />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btndischargesummary" ImageUrl="~/EmrDasImage/EMR_icons/Doctor_Notes.jpg" OnClick="btndischargesummary_Click" />
                                                 </div>
                                     </div>
                                 </div>
@@ -430,32 +430,32 @@
                             <div class="row">   
                                 <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                            <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnMaternity" ImageUrl="~/EmrDasImage/Maternity.png" OnClick="btnMaternity_Click"   />
+                                            <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnMaternity" ImageUrl="~/EmrDasImage/EMR_icons/Maternity.jpg" OnClick="btnMaternity_Click"   />
                                                      </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnIPDVisitrecord" ImageUrl="~/EmrDasImage/vital-signs.png" OnClick="btnIPDVisitrecord_Click"  />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnIPDVisitrecord" ImageUrl="~/EmrDasImage/EMR_icons/IPD_Visit_Record.jpg" OnClick="btnIPDVisitrecord_Click"  />
                                                 </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnPostCharges" ImageUrl="~/EmrDasImage/40780383.jpg"  OnClick="btnPostCharges_Click" />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnPostCharges" ImageUrl="~/EmrDasImage/EMR_icons/Post_Charges.jpg"  OnClick="btnPostCharges_Click" />
                                                 </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnIpdFile" ImageUrl="~/EmrDasImage/LabReport.jpg" OnClick="btnIpdFile_Click"  />
+                                                  <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnIpdFile" ImageUrl="~/EmrDasImage/EMR_icons/Dialysis.jpg" OnClick="btnIpdFile_Click"  />
                                                 </div>
                                     </div>
                                  <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                <asp:ImageButton runat="server" Width="100px" Height="70px"  ID="btnNurseOrder" ImageUrl="~/EmrDasImage/OrderSheet.jpg" OnClick="btnNurseOrder_Click"  />
+                                                <asp:ImageButton runat="server" Width="100px" Height="70px"  ID="btnNurseOrder" ImageUrl="~/EmrDasImage/EMR_icons/Nurse_Order.jpg" OnClick="btnNurseOrder_Click"  />
                                                 </div>
                                     </div>
                                 <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
-                                                <asp:ImageButton runat="server" Width="100px" Height="70px"  ID="btnNICUChart" ImageUrl="~/EmrDasImage/OrderSheet.jpg" OnClick="btnNICUChart_Click"  />
+                                                <asp:ImageButton runat="server" Width="100px" Height="70px"  ID="btnNICUChart" ImageUrl="~/EmrDasImage/EMR_icons/NICUChart.jpg" OnClick="btnNICUChart_Click"  />
                                                 </div>
                                     </div>
                                 <%--<div class="col-lg-2 text-center" >                                                           
@@ -509,7 +509,7 @@
                                 <div class="col-lg-2 text-center" >                                                           
                                             <div class="form-group"> 
                                                
-                                                <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnopdvisitrecord" ImageUrl="~/EmrDasImage/AdmissionSheet.jpg" OnClick="btnopdvisitrecord_Click"  />
+                                                <asp:ImageButton runat="server" Width="100px" Height="70px" ID="btnopdvisitrecord" ImageUrl="~/EmrDasImage/EMR_icons/OPD_Visit_Record_1.jpg" OnClick="btnopdvisitrecord_Click"  />
                                                 </div>
                                     </div>
                                 </div>

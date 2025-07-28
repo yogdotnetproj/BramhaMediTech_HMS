@@ -700,8 +700,17 @@
                 $('#userMenuWrapper').toggleClass('show');
                 e.preventDefault();
             });
+            $(document).ready(function () {
+                if (localStorage.getItem('sidebarMenuToggle') && localStorage.getItem('sidebarMenuToggle') != 'true') {
+                    $('#bodyWrapper').toggleClass('collapsed');
+                }
+            });
             $('#toggleMenu').on('click', function () {
+                localStorage.setItem('sidebarMenuToggle', '' + $('#bodyWrapper').hasClass('collapsed'));
                 $('#bodyWrapper').toggleClass('collapsed');
+                e.preventDefault();
+            });
+            $('#bodyWrapper').toggleClass('collapsed');
                 e.preventDefault();
             });
             $(".metismenu > li").on('click', function () {

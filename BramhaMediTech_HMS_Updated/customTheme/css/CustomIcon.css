@@ -1,0 +1,93 @@
+﻿.icon-sprite {
+    display: inline-block;
+    width: 100px;
+    height: 70px;
+    background-image: url('/EmrDasImage/Medical_Icons_Sprite_Emr.jpg'); /* Update path as per your project */
+    background-size: auto;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    background-color: white;
+    background-position: 0 0;
+    font-size:0;
+    
+}
+
+    .icon-sprite.admission-sheet {
+        background-position: 0px 0px;
+    }
+
+    .icon-sprite.vital-signs {
+        background-position: -100px 0px;
+    }
+
+    .icon-sprite.intake-output-chart {
+        background-position: -200px 0px;
+    }
+
+    .icon-sprite.investigation-report {
+        background-position: -300px 0px;
+    }
+
+    .icon-sprite.order-sheet {
+        background-position: 0px -70px;
+    }
+
+    .icon-sprite.clinical-pharmacist {
+        background-position: -100px -70px;
+    }
+
+    .icon-sprite.mar {
+        background-position: -200px -70px;
+    }
+
+    .icon-sprite.nurses-notes {
+        background-position: -300px -70px;
+    }
+
+    .icon-sprite.surgery-form {
+        background-position: 0px -140px;
+    }
+
+    .icon-sprite.doctor-notes {
+        background-position: -100px -140px;
+    }
+
+    .icon-sprite.discharge-medication {
+        background-position: -200px -140px;
+    }
+
+    .icon-sprite.maternity {
+        background-position: -300px -140px;
+    }
+
+    .icon-sprite.ipd-visit-record {
+        background-position: 0px -210px;
+    }
+
+    .icon-sprite.post-charges {
+        background-position: -100px -210px;
+    }
+
+    .icon-sprite.dialysis {
+        background-position: -200px -210px;
+    }
+
+    .icon-sprite.opd-visit-record1 {
+        background-position: -300px -210px;
+    }
+
+    .icon-sprite.nurse-order {
+        background-position: 0px -280px;
+    }
+
+    .icon-sprite.nicu-chart {
+        background-position: -100px -280px;
+    }
+
+    .icon-sprite.opd-visit-record2 {
+        background-position: -200px -280px;
+    }
+
+    .icon-sprite.opd-visit-record3 {
+        background-position: -300px -280px;
+    }
