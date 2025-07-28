@@ -1125,9 +1125,7 @@
             $('#bodyWrapper').toggleClass('collapsed');
             e.preventDefault();
         });
-        $('#bodyWrapper').toggleClass('collapsed');
-            e.preventDefault();
-        });
+        
         $(".metismenu > li").on('click', function () {
             // console.log($('.metismenu li.active ul'));
             if ($('.metismenu li.active ul')[0]) {

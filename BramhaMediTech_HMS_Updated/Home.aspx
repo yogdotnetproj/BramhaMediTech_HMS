@@ -459,9 +459,9 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="row">
-                            <div class="col-md-9">
+                            <div class="col-md-4">
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                                 <select name="months3" class="months3 form-control" id="months3">
                                     <option value="1">January</option>
                                     <option value="2">February</option>
@@ -477,7 +477,7 @@
                                     <option value="12">December</option>
                                 </select>
                             </div>
-                            <div class="col-md-1">
+                            <div class="col-md-4">
                                 <input type="text" class="form-control" id="datepicker3" />
                             </div>
                         </div>
@@ -513,9 +513,9 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <select name="months" class="months4 form-control" id="months4">
                                     <option value="1">January</option>
                                     <option value="2">February</option>
@@ -531,7 +531,7 @@
                                     <option value="12">December</option>
                                 </select>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <input type="text" class="form-control" id="datepicker4" />
                             </div>
                         </div>
