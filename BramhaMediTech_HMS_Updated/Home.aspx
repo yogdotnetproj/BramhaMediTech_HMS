@@ -158,10 +158,10 @@
                 </li>
                 <li class="profile-nav custom-dropdown">
                   <div class="user-wrap">
-                    <div class="user-img"><img src="customTheme/images/profile.png" alt="user"></div>
+                    <div class="user-img"><img src="customTheme/images/DrProfile.jpg" alt="user"></div>
                     <div class="user-content" id="userMenu">
-                      <h6>Ava Davis</h6>
-                      <p class="mb-0">Admin<i class="fa-solid fa-chevron-down"></i></p>
+                      <h6>Welcome, <%= Session["username"] %></h6>
+                      <p class="mb-0"><%= Session["usertype"] %><i class="fa-solid fa-chevron-down"></i></p>
                     </div>
                   </div>
                   <div class="custom-menu overflow-hidden" id="userMenuWrapper">
@@ -174,7 +174,7 @@
                       <li class="d-flex"> 
                         <svg class="svg-color">
                           <use href="customTheme/svg/iconly-sprite.svg#Document"></use>
-                        </svg><a class="ms-2" href="ChangePassword.aspx">Change Password</a>
+                        </svg><a class="ms-2" href="#">Change Password</a>
                       </li>
                       <li class="d-flex"> 
                         <svg class="svg-color">
