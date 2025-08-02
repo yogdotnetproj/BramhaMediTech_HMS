@@ -118,7 +118,7 @@ public partial class Login :BasePage
                 }
                 if (ChangePass == false)
                 {
-                    Server.Transfer("ChangePassword.aspx",false);
+                   // Server.Transfer("ChangePassword.aspx",false);
                 }
                 if (u.P_ModuleName == "HMS")
                 {
