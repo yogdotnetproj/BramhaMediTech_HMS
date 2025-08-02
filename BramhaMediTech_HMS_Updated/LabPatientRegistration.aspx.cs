@@ -732,6 +732,8 @@ public partial class LabPatientRegistration :BasePage
         txtTotalCharges.Text ="0";
 
     }
+
+   
     protected void gvBill_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
       
@@ -999,9 +1001,12 @@ public partial class LabPatientRegistration :BasePage
             lblChargeNo.ForeColor = System.Drawing.Color.Red;
             ShowMessage("Record is already saved!", MessageType.Warning);
         }
-
-       }
+        // Reset all controls
+        ControlHelper.ResetAllControls(this.Page);
+    }
    
+
+
     protected BELPatientInformation WriteToPatientReg()
     {
         objBELPatInfo = new BELPatientInformation();
@@ -1300,6 +1305,8 @@ public partial class LabPatientRegistration :BasePage
         lblMessage.Text = "Record Saved Successfully";
         Clear();
     }
+
+
 
     //private void InsertInBill()
     //{

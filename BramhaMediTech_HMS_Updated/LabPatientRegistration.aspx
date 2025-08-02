@@ -754,7 +754,7 @@
                                                 <div class="col-sm-6 text-left">
                                                     <div class="form-group">  
                                                                                          
-                                    <asp:TextBox ID="txtService" runat="server" TabIndex="13" AutoCompleteType="None" BackColor="#99CCFF" Font-Bold="True" Font-Size="Larger"  CssClass="form-control" placeholder="Enter Test Name(*)"
+                                    <asp:TextBox ID="txtService" runat="server" TabIndex="13" AutoCompleteType="None" BackColor="#cc81da" Font-Bold="True" Font-Size="Larger"  CssClass="form-control" placeholder="Enter Test Name(*)"
                                                AutoPostBack="True"   onkeyPress="return alpha_only(event);" OnTextChanged="txtService_TextChanged" ></asp:TextBox>
                                                <asp:AutoCompleteExtender 
                                                 MinimumPrefixLength="1"  

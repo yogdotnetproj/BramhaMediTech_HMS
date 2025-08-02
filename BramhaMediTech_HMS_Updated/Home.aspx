@@ -48,7 +48,7 @@
         <link rel="stylesheet" href="customTheme/css/customTheme.css"/>
         <link rel="stylesheet" href="customTheme/css/CustomGridstyle25.css"/>
 </head>
-<body class="fixed-navbar has-animation bluetheme" id="bodyWrapper">
+<body class="fixed-navbar has-animation bluetheme collapsed" id="bodyWrapper">
     <form id="form1" runat="server">
    <%-- <script src="fusioncharts/FusionCharts.js" type="text/javascript"></script>--%>
     <asp:ScriptManager ID="ScriptManager1" runat="server">

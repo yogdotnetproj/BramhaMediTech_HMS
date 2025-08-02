@@ -41,7 +41,7 @@
     </head>
 
     
-    <body class="fixed-navbar has-animation bluetheme" id="bodyWrapper">
+    <body class="fixed-navbar has-animation bluetheme collapsed" id="bodyWrapper">
         <form id="Form1" runat="server">
          <%--   <ul class="color-theme">
                        <li><a href="#" class="dark-theme"></a></li>

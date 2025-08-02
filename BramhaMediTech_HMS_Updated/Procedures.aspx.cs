@@ -698,7 +698,10 @@ public partial class Procedures :BasePage
             ShowMessage("Record already saved!", MessageType.Warning);
         }
 
-       }
+        // Reset all controls
+        ControlHelper.ResetAllControls(this.Page);
+
+    }
    
     protected BELPatientInformation WriteToPatientReg()
     {

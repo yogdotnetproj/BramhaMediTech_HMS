@@ -37,7 +37,7 @@
             <link rel="stylesheet" href="customTheme/css/CustomGridstyle25.css"/>
             
         </head>
-        <body class="fixed-navbar has-animation bluetheme" id="bodyWrapper">
+        <body class="fixed-navbar has-animation bluetheme collapsed" id="bodyWrapper">
             <div class="wrapper">
                 <!--header class="header">
                     <div class="page-brand p-1 align-self-center">
