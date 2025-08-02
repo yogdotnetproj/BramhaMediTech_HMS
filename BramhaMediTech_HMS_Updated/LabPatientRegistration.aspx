@@ -1049,16 +1049,16 @@
                                                          <div class="col-sm-3 text-right">
                                                     <div class="form-group"> 
                                                         
-                                                        <input id="rdbdiscAmt" type="radio" name="rdbDisc" disabled="disabled" runat="server" value="Amt"/>
+                                                        <input id="rdbdiscAmt" type="radio" name="rdbDisc" runat="server" value="Amt"/>
                 <label for="rdbdiscAmt">Amt</label>
-                <input id="rdbdiscPer" type="radio" runat="server" disabled="disabled" name="rdbDisc" value="Per" />
+                <input id="rdbdiscPer" type="radio" runat="server"  name="rdbDisc" value="Per" />
                   <label for="rdbdiscPer">Per(%)</label>
                                                          
                                                         </div>
                                                      </div>
                                                        <div class="col-sm-2 text-left">
                                                     <div class="form-group">
-                                                        <asp:TextBox ID="txtDiscount" runat="server"  Enabled="false"  CssClass="form-control" placeholder="Discount"
+                                                        <asp:TextBox ID="txtDiscount" runat="server"  Enabled="true"  CssClass="form-control" placeholder="Discount"
                                                       AutoPostBack="True" OnTextChanged="txtDiscount_TextChanged" onkeyPress="return numeric_only(event);"></asp:TextBox>
                        
                                                         </div>
@@ -1090,7 +1090,7 @@
                                                           <div class="col-sm-4 text-left">
                                                            <div class="form-group">  
                                                        
-                                                               <asp:DropDownList ID="ddlDiscReason" runat="server"  AutoPostBack="True" CssClass="form-control form-select" OnSelectedIndexChanged="ddlDiscReason_SelectedIndexChanged" >
+                                                               <asp:DropDownList ID="ddlDiscReason" runat="server"  AutoPostBack="True" CssClass="form-control form-select"  >
                                                     </asp:DropDownList>
                                                                </div>
                                                         </div>

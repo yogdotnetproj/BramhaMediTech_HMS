@@ -3614,25 +3614,25 @@ public partial class LabPatientRegistration :BasePage
             ViewState["DisMsg"] = "No";
         }
     }
-    protected void ddlDiscReason_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        if (ddlDiscReason.SelectedValue != "0")
-        {
-            DataTable dt = new DataTable();
-            dt = objDALPatInfo.Get_DiscountPercent(Convert.ToInt32(ddlDiscReason.SelectedValue));
-            if (dt.Rows.Count > 0)
-            {
-                if (Convert.ToInt32(dt.Rows[0]["DiscPer"]) > 0)
-                {
-                    txtDiscount.Text = Convert.ToString(dt.Rows[0]["DiscPer"]);
-                    this.txtDiscount_TextChanged(null, null);
-                }
-            }
-            else
-            {
-                txtDiscount.Text = Convert.ToString(0);
-                this.txtDiscount_TextChanged(null, null);
-            }
-        }
-    }
+    //protected void ddlDiscReason_SelectedIndexChanged(object sender, EventArgs e)
+    //{
+    //    if (ddlDiscReason.SelectedValue != "0")
+    //    {
+    //        DataTable dt = new DataTable();
+    //        dt = objDALPatInfo.Get_DiscountPercent(Convert.ToInt32(ddlDiscReason.SelectedValue));
+    //        if (dt.Rows.Count > 0)
+    //        {
+    //            if (Convert.ToInt32(dt.Rows[0]["DiscPer"]) > 0)
+    //            {
+    //                txtDiscount.Text = Convert.ToString(dt.Rows[0]["DiscPer"]);
+    //                this.txtDiscount_TextChanged(null, null);
+    //            }
+    //        }
+    //        else
+    //        {
+    //            txtDiscount.Text = Convert.ToString(0);
+    //            this.txtDiscount_TextChanged(null, null);
+    //        }
+    //    }
+    //}
 }
