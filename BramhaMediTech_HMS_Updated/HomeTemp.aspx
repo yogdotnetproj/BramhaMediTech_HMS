@@ -43,70 +43,149 @@
       <link href="cssmain/glyphicon.css" rel="stylesheet" type="text/css" />
         <%--<link href="App_Themes/Default/GVCss.css" rel="stylesheet" type="text/css" />--%>
        <link href="css/bootstrap-datepicker.css"  rel="stylesheet" />  
+      <link rel="stylesheet" href="customTheme/css/fontawesome-min.css"/>
+        <link rel="stylesheet" href="customTheme/css/customTheme.css"/>
+        <link rel="stylesheet" href="customTheme/css/CustomGridstyle25.css"/>
 </head>
-<body class="fixed-navbar has-animation bluetheme">
+<body class="fixed-navbar has-animation bluetheme collapsed" id="bodyWrapper">
     <form id="form1" runat="server">
    <%-- <script src="fusioncharts/FusionCharts.js" type="text/javascript"></script>--%>
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
     <div class="regular">
         <div class="wrapper">
-         <header class="header">
-
-            <div class="page-brand p-1 align-self-center">
-                <a class="link" href="index.html">
-                    <span class="brand"> 
-                        <span class="brand-tip text-center">HIS Management System</span>
-                    </span>
-                    <span class="brand-mini">HIS</span>
-                </a>
+      <header class="page-header row">
+          <div class="logo-wrapper d-flex align-items-center col-auto">
+            <a href="Home.aspx">
+              <img class="light-logo img-fluid" src="customTheme/brahmaMedical.png" width="130px" alt="logo">
+              <img class="dark-logo img-fluid" src="customTheme/brahmaMedical.png" width="130px" alt="logo"></a><a class="close-btn toggle-sidebar" href="javascript:void(0)">
+              <svg class="svg-color" id="toggleMenu">
+                <use href="customTheme/svg/iconly-sprite.svg#Category"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="page-main-header col">
+            <div class="header-left">
+              <div class="form-group-header d-lg-block d-none">
+                <div class="Typeahead Typeahead--twitterUsers">
+                  <div class="u-posRelative d-flex align-items-center"> 
+                    <input class="demo-input py-0 Typeahead-input form-control-plaintext w-100" type="text" placeholder="Type to Search..." name="q" title=""><i class="search-bg iconly-Search icli"></i>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="flex-1 colorTheme">
-                <!-- START TOP-LEFT TOOLBAR-->
-                <div class="d-flex justify-content-between bd-highlight p-1">
-                    <div class="align-self-center"><a class="nav-link sidebar-toggler js-sidebar-toggler"><i class="ti-menu"></i></a></div>
-                    <div class="col text-center align-self-center mobile-v">  Hospital Information Management System</div>
-                    <div class="p-2">
-                         <div class="navbar-custom-menu">
-                        <ul class="nav navbar-nav">
-                           
-                            <li class="dropdown tasks-menu">
-                                
-                               <%-- <a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-fw fa-sign-in"></i>
-                                </a>--%>
-
-                                 <a href="Home.aspx">
-                                   <%-- <i class="fa fa-fw fa-sign-in"></i>--%>
-                                      <i class="fa fa-fw fa-home"></i>
-                                </a>
-
-
-                               
-                                 
+            <div class="nav-right">
+              <ul class="header-right"> 
+                <li class="search d-lg-none d-flex"> <a href="javascript:void(0)">
+                  <svg>
+                    <use href="customTheme/svg/iconly-sprite.svg#Search"></use>
+                  </svg></a>
+                </li>
+                <li>
+                  <a class="dark-mode" href="javascript:void(0)">
+                    <svg>
+                      <use href="customTheme/svg/iconly-sprite.svg#moondark"></use>
+                    </svg></a>
+                </li>
+                <li class="custom-dropdown">
+                    <a href="javascript:void(0)" id="notificationMenu">
+                        <svg>
+                            <use href="customTheme/svg/iconly-sprite.svg#notification"></use>
+                        </svg>
+                    </a>
+                    <span class="badge rounded-pill badge-primary">4</span>
+                    <div class="custom-menu notification-dropdown py-0 overflow-hidden" id="notificationMenuWrapper">
+                        <h3 class="title bg-primary-light dropdown-title">Notification <span class="font-primary">View all</span></h3>
+                        <ul class="activity-timeline">
+                            <li class="d-flex align-items-start">
+                              <div class="activity-line"></div>
+                              <div class="activity-dot-primary"></div>
+                              <div class="flex-grow-1">
+                                <h6 class="f-w-600 font-primary">30-04-2024<span>Today</span><span class="circle-dot-primary float-end">
+                                    <svg class="circle-color">
+                                      <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                    </svg></span></h6>
+                                <h5>Alice Goodwin</h5>
+                                <p class="mb-0">Fashion should be fun. It shouldn't be labelled intellectual.</p>
+                              </div>
                             </li>
-                              <li>
-                                <%--<a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-fw fa-power-off"></i>
-                                </a>--%>
-                                <a  href="ChangePassword.aspx">
-                                    <i class="fa fa-fw fa-key"></i>
-                                </a>
+                            <li class="d-flex align-items-start">
+                                <div class="activity-dot-secondary"></div>
+                                <div class="flex-grow-1">
+                                    <h6 class="f-w-600 font-secondary">28-06-2024<span>1 hour ago</span><span class="float-end circle-dot-secondary">
+                                      <svg class="circle-color">
+                                        <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                      </svg></span>
+                                    </h6>
+                                    <h5>Herry Venter</h5>
+                                    <p>I am convinced that there can be luxury in simplicity.</p>
+                                </div>
                             </li>
-                            <li>
-                                <%--<a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-fw fa-power-off"></i>
-                                </a>--%>
-                                <a href="Login.aspx" >
-                                    <i class="fa fa-fw fa-power-off"></i>
-                                </a>
+                            <li class="d-flex align-items-start">
+                                <div class="activity-dot-primary"></div>
+                                <div class="flex-grow-1">
+                                  <h6 class="f-w-600 font-primary">04-08-2024<span>Today</span><span class="float-end circle-dot-primary">
+                                      <svg class="circle-color">
+                                        <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                      </svg></span>
+                                  </h6>
+                                  <h5>Loain Deo</h5>
+                                  <p>I feel that things happen for open new opportunities.</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <div class="activity-dot-secondary"></div>
+                                <div class="flex-grow-1">
+                                  <h6 class="f-w-600 font-secondary">12-11-2024<span>Yesterday</span><span class="float-end circle-dot-secondary">
+                                      <svg class="circle-color">
+                                        <use href="../assets/svg/iconly-sprite.svg#circle"></use>
+                                      </svg></span>
+                                  </h6>
+                                  <h5>Fenter Jessy</h5>
+                                  <p>Sometimes the simplest things are the most profound.</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
+                </li>
+                <li>
+                  <a class="full-screen" href="javascript:void(0)"> 
+                    <svg>
+                      <use href="customTheme/svg/iconly-sprite.svg#scanfull"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="profile-nav custom-dropdown">
+                  <div class="user-wrap">
+                    <div class="user-img"><img src="customTheme/images/DrProfile.jpg" alt="user"></div>
+                    <div class="user-content" id="userMenu">
+                      <h6>Welcome, <%= Session["username"] %></h6>
+                      <p class="mb-0"><%= Session["usertype"] %><i class="fa-solid fa-chevron-down"></i></p>
                     </div>
-                </div>
-                
+                  </div>
+                  <div class="custom-menu overflow-hidden" id="userMenuWrapper">
+                    <ul class="profile-body">
+                      <li class="d-flex"> 
+                        <svg class="svg-color">
+                          <use href="customTheme/svg/iconly-sprite.svg#Profile"></use>
+                        </svg><a class="ms-2" href="Home.aspx">Home</a>
+                      </li>
+                      <li class="d-flex"> 
+                        <svg class="svg-color">
+                          <use href="customTheme/svg/iconly-sprite.svg#Document"></use>
+                        </svg><a class="ms-2" href="#">Change Password</a>
+                      </li>
+                      <li class="d-flex"> 
+                        <svg class="svg-color">
+                          <use href="customTheme/svg/iconly-sprite.svg#Login"></use>
+                        </svg><a class="ms-2" href="login.aspx">Log Out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
+          </div>
         </header>
             <!-- Left side column. contains the logo and sidebar -->
           <nav class="page-sidebar" id="sidebar">
@@ -118,9 +197,10 @@
                     <div class="admin-info">
                         <div class="font-strong"><asp:Label ID="UsernameLB2" runat="server" Text=""></asp:Label></div><small></small></div>
                 </div>
+                 <ul class="subMenuWrapper nav-2-level" id="subMenuWrapper"></ul>
                 <ul class="side-menu metismenu">
                     <li>
-                        <a class="active" href="Home.aspx"><i class="sidebar-item-icon fa fa-th-large"></i>
+                        <a class="active" href="HomeTemp.aspx"><i class="sidebar-item-icon fa fa-th-large"></i>
                             <span class="nav-label">Dashboard</span>
                         </a>
                     </li>
@@ -375,7 +455,67 @@
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         rel="stylesheet" /> -->
-   
+   <script type="text/javascript">
+       $(document).ready(function () {
+
+
+           $('#userMenu').on('click', function () {
+               $('#userMenuWrapper').toggleClass('show');
+               e.preventDefault();
+           });
+           $(document).ready(function () {
+               if (localStorage.getItem('sidebarMenuToggle') && localStorage.getItem('sidebarMenuToggle') != 'true') {
+                   $('#bodyWrapper').toggleClass('collapsed');
+               }
+           });
+           $('#toggleMenu').on('click', function () {
+               localStorage.setItem('sidebarMenuToggle', '' + $('#bodyWrapper').hasClass('collapsed'));
+               $('#bodyWrapper').toggleClass('collapsed');
+               e.preventDefault();
+           });
+           $(".metismenu > li").on('click', function () {
+               // console.log($('.metismenu li.active ul'));
+               if ($('.metismenu li.active ul')[0]) {
+                   $('#subMenuWrapper').html($('.metismenu li.active ul')[0].innerHTML);
+                   if (($('.metismenu li.active ul').closest('li.active').offset().top + $('#subMenuWrapper').height()) > $(window).height()) {
+                       $('#subMenuWrapper').css({
+                           top: $('.metismenu li.active ul').closest('li.active').offset().top - 25 - $('#subMenuWrapper').height(),
+                           left: $('.metismenu li.active ul').closest('li.active').offset().left + 105
+                       });
+                   } else {
+                       $('#subMenuWrapper').css({
+                           top: $('.metismenu li.active ul').closest('li.active').offset().top - 75,
+                           left: $('.metismenu li.active ul').closest('li.active').offset().left + 105
+                       });
+                   }
+               } else {
+                   $('#subMenuWrapper').html('');
+                   $('#subMenuWrapper').css({
+                       top: 0,
+                       left: 0
+                   });
+               }
+               // e.preventDefault();
+           });
+           $(document).on('click', function (e) {
+               if (!$(e.target).closest('#subMenuWrapper').length && !$(e.target).closest('.metismenu li.active').length && !$(e.target).closest('.logo-wrapper').length) {
+                   $('#subMenuWrapper').html('');
+                   $('#subMenuWrapper').css({
+                       top: 0,
+                       left: 0
+                   });
+                   $('.metismenu li.active').removeClass('active');
+               }
+               if (!$(e.target).closest('#notificationMenu').length) {
+                   $('#notificationMenuWrapper').removeClass('show');
+               }
+               if (!$(e.target).closest('#userMenu').length) {
+                   $('#userMenuWrapper').removeClass('show');
+               }
+           });
+
+       });
+   </script>
     </form>
       <!-- CORE PLUGINS-->
    <%-- <script src="./assets/vendors/jquery/dist/jquery.min.js" type="text/javascript"></script>
