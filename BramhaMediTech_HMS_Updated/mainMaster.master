@@ -110,7 +110,7 @@
     
       <link rel="stylesheet" href="customTheme/css/customTheme.css"/>
 </head>
-<body class="fixed-navbar has-animation bluetheme collapsed" id="bodyWrapper">
+<body class="fixed-navbar has-animation bluetheme" id="bodyWrapper">
     <div class="wrapper">
       <header class="page-header row">
                     <div class="logo-wrapper d-flex align-items-center col-auto">
@@ -259,6 +259,9 @@
                         <a class="active" href="Home.aspx"><i class="sidebar-item-icon fa fa-th-large"></i>
                             <span class="nav-label">Dashboard</span>
                         </a>
+                    </li>
+                     <li runat="server" id="patientlist" visible="true" class="nav-label">
+                        <a href="ListPatients.aspx"><span>Patient List</span></a>
                     </li>
                     <li runat="server" id="IPDEMRDashboard" visible="false" class="nav-label">
                         <a href="IPDEMRDashboard.aspx"><span>IPD EMR Dashboard</span></a>

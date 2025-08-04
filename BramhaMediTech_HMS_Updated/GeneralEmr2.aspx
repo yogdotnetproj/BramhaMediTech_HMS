@@ -1121,7 +1121,14 @@
             }
         });
         $('#toggleMenu').on('click', function () {
-            localStorage.setItem('sidebarMenuToggle', '' + $('#bodyWrapper').hasClass('collapsed'));
+            // Get current value from localStorage (default to 'false' if not set)
+            let current = localStorage.getItem('sidebarMenuToggle') === 'true';
+
+            // Toggle it: true → false, false → true
+            let newValue = !current;
+
+            // Save the toggled value back to localStorage
+            localStorage.setItem('sidebarMenuToggle', newValue.toString());
             $('#bodyWrapper').toggleClass('collapsed');
             e.preventDefault();
         });

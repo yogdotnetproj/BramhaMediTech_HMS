@@ -331,7 +331,7 @@ public partial class ListPatients :BasePage
             bool PatientChecked = Convert.ToBoolean((e.Row.FindControl("hdnIsPatientChecked") as HiddenField).Value);
             if (PatientChecked == true)
             {
-                e.Row.BackColor = Color.SpringGreen;
+                e.Row.BackColor = System.Drawing.ColorTranslator.FromHtml("#65c69b"); //"#afac5d"; //Color.DarkGreen;
             }
             int LabPtype = Convert.ToInt32((e.Row.FindControl("hdnTriageCriteria") as HiddenField).Value);
           //  e.Row.Cells[9].Text = "<span class='btn btn-xs btn-success'>Low Risk</span>";

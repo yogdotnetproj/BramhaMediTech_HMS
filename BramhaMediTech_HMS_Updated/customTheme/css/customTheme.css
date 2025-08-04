@@ -54159,7 +54159,7 @@ i.sidebar-item-icon.fa-solid.fa-chart-pie {
 }
 
 .patientListDataTable tbody tr:nth-child(n + 2) {
-    background: #fff !important;
+    /*background: #fff !important;*/
 }
 
 
