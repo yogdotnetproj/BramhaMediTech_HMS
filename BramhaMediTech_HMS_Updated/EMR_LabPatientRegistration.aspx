@@ -248,7 +248,7 @@
                                         <div id="Div5" class="col-lg-12" runat="server" > 
                                             <div class="row">
                                                     <div class="form-Inline form-check pl12">
-                                                        <asp:RadioButtonList ID="RBLLabType" runat="server"  Enabled="false"  BackColor="#66ccff"  RepeatDirection="Horizontal" AutoPostBack="True"  Font-Bold="True" Font-Size="Medium" Width="100%" OnSelectedIndexChanged="RBLLabType_SelectedIndexChanged" >
+                                                        <asp:RadioButtonList ID="RBLLabType" runat="server"  Enabled="false"  BackColor="#c669ab"  RepeatDirection="Horizontal" AutoPostBack="True"  Font-Bold="True" Font-Size="Medium" Width="100%" OnSelectedIndexChanged="RBLLabType_SelectedIndexChanged" >
                                                              <asp:ListItem Value="P" >Pathology</asp:ListItem>
                                                              <asp:ListItem Value="R">Radiology</asp:ListItem>                                                            
                                                              <asp:ListItem Selected="True" Value="M">Medical Lab</asp:ListItem>
