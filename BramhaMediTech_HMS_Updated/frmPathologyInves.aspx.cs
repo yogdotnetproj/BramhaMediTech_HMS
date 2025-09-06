@@ -49,11 +49,11 @@ public partial class frmPathologyInves :BasePage
                 //rblPaymenttype.Items[0].Selected = true;
             }
 
-            string Currentdate = Date.getdate().ToString("dd/MM/yyyy");
-            if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("15 /09/ 2020"))
-            {
-                Response.Redirect("~/Login.aspx?Activation=Yes");
-            }
+            //string Currentdate = Date.getdate().ToString("dd/MM/yyyy");
+            //if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("15 /09/ 2020"))
+            //{
+            //    Response.Redirect("~/Login.aspx?Activation=Yes");
+            //}
             string BName = " Diagnostic Center";
            // string BCount = Patmst_New_Bal_C.PatientCountBanner(Convert.ToInt32(Session["Branchid"]));
             //  lblDemoHospitalName.Text = Convert.ToString(dtban.Rows[0]["BannerName"]).Trim();

@@ -26,20 +26,20 @@ public partial class Login :BasePage
         }
 
         txtUName.Focus();
-        if (Convert.ToString( Request.QueryString["Activation"]) == "Yes")
-        {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Contact to system administrator.');", true);
-        }
+        //if (Convert.ToString( Request.QueryString["Activation"]) == "Yes")
+        //{
+        //   // ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Contact to system administrator.');", true);
+        //}
       // string Currentdate=DateTime.Now.ToString("dd/MM/yyyy");
-         string Currentdate = Date.getdate().ToString("dd/MM/yyyy");
+      //   string Currentdate = Date.getdate().ToString("dd/MM/yyyy");
          //if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("26 /09/ 2019") && Convert.ToDateTime(Currentdate) < Convert.ToDateTime("26 / 10 / 2019"))
          //{
          //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Software will expire few days,please contact to system administrator.');", true);
          //}
-         if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("06 /09/ 2025") && Convert.ToDateTime(Currentdate) < Convert.ToDateTime("26 /09/ 2025"))
-         {
-             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('contact to system administrator.');", true);
-         }
+         //if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("06 /09/ 2025") && Convert.ToDateTime(Currentdate) < Convert.ToDateTime("26 /09/ 2025"))
+         //{
+         //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('contact to system administrator.');", true);
+         //}
 
        // */__________________________________________________________________________________________________/*//
          //if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("28 /04/ 2017") )
@@ -60,12 +60,12 @@ public partial class Login :BasePage
     }
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        string Currentdate = Date.getdate().ToString("dd/MM/yyyy");
-        if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("26 /10/ 2025"))
-        {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Contact to system administrator.');", true);
-            return;
-        } //31-10-2018
+        //string Currentdate = Date.getdate().ToString("dd/MM/yyyy");
+        //if (Convert.ToDateTime(Currentdate) >= Convert.ToDateTime("26 /10/ 2025"))
+        //{
+        //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Contact to system administrator.');", true);
+        //    return;
+        //} //31-10-2018
       DataTable  dtban = ObjTB.Bindbanner();
       Session["Bannername"] = Convert.ToString(dtban.Rows[0]["BannerName"]).Trim();
       Session["BannerCode"] = Convert.ToString(dtban.Rows[0]["BannerName"]).Trim();
